@@ -6,6 +6,7 @@
 * [Setup](#setup)
 
 ## General info
+*General info will go in this section*
 
 	
 ## Technologies
