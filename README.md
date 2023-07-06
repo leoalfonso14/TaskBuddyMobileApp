@@ -21,7 +21,7 @@ Software tools:
 * Favicon Generator
 
 Database:
-*Firebase
+* Firebase
  
 Languages: 
 * HTML 5
