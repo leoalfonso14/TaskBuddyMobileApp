@@ -14,8 +14,8 @@ const firebaseConfig = {
 
   function signUp(){
 
-    email = document.getElementByID("email").value;
-    password = document.getElementByID("password").value;
+    email = document.getElementById("email").value;
+    password = document.getElementById("password").value;
 
     auth.createUserWithEmailAndPassword(email,password).then((userCredential) => {
             var user = userCredential.user;
@@ -26,8 +26,8 @@ const firebaseConfig = {
 
   function login(){
 
-    email = document.getElementByID("email").value;
-    password = document.getElementByID("password").value;
+    email = document.getElementById("email").value;
+    password = document.getElementById("password").value;
 
     auth.signInWithEmailAndPassword(email,password).then ((userCredential) => {
         var user=userCredential.user
