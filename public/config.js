@@ -14,29 +14,26 @@ const firebaseConfig = {
 
   function signUp(){
 
-    email = document.getElementById("email").value;
-    password = document.getElementById("password").value;
+    email = document.getElementByID("email").value;
+    password = document.getElementByID("password").value;
 
     auth.createUserWithEmailAndPassword(email,password).then((userCredential) => {
             var user = userCredential.user;
             alert("Signed Up");
     })
 
-    
-
   }
 
   function login(){
 
-    email = document.getElementBytId("email").value;
-    password = document.getElementBytId("password").value;
+    email = document.getElementByID("email").value;
+    password = document.getElementByID("password").value;
 
     auth.signInWithEmailAndPassword(email,password).then ((userCredential) => {
         var user=userCredential.user
         alert("Logged In" + user.email)
 
     })
-
 
 
   }
