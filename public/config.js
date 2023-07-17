@@ -100,7 +100,7 @@ function show() {
         //console.log("Document data: ", doc.data());
         document.getElementById("nameDisplay").innerHTML = doc.data().name;
         document.getElementById("petNameDisplay").innerHTML =
-          doc.data().PetName;
+          doc.data().petName;
         document.getElementById("coinsDisplay").innerHTML = doc.data().coins;
       } else {
         console.log("No Such Document");
