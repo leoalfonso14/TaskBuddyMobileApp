@@ -1,59 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    
+  <body>
     <!--Login/Signup containers-->
-    <div>
-        <div>Login:</div>
-        <input type="text" id="email" placeholder="email">
-        <input type="password" id="password" placeholder="password">
-        <button id="login" onclick="login()">Login</button>
-        <button id="signup" onclick="signUp()">Signup</button>
+    <div id="login">
+      <div>Login:</div>
+      <input type="text" id="email" placeholder="email" />
+      <input type="password" id="password" placeholder="password" />
+      <input
+        type="checkbox"
+        id="showPasswordBox"
+        onclick="showPassword()"
+      />Show Password
+      <button id="login" onclick="login()">Login</button>
+      <button id="signup" onclick="signUp()">Signup</button>
+      <input onclick="forgotPassword()" />Forgot Password?
     </div>
+  </body>
 
-    <!--Display containers and buttons for db storage-->
-    <div id="box">
-
-        <div><br>Enter Name Below:</div>
-        <input type="text" id ="name" placeholder="name">
-
-        <div><br>Enter Age Below</div>
-        <input type="text" id ="age" placeholder="age">
-
-        <div><br>Enter ID Below</div>
-        <input type="text" id ="id" placeholder="id">
-
-        <div><br>Enter Current Semester</div>
-        <input type="text" id ="semester" placeholder="semester">
-
-        <br><br>
-        <button type="button" id="add" onclick="set()">Add Data</button>
-        <button type="button" id="update" onclick="update()">Update Data</button>
-        <button type="button" id="update" onclick="show()">Show Data</button>
-        <button type="button" id="delete" onclick="deleteData()">Delete Data</button>
-
-    </div>
-
-    <!--Display containers for DB information-->
-    <div>
-        <div id="nameDisplay"></div>
-        <div id="ageDisplay"></div>
-        <div id="idDisplay"></div>
-        <div id="semesterDisplay"></div>
-    </div>
-
-</body>
-
-    <!--Scripts for firebase connections-->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-    <script src="config.js"></script>
-
+  <!--Scripts for firebase connections-->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="config.js"></script>
 </html>
