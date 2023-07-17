@@ -14,19 +14,6 @@ firebase.initializeApp(firebaseConfig);
 auth = firebase.auth();
 db = firebase.firestore();
 
-jQuery(window).load(function () {
-  console.log("loaded");
-  sessionStorage.setItem("status", "loggedIn");
-});
-
-if (sessionStorage.getItem("status") != null) {
-  //redirect to page
-  window.location.href = "./index.html";
-} else {
-  window.location.href = "./index.html";
-  //show validation message
-}
-
 //Signs User up
 function signUp() {
   email = document.getElementById("email").value;
@@ -58,7 +45,6 @@ function set() {
   var name = document.getElementById("name").value;
   var petName = document.getElementById("petName").value;
   var coins = document.getElementById("coins").value;
-  var semester = document.getElementById("semester").value;
   var UserID = auth.currentUser.uid;
 
   db.collection("User")
@@ -67,7 +53,6 @@ function set() {
       name: name,
       petName: petName,
       coins: coins,
-      semester: firebase.firestore.FieldValue.arrayUnion(semester),
     })
     .then(() => {
       console.log("Success!");
@@ -82,7 +67,6 @@ function update() {
   var name = document.getElementById("name").value;
   var petName = document.getElementById("petName").value;
   var coins = document.getElementById("coins").value;
-  var semester = document.getElementById("semester").value;
   var UserID = auth.currentUser.uid;
 
   db.collection("User")
@@ -91,7 +75,6 @@ function update() {
       name: name,
       petName: petName,
       coins: coins,
-      semester: firebase.firestore.FieldValue.arrayUnion(semester),
     })
     .then(() => {
       console.log("Success!");
@@ -119,10 +102,6 @@ function show() {
         document.getElementById("petNameDisplay").innerHTML =
           doc.data().PetName;
         document.getElementById("coinsDisplay").innerHTML = doc.data().coins;
-
-        // prettier-ignore
-        document.getElementById("semesterDisplay").innerHTML = doc.data().semester;
-        //prettier-ignore
       } else {
         console.log("No Such Document");
         /* Added this part so it removes from the UI the data that was displayed, because if you delete data and then 
@@ -130,9 +109,6 @@ function show() {
         document.getElementById("nameDisplay").innerHTML = "";
         document.getElementById("petNameDisplay").innerHTML = "";
         document.getElementById("coinsDisplay").innerHTML = "";
-        // prettier-ignore
-        document.getElementById("semesterDisplay").innerHTML = "";
-        //prettier-ignore
       }
     });
 }
