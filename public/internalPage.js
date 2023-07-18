@@ -14,31 +14,9 @@ firebase.initializeApp(firebaseConfig);
 auth = firebase.auth();
 db = firebase.firestore();
 
-//Signs User up
-function signUp() {
-  email = document.getElementById("email").value;
-  password = document.getElementById("password").value;
-
-  auth
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      var user = userCredential.user;
-      alert("Signed Up");
-      window.location.href = "./internalPage.html";
-    });
-}
-
-//Logs User in
-function login() {
-  email = document.getElementById("email").value;
-  password = document.getElementById("password").value;
-
-  auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
-    var user = userCredential.user;
-    alert("Logged In " + user.email);
-    window.location.href = "./internalPage.html";
-  });
-}
+//DISPLAY LOADER
+// CHECK IF USER IS LOGGED IN - IF NOT SEND TO REGISTRATION/SIGNIN PAGE
+//IF LOGGED IN THEN DISPLAY PAGE WITH USERS STUFF
 
 //Sets User data in firebase
 function set() {
@@ -80,11 +58,7 @@ function update() {
       console.log("Success!");
     })
     .catch((error) => {
-      if (doc.exists) {
-        console.log("Error, something went wrong!");
-      } else {
-        set();
-      }
+      set();
     });
 }
 
@@ -105,7 +79,7 @@ function show() {
       } else {
         console.log("No Such Document");
         /* Added this part so it removes from the UI the data that was displayed, because if you delete data and then 
-        try to show data it gives the error but is still displaying the data that was displayed earlier and deleted */
+          try to show data it gives the error but is still displaying the data that was displayed earlier and deleted */
         document.getElementById("nameDisplay").innerHTML = "";
         document.getElementById("petNameDisplay").innerHTML = "";
         document.getElementById("coinsDisplay").innerHTML = "";
@@ -127,18 +101,70 @@ function deleteData() {
     });
 }
 
-function forgotPassword() {
-  //Show Forgot Password Modal
-  console.log("Currently Working on this!");
+function signOut() {
+  firebase
+    .auth()
+    .signOut()
+    .then(() => {
+      // Sign-out successful.
+      console.log();
+      window.location.href = "./index.html";
+    })
+    .catch((error) => {
+      // An error happened.
+    });
 }
 
-/*When the show password checkbox is clicked the following functions changes the input 
-type to text so that it shows the password, if unchecked it gets turned back into password*/
-function showPassword() {
-  var x = document.getElementById("password");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
+// Forgot Password Modal
+// Get the modal
+function openModal() {
+  var modal = document.getElementById("forgotPasswordModal");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal - remove
+  PasswordResetBtn.onclick = function () {
+    // Get the button that opens the modal - remove
+    var PasswordResetBtn = document.getElementById("forgotPasswordBtn");
+    modal.style.display = "block";
+  };
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
+// Generating Password Reset Link
+const actionCodeSettings = {
+  // URL you want to redirect back to. The domain (www.example.com) for
+  // this URL must be whitelisted in the Firebase Console.
+  url: "https://taskbuddy-9c3f6.web.app/",
+  // This must be true for email link sign-in.
+  handleCodeInApp: false, // for now we do not have an app
+};
+
+function resetBtn() {
+  console.log("Currently Working on this!");
+  let emailReset = document.getElementById("emailReset").value;
+  console.log("userEmail", emailReset);
+  getAuth()
+    .generatePasswordResetLink(emailReset, actionCodeSettings)
+    .then((link) => {
+      // Construct password reset email template, embed the link and send
+      // using custom SMTP server.
+      return sendCustomPasswordResetEmail(emailReset, displayName, link);
+    })
+    .catch((error) => {
+      // Some error occurred.
+      console.log("Error occurred: ", error);
+    });
 }
