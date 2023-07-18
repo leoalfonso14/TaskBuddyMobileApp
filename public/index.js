@@ -160,6 +160,10 @@ window.onclick = function (event) {
   }
 };
 
+
+
+
+// WORK IN PROGRESS - IGNORE
 function getParameterByName(name) {
   if (name !== "" && name !== null && name != undefined) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -232,12 +236,16 @@ function handleResetPassword(auth, actionCode, continueUrl, lang) {
           // Error occurred during confirmation. The code might have expired or the
           // password is too weak.
           console.log("Error resetting password");
+          alert("This is a work in progress"); // TODO: Remove this when working
+          modal.style.display = "none";
         });
     })
     .catch((error) => {
       // Invalid or expired action code. Ask user to try to reset the password
       // again.
       console.log("Error resetting password - try again");
+      alert("This is a work in progress"); // TODO: Remove this when working
+      modal.style.display = "none";
     });
 }
 
