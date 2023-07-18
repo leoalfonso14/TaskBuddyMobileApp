@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="import" href="./components/forgot-password-modal.html">
+    <title>External Home Page</title>
   </head>
 
   <body>
@@ -19,13 +21,26 @@
       />Show Password
       <button id="login" onclick="login()">Login</button>
       <button id="signup" onclick="signUp()">Signup</button>
-      <a href="" target="_blank" onclick="forgotPassword()">Forgot Password?</a>
+      <button id="forgotPasswordBtn">Forgot Password?</button>
     </div>
   </body>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgotPasswordModal" class="modal" style="display: none">
+    <!--  Content -->
+    <div style="text-align: center" class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Reset your TaskBuddy password</h2>
+      <h4>Enter your email and click Reset to reset it. You will get an email with the request.</h4>
+      <input type="text" id="emailReset" placeholder="email" />
+      <button id="resetBtn" onclick="resetBtn('resetPassword')">Reset</button>
+    </div>
+  </div>
+</body>
 
   <!--Scripts for firebase connections-->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-  <script src="config.js"></script>
+  <script src="index.js"></script>
 </html>

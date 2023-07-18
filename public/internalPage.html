@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="internalPage.css" />
+    <title>Internal Home Page</title>
   </head>
 
   <body>
@@ -16,6 +17,7 @@
         style="position: fixed; left: 96%"
       />
     </a>
+    <button onclick="signOut()">Sign Out</button>
 
     <!--Display containers and buttons for db storage-->
     <div id="box">
@@ -49,5 +51,5 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-  <script src="config.js"></script>
+  <script src="internalPage.js"></script>
 </html>
