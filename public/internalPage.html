@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <a href="./index.html">
+      <img
+        src="./icons/return.png"
+        alt=""
+        widht="25"
+        height="25"
+        style="position: fixed; left: 96%"
+      />
+    </a>
+
+    <!--Display containers and buttons for db storage-->
+    <div id="box">
+      <div><br />Enter Your Name Below</div>
+      <input type="text" id="name" placeholder="name" />
+
+      <div><br />Enter Your Virtual Pet's Name Below:</div>
+      <input type="text" id="petName" placeholder="pet name" />
+
+      <div><br />Enter Your Coin Amount Below</div>
+      <input type="text" id="coins" placeholder="coins" />
+
+      <br /><br />
+      <button type="button" id="add" onclick="set()">Add Data</button>
+      <button type="button" id="update" onclick="update()">Update Data</button>
+      <button type="button" id="update" onclick="show()">Show Data</button>
+      <button type="button" id="delete" onclick="deleteData()">
+        Delete Data
+      </button>
+    </div>
+
+    <!--Display containers for DB information-->
+    <div>
+      <div id="nameDisplay"></div>
+      <div id="petNameDisplay"></div>
+      <div id="coinsDisplay"></div>
+    </div>
+  </body>
+
+  <!--Scripts for firebase connections-->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="config.js"></script>
+</html>

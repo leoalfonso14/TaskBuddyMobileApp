@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
 
-    <div>
-        <input type="text" id="email" placeholder="email">
-        <input type="password" id="password" placeholder="password">
-        <button id="login" onclick="login()">Login</button>
-        <button id="signup" onclick="signUp()">Signup</button>
+  <body>
+    <!--Login/Signup containers-->
+    <div id="login">
+      <div>Login:</div>
+      <input type="text" id="email" placeholder="email" />
+      <input type="password" id="password" placeholder="password" />
+      <input
+        type="checkbox"
+        id="showPasswordBox"
+        onclick="showPassword()"
+      />Show Password
+      <button id="login" onclick="login()">Login</button>
+      <button id="signup" onclick="signUp()">Signup</button>
+      <a href="" target="_blank" onclick="forgotPassword()">Forgot Password?</a>
     </div>
+  </body>
 
-</body>
-
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-    <script src="config.js"></script>
-
+  <!--Scripts for firebase connections-->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="config.js"></script>
 </html>
