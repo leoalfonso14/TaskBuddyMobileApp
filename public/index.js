@@ -136,7 +136,7 @@ function showPassword() {
 
 // Forgot Password Modal
 // Get the modal
-var modal = document.getElementById("forgotPasswordModal");
+var passwordModal = document.getElementById("forgotPasswordModal");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -144,149 +144,33 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal - remove
 forgotPasswordBtn.onclick = function () {
   // Get the button that opens the modal - remove
-  var PasswordResetBtn = document.getElementById("forgotPasswordBtn");
-  modal.style.display = "block";
+  passwordModal.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-  modal.style.display = "none";
+  passwordModal.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == passwordModal) {
+    passwordModal.style.display = "none";
   }
 };
 
-// WORK IN PROGRESS - IGNORE
 // Generating Password Reset Link
 // The function runs when the reset button is clicked
 function resetBtn() {
   let emailReset = document.getElementById("emailReset").value;
-  // Sends the email with code
-
-  // ENTER CODE TO VERIFY SCREEN SHOWS UP
-
-  // Display the password change screen
-
-  //When user clicks reset in this new screen it will change the user's password
-
-  auth
-    .generatePasswordResetLink(emailReset, actionCodeSettings)
-    .then((link) => {
-      // Construct password reset email template, embed the link and send
-      // using custom SMTP server.
-      console.log("link", link);
-      return sendCustomPasswordResetEmail(userEmail, displayName, link);
+  auth.sendPasswordResetEmail(emailReset).then(() => {
+      //Sends email to user
+      console.log("Email sent!");
+      passwordModal.style.display = "none";
+      alert("Email was sent!");
     })
     .catch((error) => {
       // Some error occurred.
-      console.log("Error");
+      console.log("Error", error);
     });
 }
-
-// MAYBE
-// const actionCodeSettings = {
-//   // URL you want to redirect back to. The domain (www.example.com) for
-//   // this URL must be whitelisted in the Firebase Console.
-//   url: "https://taskbuddy-9c3f6.web.app/",
-//   // This must be true for email link sign-in.
-//   handleCodeInApp: false, // for now we do not have an app
-// };
-
-// function getParameterByName(key) {
-//   console.log("location:", window.location);
-//   var search = window.location.search;
-//   console.log("search: ", search);
-//   let i = search.search(key);
-//   let size = i.legnth; // maybe if search[i] != "" does not work
-//   let result1 = "";
-//   let result2 = "";
-//   console.log("size", size);
-//   console.log("search[i]", search[i]);
-//   do {
-//     //store from start of key until right before the & or end of search in result1 - example: "code=code"
-//     result1 += search[i];
-//     i++;
-//   } while (search[i] != "&" || i != size - 1);
-
-//   //then from "code=code" get the part after the = sign and assign it to result2
-//   let j = search.search("=");
-//   do {
-//     //store from start of key until right before the & or end of search in result1 - example: "code=code"
-//     result2 += search[j + 1];
-//     j++;
-//   } while (search[j] != "&" || j != size - 1);
-
-//   console.log("result2", result2);
-//   return result2;
-// }
-
-// function handleResetPassword(auth, actionCode, continueUrl) {
-//   // Localize the UI to the selected language as determined by the lang
-//   // parameter.
-
-//   // Verify the password reset code is valid.
-//   auth
-//     .verifyPasswordResetCode(actionCode)
-//     .then((email) => {
-//       var accountEmail = email;
-
-//       // TODO: Show the reset screen with the user's email and ask the user for the new password.
-//       window.location.href = "./newPassword.html";
-//       var newPassword = document.getElementById("newPassword").value;
-
-//       // Save the new password. ??? Button needed ??
-//       auth
-//         .confirmPasswordReset(actionCode, newPassword)
-//         .then((resp) => {
-//           // Password reset has been confirmed and new password updated.
-
-//           // Sign-in the user directly
-//           auth.signInWithEmailAndPassword(accountEmail, newPassword);
-//           window.location.href = "./internalPage.html";
-//         })
-//         .catch((error) => {
-//           // Error occurred during confirmation. The code might have expired or the
-//           // password is too weak.
-//           console.log("Error changing password");
-//         });
-//     })
-//     .catch((error) => {
-//       // Invalid or expired action code. Ask user to try to reset the password
-//       // again.
-//       console.log("Error with code");
-//     });
-// }
-
-// function resetBtn() {
-//   // Get the action to complete.
-//   var mode = getParameterByName("mode");
-//   // Get the one-time code from the query parameter.
-//   var actionCode = getParameterByName("oobCode");
-//   // (Optional) Get the continue URL from the query parameter if available.
-//   var continueUrl = "https://taskbuddy-9c3f6.web.app/";
-//   // (Optional) Get the language code if available.
-//   //var lang = getParameterByName("lang") || "en";
-
-//   // Handle the user management action.
-//   switch (mode) {
-//     case "resetPassword":
-//       // Display reset password handler and UI.
-//       console.log("Here2");
-//       handleResetPassword(auth, actionCode, continueUrl, lang);
-//       break;
-//     case "recoverEmail":
-//       // Display email recovery handler and UI.
-//       handleRecoverEmail(auth, actionCode, lang);
-//       break;
-//     case "verifyEmail":
-//       // Display email verification handler and UI.
-//       handleVerifyEmail(auth, actionCode, continueUrl, lang);
-//       break;
-//     default:
-//     // Error: invalid mode.
-//   }
-// }
