@@ -58,7 +58,7 @@ function set() {
       console.log("Success!");
     })
     .catch((error) => {
-      console.log("Error!");
+      console.log("Error!", error);
     });
 }
 
@@ -160,172 +160,133 @@ window.onclick = function (event) {
   }
 };
 
-
-
-
 // WORK IN PROGRESS - IGNORE
-function getParameterByName(name) {
-  if (name !== "" && name !== null && name != undefined) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-    return results === null
-      ? ""
-      : decodeURIComponent(results[1].replace(/\+/g, " "));
-  } else {
-    var arr = location.href.split("/");
-    return arr[arr.length - 1];
-  }
-}
-
-function resetBtn(mode) {
-  // Get the one-time code from the query parameter.
-  var actionCode = getParameterByName("oobCode");
-  // (Optional) Get the continue URL from the query parameter if available.
-  var continueUrl = getParameterByName("continueUrl") || "./internalPage.html";
-  // (Optional) Get the language code if available.
-  var lang = getParameterByName("lang") || "en";
-
-  // Handle the user management action.
-  switch (mode) {
-    case "resetPassword":
-      // Display reset password handler and UI.
-      handleResetPassword(auth, actionCode, continueUrl, lang);
-      break;
-    case "recoverEmail":
-      // Display email recovery handler and UI.
-      handleRecoverEmail(auth, actionCode, lang);
-      break;
-    case "verifyEmail":
-      // Display email verification handler and UI.
-      handleVerifyEmail(auth, actionCode, continueUrl, lang);
-      break;
-    default:
-      // Error: invalid mode.
-      console.log("Invalid Mode");
-  }
-}
-
-function handleResetPassword(auth, actionCode, continueUrl, lang) {
-  // Localize the UI to the selected language as determined by the lang
-  // parameter.
-
-  // Verify the password reset code is valid.
-  auth
-    .verifyPasswordResetCode(actionCode)
-    .then((email) => {
-      var accountEmail = email;
-
-      // TODO: Show the reset screen with the user's email and ask the user for
-      // the new password.
-      var newPassword = "...";
-
-      // Save the new password.
-      auth
-        .confirmPasswordReset(actionCode, newPassword)
-        .then((resp) => {
-          auth
-            .signInWithEmailAndPassword(email, password)
-            .then((userCredential) => {
-              var user = userCredential.user;
-              alert("Logged In " + user.email);
-              window.location.href = "./internalPage.html";
-            });
-        })
-        .catch((error) => {
-          // Error occurred during confirmation. The code might have expired or the
-          // password is too weak.
-          console.log("Error resetting password");
-          alert("This is a work in progress"); // TODO: Remove this when working
-          modal.style.display = "none";
-        });
-    })
-    .catch((error) => {
-      // Invalid or expired action code. Ask user to try to reset the password
-      // again.
-      console.log("Error resetting password - try again");
-      alert("This is a work in progress"); // TODO: Remove this when working
-      modal.style.display = "none";
-    });
-}
-
-function handleRecoverEmail(auth, actionCode, lang) {
-  // Localize the UI to the selected language as determined by the lang
-  // parameter.
-  var restoredEmail = null;
-  // Confirm the action code is valid.
-  auth
-    .checkActionCode(actionCode)
-    .then((info) => {
-      // Get the restored email address.
-      restoredEmail = info["data"]["email"];
-
-      // Revert to the old email.
-      return auth.applyActionCode(actionCode);
-    })
-    .then(() => {
-      // Account email reverted to restoredEmail
-
-      // TODO: Display a confirmation message to the user.
-
-      // You might also want to give the user the option to reset their password
-      // in case the account was compromised:
-      auth
-        .sendPasswordResetEmail(restoredEmail)
-        .then(() => {
-          // Password reset confirmation sent. Ask user to check their email.
-        })
-        .catch((error) => {
-          // Error encountered while sending password reset code.
-        });
-    })
-    .catch((error) => {
-      // Invalid code.
-    });
-}
-
-function handleVerifyEmail(auth, actionCode, continueUrl, lang) {
-  // Localize the UI to the selected language as determined by the lang
-  // parameter.
-  // Try to apply the email verification code.
-  auth
-    .applyActionCode(actionCode)
-    .then((resp) => {
-      // Email address has been verified.
-      // TODO: Display a confirmation message to the user.
-      // You could also provide the user with a link back to the app.
-      // TODO: If a continue URL is available, display a button which on
-      // click redirects the user back to the app via continueUrl with
-      // additional state determined from that URL's parameters.
-    })
-    .catch((error) => {
-      // Code is invalid or expired. Ask the user to verify their email address
-      // again.
-    });
-}
-
 // Generating Password Reset Link
-const actionCodeSettings = {
-  // URL you want to redirect back to. The domain (www.example.com) for
-  // this URL must be whitelisted in the Firebase Console.
-  url: "https://taskbuddy-9c3f6.web.app/",
-  // This must be true for email link sign-in.
-  handleCodeInApp: false, // for now we do not have an app
-};
+// The function runs when the reset button is clicked
+function resetBtn() {
+  let emailReset = document.getElementById("emailReset").value;
+  // Sends the email with code
 
-// function resetBtn() {
-//   console.log("Currently Working on this!");
-//   let emailReset = document.getElementById("emailReset").value;
-//   console.log("userEmail", emailReset);
+  // ENTER CODE TO VERIFY SCREEN SHOWS UP
+
+  // Display the password change screen
+
+  //When user clicks reset in this new screen it will change the user's password
+
+  auth
+    .generatePasswordResetLink(emailReset, actionCodeSettings)
+    .then((link) => {
+      // Construct password reset email template, embed the link and send
+      // using custom SMTP server.
+      console.log("link", link);
+      return sendCustomPasswordResetEmail(userEmail, displayName, link);
+    })
+    .catch((error) => {
+      // Some error occurred.
+      console.log("Error");
+    });
+}
+
+// MAYBE
+// const actionCodeSettings = {
+//   // URL you want to redirect back to. The domain (www.example.com) for
+//   // this URL must be whitelisted in the Firebase Console.
+//   url: "https://taskbuddy-9c3f6.web.app/",
+//   // This must be true for email link sign-in.
+//   handleCodeInApp: false, // for now we do not have an app
+// };
+
+// function getParameterByName(key) {
+//   console.log("location:", window.location);
+//   var search = window.location.search;
+//   console.log("search: ", search);
+//   let i = search.search(key);
+//   let size = i.legnth; // maybe if search[i] != "" does not work
+//   let result1 = "";
+//   let result2 = "";
+//   console.log("size", size);
+//   console.log("search[i]", search[i]);
+//   do {
+//     //store from start of key until right before the & or end of search in result1 - example: "code=code"
+//     result1 += search[i];
+//     i++;
+//   } while (search[i] != "&" || i != size - 1);
+
+//   //then from "code=code" get the part after the = sign and assign it to result2
+//   let j = search.search("=");
+//   do {
+//     //store from start of key until right before the & or end of search in result1 - example: "code=code"
+//     result2 += search[j + 1];
+//     j++;
+//   } while (search[j] != "&" || j != size - 1);
+
+//   console.log("result2", result2);
+//   return result2;
+// }
+
+// function handleResetPassword(auth, actionCode, continueUrl) {
+//   // Localize the UI to the selected language as determined by the lang
+//   // parameter.
+
+//   // Verify the password reset code is valid.
 //   auth
-//     .generatePasswordResetLink(emailReset, actionCodeSettings)
-//     .then((link) => {
-//       // Construct password reset email template, embed the link and send
-//       // using custom SMTP server.
-//       return sendCustomPasswordResetEmail(emailReset, displayName, link);
+//     .verifyPasswordResetCode(actionCode)
+//     .then((email) => {
+//       var accountEmail = email;
+
+//       // TODO: Show the reset screen with the user's email and ask the user for the new password.
+//       window.location.href = "./newPassword.html";
+//       var newPassword = document.getElementById("newPassword").value;
+
+//       // Save the new password. ??? Button needed ??
+//       auth
+//         .confirmPasswordReset(actionCode, newPassword)
+//         .then((resp) => {
+//           // Password reset has been confirmed and new password updated.
+
+//           // Sign-in the user directly
+//           auth.signInWithEmailAndPassword(accountEmail, newPassword);
+//           window.location.href = "./internalPage.html";
+//         })
+//         .catch((error) => {
+//           // Error occurred during confirmation. The code might have expired or the
+//           // password is too weak.
+//           console.log("Error changing password");
+//         });
 //     })
 //     .catch((error) => {
-//       // Some error occurred.
-//       console.log("Error occurred: ", error);
+//       // Invalid or expired action code. Ask user to try to reset the password
+//       // again.
+//       console.log("Error with code");
 //     });
+// }
+
+// function resetBtn() {
+//   // Get the action to complete.
+//   var mode = getParameterByName("mode");
+//   // Get the one-time code from the query parameter.
+//   var actionCode = getParameterByName("oobCode");
+//   // (Optional) Get the continue URL from the query parameter if available.
+//   var continueUrl = "https://taskbuddy-9c3f6.web.app/";
+//   // (Optional) Get the language code if available.
+//   //var lang = getParameterByName("lang") || "en";
+
+//   // Handle the user management action.
+//   switch (mode) {
+//     case "resetPassword":
+//       // Display reset password handler and UI.
+//       console.log("Here2");
+//       handleResetPassword(auth, actionCode, continueUrl, lang);
+//       break;
+//     case "recoverEmail":
+//       // Display email recovery handler and UI.
+//       handleRecoverEmail(auth, actionCode, lang);
+//       break;
+//     case "verifyEmail":
+//       // Display email verification handler and UI.
+//       handleVerifyEmail(auth, actionCode, continueUrl, lang);
+//       break;
+//     default:
+//     // Error: invalid mode.
+//   }
 // }
