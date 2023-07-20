@@ -125,6 +125,16 @@ function deleteData() {
 
 /*When the show password checkbox is clicked the following functions changes the input 
 type to text so that it shows the password, if unchecked it gets turned back into password*/
+const togglePassword = document.querySelector("#togglePassword");
+togglePassword.addEventListener("click", function () {
+  // toggle the type attribute
+  const type = password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  
+  // toggle the icon
+  this.classList.toggle("bi-eye");
+});
+
 function showPassword() {
   var x = document.getElementById("password");
   if (x.type === "password") {
@@ -133,6 +143,7 @@ function showPassword() {
     x.type = "password";
   }
 }
+
 
 // Forgot Password Modal
 // Get the modal
