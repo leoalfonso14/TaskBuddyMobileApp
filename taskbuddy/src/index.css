@@ -1,0 +1,116 @@
+/* ExternalHomePage.css */
+
+/* Set a pet-themed background image or color */
+.external-homepage {
+  background-color: #f7f7f7;
+  /*background-image: url('path/to/pet-themed-background-image.jpg');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add a playful border and background to the login container */
+.login-container {
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the password toggle icon */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+/* Style the buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn {
+  background-color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 10px;
+}
+
+.signup-btn {
+  background-color: #28a745; /* Bootstrap success color */
+  margin-bottom: 10px;
+}
+
+.forgot-password-btn {
+  background-color: #6c757d; /* Bootstrap secondary color */
+}
+
+/* Add some padding to the modal content */
+.forgot-password-modal .modal-content {
+  padding: 20px;
+}
+
+/* Style the close button of the modal */
+.forgot-password-modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Add some pet-themed styles to the modal */
+.forgot-password-modal h2 {
+  color: #28a745; /* Green color */
+}
+
+.forgot-password-modal h4 {
+  color: #007bff; /* Blue color */
+  font-weight: bold;
+}
+
+/* Set the background and border for the modal input field */
+.forgot-password-modal input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #28a745; /* Green border */
+  border-radius: 5px;
+  background-color: #f7f7f7; /* Light gray background */
+}
+
+/* Style the Reset button in the modal */
+.forgot-password-modal #resetBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Blue color */
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
