@@ -14,21 +14,22 @@
       sizes="32x32"
       href="favicon.io/favicon-16x16.png"
     />
+    <title>External Dashboard</title>
   </head>
 
   <body class="DashboardPage">
     <!-- Nav bar -->
     <div id="navlist">
-      <b>TaskBuddy</b>
       <img id="navimg" src="images/navbar.png" width="84" height="84" />
-      <a href="javascript:void(0)">Login</a>
+      <b><a id="mainTitle" href="index.html">TaskBuddy</a></b>
+      <a href="login.html">Login</a>
       <a href="virtual.html">Virtual Pet</a>
-      <a href="dashboard.html">Dashboard</a>
+      <p id="noClickNav">Dashboard</p>
     </div>
+
     <div class="Dashboard">
-      <div class="image">
-        <img id="dashboardimg" src="images/DashboardTitle.png" />
-      </div>
+      <div class="image"></div>
+
       <div class="WhatisCalendar">
         <div class="content-calendar">
           <h1>Our Famous Virtual Calendar</h1>
@@ -61,7 +62,15 @@
         </div>
         <div class="imageofnotes">
             <img id="notesimg" src="images/Notes.png" />
-          </div>
+        </div>
     </div>
+
+    <div class="footersection" style="background-color: #301d5c">
+      <a class="footer-link" href=""> Meet The Team </a>
+      <a class="footer-link" href=""> Instagram </a>
+      <a class="footer-link" href=""> Youtube </a>
+      <p class="copyright">© 2023 TaskBuddy</p>
+    </div>
+  
   </body>
 </html>
