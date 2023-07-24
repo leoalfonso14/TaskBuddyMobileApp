@@ -1,10 +1,9 @@
 /* This is a single-line comment /
 / file name' style.css */
 body {
+  margin: 0;
   background-color: #00011d;
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 /*Animation for stars */
@@ -661,36 +660,6 @@ body {
   height: 20vh;
 }
 
-#main-article {
-  background-image: url(images/office.jpg);
-  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  color: var(--text);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  top: 0px;
-  z-index: 10;
-  margin: 100;
-  padding: 0;
-  box-sizing: border-box;
-}
-#fontimg {
-  position: absolute;
-  background-position: center;
-  top: 5px;
-  bottom: 20px;
-  overflow: auto;
-  width: 50%;
-}
-body {
-  margin: 0;
-}
-
 .header {
   text-align: center;
   width: 100%;
@@ -723,15 +692,7 @@ body {
   float: left;
 }
 
-/* #navimg {
-  position: absolute;
-  right: 30px;
-  left: 20px;
-  top: 5px;
-  bottom: 20px;
-} */
-
-/* if in Dashboard the Dashboard part of the nav bar cannot be clicked */
+/* if in Dashboard page the Dashboard part of the nav bar cannot be clicked */
 #noClickNav {
   float: right;
   display: block;
@@ -751,6 +712,33 @@ body {
   font-size: 40px;
   font-family: "Bitter", serif;
   text-decoration: none;
+}
+
+#main-article {
+  background-image: url(images/office.jpg);
+  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  top: 0px;
+  z-index: 10;
+  margin: 100;
+  padding: 0;
+  box-sizing: border-box;
+}
+#fontimg {
+  position: absolute;
+  background-position: center;
+  top: 5px;
+  bottom: 20px;
+  overflow: auto;
+  width: 50%;
 }
 
 /* scroll portion design */
@@ -886,12 +874,7 @@ body {
   height: 100vh; /* makes the sun the size of the viewport */
   aspect-ratio: 1/1;
   font-size: 35px;
-  background-position: center;
-  bottom: 20px;
-  top: 80px;
-  left: -100px;
-  position: relative;
-  float: right;
+  /* background-position: center; */
 }
 .Joinbutton {
   background: linear-gradient(to bottom, #dddddd 5%, #e3e3e3 100%);
@@ -913,15 +896,10 @@ body {
 #todolistimg {
   float: left;
   padding: 10px;
-  width: 50%;
-  position: absolute;
+  /* width: 50%; */
   background-position: center;
   overflow: auto;
-  right: 10px;
-  bottom: 1000px;
-  left: 0px;
-  top: 30px;
-  height: 90vh;
+  /* height: 90vh; */
 }
 #CCVirtualPetInfo {
   background: rgb(208, 163, 181);
@@ -939,35 +917,19 @@ body {
   min-height: 120vh;
 }
 .VirtualPetInfo {
-  width: 50%;
+  /* width: 50%; */
   color: white;
   height: 100vh; /* makes the sun the size of the viewport */
   aspect-ratio: 1/1;
   font-size: 35px;
   background-position: center;
-  bottom: 20px;
-  top: 80px;
-  left: -100px;
-  position: relative;
-  float: right;
 }
-/* #font2 {
-    position: absolute;
-    background-position: top;
-    top: -342px;
-    overflow: auto;
-    width: 90%;
-    left: -330px;
-  } */
+
 #whythepet {
-  width: 60%;
+  /* width: 60%; */
   color: white;
-  height: 100vh;
+  /* height: 100vh; */
   aspect-ratio: 1/1;
-  bottom: 10px;
-  top: 100px;
-  left: -555px;
-  position: absolute;
   font-size: 25px;
   font-family: "Frank Ruhl Libre";
   font-weight: 200;
@@ -975,67 +937,35 @@ body {
 
 #PetShop {
   padding: 10px;
-  width: 100%;
-  position: relative;
+  /* width: 100%; */
   background-position: center;
   overflow: auto;
-  left: 156px;
-  right: 40px;
-  bottom: 120px;
-  height: 100vh;
+  /* height: 100vh; */
   aspect-ratio: 1/1;
 }
 
 #fonttext {
-  width: 50%;
+  /* width: 50%; */
   color: white;
   font-size: 40px;
   background-position: center;
-  bottom: 30px;
-  top: -30px;
-  left: -555px;
-  position: absolute;
-  float: right;
 }
 .joinus {
   background: linear-gradient(to bottom, #dddddd 5%, #e3e3e3 100%);
   background-color: #ffffff;
   border-radius: 35px;
-  display: inline-block;
+  /* display: inline-block; */
   cursor: pointer;
   color: #000000;
   font-family: "Frank Ruhl Libre", serif;
   font-size: 19px;
   padding: 15px 32px;
   text-decoration: none;
-  position: absolute;
-  left: -100px;
-  bottom: 169px;
-  left: -555px;
 }
 .joinusbutton:hover {
   background: linear-gradient(to bottom, #ffe4e1 5%, #f684c2 100%);
   background-color: #d878c8;
   color: #ede9ea;
-}
-.footersection {
-  background-color: #fbd3e4;
-  font-size: 30px;
-  line-height: 1;
-  padding: 20px 10px 0px 10px;
-  text-align: center;
-  font-family: "Frank Ruhl Libre, serif";
-  min-height: 45vh;
-}
-.footersection a {
-  color: white;
-  margin: 10px 20px;
-  text-decoration: none;
-}
-.copyright {
-  color: black;
-  font-size: 25px;
-  padding: 15px 0px;
 }
 
 /* /--------------Dashboard.html CSS begins--------------/ .*/
@@ -1044,7 +974,6 @@ body {
 }
 .image {
   background-image: url(images/DashboardOfficeNew.jpg);
-
   min-height: 100vh;
   background-position: center;
   color: var(--text);
@@ -1062,41 +991,23 @@ body {
 }
 
 .WhatisCalendar {
-  height: 100vh;
   padding: 20px;
   background-color: #301d5c;
-  min-width: 100vh;
 }
+
 .content-calendar {
   font-family: "Frank Ruhl Libre, serif";
   color: #e9e9e9;
   max-width: 600px;
   padding: 20px;
-  /* text-align: center; */
-
-  width: 150%;
+  float: left;
   line-height: 2;
   font-size: 22px;
 }
 
-#calendarimg {
-  padding: 10px;
-  width: 50%;
-  position: absolute;
-  background-position: center;
-  overflow: auto;
-  left: 786px;
-  right: 0px;
-  bottom: -1110px;
-  height: 80vh;
-  aspect-ratio: 1/1;
-  top: 900px;
-}
 .WhatisToDoList {
-  height: 100vh;
   padding: 20px;
   background-color: #301d5c;
-  min-width: 100vh;
 }
 .content-ToDoList {
   font-family: "Frank Ruhl Libre, serif";
@@ -1105,17 +1016,7 @@ body {
   padding: 20px;
   float: right;
   width: 150%;
-  line-height: 2;
   font-size: 22px;
-}
-.imageofnotes {
-  padding: 10px;
-  width: 50%;
-  overflow: auto;
-  left: 786px;
-  right: 0px;
-  bottom: -1110px;
-  height: 70vh;
 }
 /* /---------------------------------------------/
   /------dashboard.html styling ends here----------/
@@ -1248,7 +1149,6 @@ body {
   padding: 20px 10px;
   text-align: center;
   font-family: "Frank Ruhl Libre, serif";
-  min-height: 25vh;
 }
 .footersection a {
   color: white;
@@ -1256,6 +1156,7 @@ body {
   text-decoration: none;
 }
 .copyright {
+  margin: 0;
   color: black;
   font-size: 20px;
   padding: 15px 0px;
