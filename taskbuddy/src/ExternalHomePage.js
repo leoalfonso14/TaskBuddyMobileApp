@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-
-import './index.css'; // Create a separate CSS file for styling
+import React, { useState } from "react";
+import ForgotPasswordModal from "./components/ForgotPasswordModal";
+import "./index.css"; // Create a separate CSS file for styling
 
 const ExternalHomePage = () => {
   const [showModal, setShowModal] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const login = () => {
     // Implement login functionality here
@@ -20,18 +20,22 @@ const ExternalHomePage = () => {
   };
 
   const handleForgotPassword = () => {
-    setShowModal(true);
+    setShowModal(!showModal);
   };
 
-  const handleResetPassword = () => {
-    // Implement password reset functionality here
-  };
+  //const handleResetPassword = () => {};
 
   return (
     <div className="external-homepage">
       <div className="login-container">
         <h2>Login</h2>
-        <input type="text" id="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input
+          type="text"
+          id="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <input
           type="password"
           id="password"
@@ -55,7 +59,7 @@ const ExternalHomePage = () => {
 
       {showModal && (
         <div className="forgot-password-modal">
-          {/* Modal content goes here */}
+          <ForgotPasswordModal />
         </div>
       )}
     </div>

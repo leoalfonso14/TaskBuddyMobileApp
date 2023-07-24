@@ -67,18 +67,24 @@ button {
   background-color: #6c757d; /* Bootstrap secondary color */
 }
 
+/* Add some padding to the overall modal */
+.forgot-password-modal {
+  background-color: white;
+  position: absolute;
+  width: 80%;
+}
+
 /* Add some padding to the modal content */
 .forgot-password-modal .modal-content {
+  text-align: center;
   padding: 20px;
 }
 
 /* Style the close button of the modal */
 .forgot-password-modal .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
   font-size: 24px;
   cursor: pointer;
+  text-align: left !important;
 }
 
 /* Add some pet-themed styles to the modal */
@@ -103,7 +109,7 @@ button {
 
 /* Style the Reset button in the modal */
 .forgot-password-modal #resetBtn {
-  width: 100%;
+  width: 30%;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -113,4 +119,3 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
-

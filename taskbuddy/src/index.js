@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ExternalHomePage from './ExternalHomePage';
-import './index.css'; // Import your custom styles here, if needed
-import firebase from 'firebase/app'; // Import the core Firebase SDK
-import 'firebase/auth'; // Import additional Firebase services if needed
+import React from "react";
+import createRoot from "react-dom";
+import ExternalHomePage from "./ExternalHomePage";
+import "./index.css"; // Import your custom styles here, if needed
+import firebase from "firebase/app"; // Import the core Firebase SDK
+import "firebase/auth"; // Import additional Firebase services if needed
 
 // Replace this config with the one from your Firebase Console
 const firebaseConfig = {
@@ -16,10 +16,9 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-
-ReactDOM.render(
+createRoot.render(
   <React.StrictMode>
     <ExternalHomePage />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
