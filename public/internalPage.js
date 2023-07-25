@@ -108,7 +108,7 @@
 //     .then(() => {
 //       // Sign-out successful.
 //       console.log();
-//       window.location.href = "./externalPage.html";
+//       window.location.href = "./index.html";
 //     })
 //     .catch((error) => {
 //       // An error happened.
