@@ -1,18 +1,11 @@
 /* This is a single-line comment /
 / file name' style.css */
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 body {
   margin: 0;
   background-color: #00011d;
   width: 100vw;
   overflow-x: hidden;
-<<<<<<< Updated upstream
-=======
   overflow-y: hidden;
->>>>>>> Stashed changes
 }
 
 /*Animation for stars */
@@ -907,10 +900,6 @@ body {
   font-size: 30px;
   color: white;
   padding: 40px 0px 0px 120px;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
   width: 100%;
   width: 100vw;
   height: 100vh;
