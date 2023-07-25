@@ -16,8 +16,8 @@ db = firebase.firestore();
 
 //Signs User up
 function signUp() {
-  email = document.getElementById("email").value;
-  password = document.getElementById("password").value;
+  email = document.getElementById("emailBox").value;
+  password = document.getElementById("passwordBox").value;
 
   auth
     .createUserWithEmailAndPassword(email, password)
@@ -29,9 +29,9 @@ function signUp() {
 }
 
 //Logs User in
-function login() {
-  email = document.getElementById("email").value;
-  password = document.getElementById("password").value;
+function signIn() {
+  email = document.getElementById("emailBox").value;
+  password = document.getElementById("passwordBox").value;
 
   auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
     var user = userCredential.user;
@@ -40,110 +40,34 @@ function login() {
   });
 }
 
-//Sets User data in firebase
-function set() {
-  var name = document.getElementById("name").value;
-  var petName = document.getElementById("petName").value;
-  var coins = document.getElementById("coins").value;
-  var UserID = auth.currentUser.uid;
-
-  db.collection("User")
-    .doc(UserID)
-    .set({
-      name: name,
-      petName: petName,
-      coins: coins,
-    })
-    .then(() => {
-      console.log("Success!");
-    })
-    .catch((error) => {
-      console.log("Error!", error);
-    });
+//GoToSignUp
+function goToSignUp() {
+  console.log("Redirecting to SignUpPage");
+  window.location.href = "./signUp.html";
 }
 
-//Updates User data in firebase
-function update() {
-  var name = document.getElementById("name").value;
-  var petName = document.getElementById("petName").value;
-  var coins = document.getElementById("coins").value;
-  var UserID = auth.currentUser.uid;
-
-  db.collection("User")
-    .doc(UserID)
-    .update({
-      name: name,
-      petName: petName,
-      coins: coins,
-    })
-    .then(() => {
-      console.log("Success!");
-    })
-    .catch((error) => {
-      set();
-    });
-}
-
-//Displays User data on the website
-function show() {
-  var UserID = auth.currentUser.uid;
-
-  db.collection("User")
-    .doc(UserID)
-    .get()
-    .then((doc) => {
-      if (doc.exists) {
-        //console.log("Document data: ", doc.data());
-        document.getElementById("nameDisplay").innerHTML = doc.data().name;
-        document.getElementById("petNameDisplay").innerHTML =
-          doc.data().petName;
-        document.getElementById("coinsDisplay").innerHTML = doc.data().coins;
-      } else {
-        console.log("No Such Document");
-        /* Added this part so it removes from the UI the data that was displayed, because if you delete data and then 
-        try to show data it gives the error but is still displaying the data that was displayed earlier and deleted */
-        document.getElementById("nameDisplay").innerHTML = "";
-        document.getElementById("petNameDisplay").innerHTML = "";
-        document.getElementById("coinsDisplay").innerHTML = "";
-      }
-    });
-}
-
-//Deletes User data from Firebase
-function deleteData() {
-  var UserID = auth.currentUser.uid;
-  db.collection("User")
-    .doc(UserID)
-    .delete()
-    .then(() => {
-      console.log("Document Successfully deleted!");
-    })
-    .catch((error) => {
-      console.error("Error Removing document ", error);
-    });
-}
-
-/*When the show password checkbox is clicked the following functions changes the input 
-type to text so that it shows the password, if unchecked it gets turned back into password*/
+/*When the show password icon is clicked the following functions changes the input 
+  type to text so that it shows the password, if unchecked it gets turned back into password*/
 const togglePassword = document.querySelector("#togglePassword");
 togglePassword.addEventListener("click", function () {
   // toggle the type attribute
-  const type = password.getAttribute("type") === "password" ? "text" : "password";
+  const type =
+    password.getAttribute("type") === "password" ? "text" : "password";
   password.setAttribute("type", type);
-  
+
   // toggle the icon
   this.classList.toggle("bi-eye");
 });
 
 function showPassword() {
-  var x = document.getElementById("password");
+  console.log("here");
+  var x = document.getElementById("passwordBox");
   if (x.type === "password") {
     x.type = "text";
   } else {
     x.type = "password";
   }
 }
-
 
 // Forgot Password Modal
 // Get the modal
@@ -174,7 +98,9 @@ window.onclick = function (event) {
 // The function runs when the reset button is clicked
 function resetBtn() {
   let emailReset = document.getElementById("emailReset").value;
-  auth.sendPasswordResetEmail(emailReset).then(() => {
+  auth
+    .sendPasswordResetEmail(emailReset)
+    .then(() => {
       //Sends email to user
       console.log("Email sent!");
       passwordModal.style.display = "none";
