@@ -1,14 +1,10 @@
 /* This is a single-line comment /
 / file name' style.css */
-html {
-  max-width: 1550px !important;
-}
-
 body {
   margin: 0;
   background-color: #00011d;
   width: 100vw;
-  overflow: none;
+  overflow-x: hidden;
 }
 
 /*Animation for stars */
@@ -897,7 +893,6 @@ body {
   font-size: 30px;
   color: white;
   padding: 40px 0px 0px 120px;
-  max-width: 1550px;
   width: 100%;
 }
 .VirtualPetInfo {
