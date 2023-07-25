@@ -1,0 +1,190 @@
+/*-----Virtual.html CSS begins----*/
+body {
+  margin: 0;
+  background-color: #00011d;
+  overflow: none;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+}
+
+#navlist {
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* navlist designing */
+#navlist > a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  font-family: "Bitter", serif;
+  text-align: center;
+  padding: 24px 46px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* navlist link hover effect */
+#navlist > a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navlist > img {
+  float: left;
+}
+
+/* if in Dashboard page the Dashboard part of the nav bar cannot be clicked */
+#noClickNav {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  font-family: "Bitter", serif;
+  text-align: center;
+  padding: 24px 46px;
+  font-size: 30px;
+  margin: 0;
+}
+
+#mainTitle {
+  margin-top: 5px;
+  padding-top: 10px;
+  color: white;
+  float: left;
+  font-size: 40px;
+  font-family: "Bitter", serif;
+  text-decoration: none;
+}
+
+.VirtualPage {
+  overflow: auto;
+}
+.VirtualPet {
+  background-image: url(images/VirtualPetGardenNew.jpg);
+  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  top: 0px;
+  z-index: 10;
+  margin: 100;
+  padding: 0;
+  box-sizing: border-box;
+}
+#VPtext {
+  position: absolute;
+  background-position: center;
+  top: -355px;
+  bottom: 20px;
+  overflow: auto;
+  width: 80%;
+}
+
+.WhatisVirtual {
+  position: relative;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(161, 181, 109, 1) 75%,
+    rgba(149, 168, 100, 1) 87%,
+    rgba(133, 151, 87, 1) 100%
+  );
+}
+#ownerpet {
+  position: absolute;
+  background-position: center;
+  right: 100px;
+  top: 130px;
+  bottom: 20px;
+  overflow: auto;
+  width: 35%;
+}
+/* Apply "Catamaran" font to the text */
+.content-virtual {
+  font-family: "Frank Ruhl Libre", serif;
+  max-width: 600px; /* Set a width appropriate for your content */
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+.dog-animation {
+  position: absolute;
+  top: 70%;
+  right: 20%;
+  transform: translate(50%, -50%);
+  width: 300px; /* Adjust the size of the dog animation */
+  height: 300px; /* Adjust the size of the dog animation */
+  background-image: url("images/TB_11.png"); /* Replace with the path to your dog animation */
+  background-size: cover;
+  animation: moveDog 20s linear infinite;
+}
+
+@keyframes moveDog {
+  0% {
+    transform: translate(100%, -60%);
+  }
+  100% {
+    transform: translate(-100%, -40%);
+  }
+}
+
+.WhyVirtual {
+  height: 100vh;
+  padding: 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(133, 151, 87, 1) 73%,
+    rgba(128, 145, 82, 1) 82%,
+    rgba(117, 133, 73, 1) 89%,
+    rgba(117, 133, 73, 1) 100%
+  );
+  width: 100%;
+}
+
+#gif {
+  padding: 30px 0px 0px 8%;
+}
+
+.content-whyvirtual {
+  font-family: "Frank Ruhl Libre", serif;
+  width: 50%; /* Set a width appropriate for your content */
+  padding: 80px;
+  font-size: 20px;
+  text-align: center;
+  float: right;
+  left: 700px;
+  right: 10;
+  overflow-x: hidden;
+}
+.footersection {
+  background-color: rgba(117, 133, 73, 1);
+  font-size: 33px;
+  line-height: 2;
+  padding: 20px 10px;
+  text-align: center;
+  font-family: "Frank Ruhl Libre, serif";
+}
+.footersection a {
+  color: black;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+.copyright {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  padding: 15px 0px;
+}
+/*---------------------------------------------*/
+/*------EnD of Virtual.html CSS styling----------------*/
+/*-----------------------------------------------*/

@@ -4,7 +4,7 @@ body {
   margin: 0;
   background-color: #00011d;
   width: 100vw;
-  overflow: none;
+  overflow-x: hidden;
 }
 
 /*Animation for stars */
@@ -858,12 +858,12 @@ body {
   height: 100vh; /* makes the sun the size of the viewport */
   aspect-ratio: 1/1;
   font-size: 35px;
+  padding-right: 10px;
 }
 #todolistimg {
   float: left;
   padding: 10px;
-  width: 45%;
-  background-position: center;
+  width: 42%;
 }
 .Joinbutton {
   background: linear-gradient(to bottom, #dddddd 5%, #e3e3e3 100%);
@@ -893,12 +893,14 @@ body {
   font-size: 30px;
   color: white;
   padding: 40px 0px 0px 120px;
+  width: 100%;
 }
 .VirtualPetInfo {
   display: inline-block;
   max-width: 40%;
   color: white;
   font-size: 35px;
+  margin-bottom: 60px;
 }
 
 #whythepet {
@@ -910,7 +912,7 @@ body {
 
 #PetShop {
   width: 35%;
-  padding: 10px;
+  padding: 0px 0px 100px 100px;
   aspect-ratio: 1/1;
 }
 
@@ -992,130 +994,7 @@ body {
   width: 150%;
   font-size: 22px;
 }
-/* /---------------------------------------------/
-  /------dashboard.html styling ends here----------/
-  /-----------------------------------------------*/
-/*-----Virtual.html CSS begins----*/
-.VirtualPage {
-  overflow: auto;
-}
-.VirtualPet {
-  background-image: url(images/VirtualPetGardenNew.jpg);
-  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  color: var(--text);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  top: 0px;
-  z-index: 10;
-  margin: 100;
-  padding: 0;
-  box-sizing: border-box;
-}
-#VPtext {
-  position: absolute;
-  background-position: center;
-  top: -355px;
-  bottom: 20px;
-  overflow: auto;
-  width: 80%;
-}
 
-.WhatisVirtual {
-  position: relative;
-  height: 100vh;
-  padding: 20px;
-  background: rgb(161, 181, 109);
-  background: linear-gradient(
-    180deg,
-    rgba(161, 181, 109, 1) 75%,
-    rgba(149, 168, 100, 1) 87%,
-    rgba(133, 151, 87, 1) 100%
-  );
-}
-#ownerpet {
-  position: absolute;
-  background-position: center;
-  right: 100px;
-  top: 130px;
-  bottom: 20px;
-  overflow: auto;
-  width: 35%;
-}
-/* Apply "Catamaran" font to the text */
-.content-virtual {
-  font-family: "Frank Ruhl Libre", serif;
-  max-width: 600px; /* Set a width appropriate for your content */
-  padding: 20px;
-  text-align: center;
-  font-size: 24px;
-}
-.dog-animation {
-  position: absolute;
-  top: 70%;
-  right: 20%;
-  transform: translate(50%, -50%);
-  width: 300px; /* Adjust the size of the dog animation */
-  height: 300px; /* Adjust the size of the dog animation */
-  background-image: url("images/TB_11.png"); /* Replace with the path to your dog animation */
-  background-size: cover;
-  animation: moveDog 20s linear infinite;
-}
-
-@keyframes moveDog {
-  0% {
-    transform: translate(100%, -60%);
-  }
-  100% {
-    transform: translate(-100%, -40%);
-  }
-}
-
-.WhyVirtual {
-  height: 100vh;
-  padding: 0px;
-  background: rgb(133, 151, 87);
-  background: linear-gradient(
-    180deg,
-    rgba(133, 151, 87, 1) 73%,
-    rgba(128, 145, 82, 1) 82%,
-    rgba(117, 133, 73, 1) 89%,
-    rgba(117, 133, 73, 1) 100%
-  );
-  position: absolute;
-  float: right;
-
-  width: 100%;
-}
-#gif {
-  position: absolute;
-  right: 800px;
-  top: 130px;
-  bottom: 20px;
-  overflow: auto;
-  width: 35%;
-  vertical-align: left;
-  float: left;
-}
-
-.content-whyvirtual {
-  font-family: "Frank Ruhl Libre", serif;
-  width: 50%; /* Set a width appropriate for your content */
-  padding: 80px;
-  font-size: 20px;
-  overflow-x: hidden;
-  text-align: center;
-  vertical-align: middle;
-  float: right;
-  left: 700px;
-  right: 10;
-  overflow-x: hidden;
-}
 .footersection {
   background-color: #fbd3e4;
   font-size: 33px;
@@ -1125,16 +1004,16 @@ body {
   font-family: "Frank Ruhl Libre, serif";
 }
 .footersection a {
-  color: white;
+  color: black;
   margin: 10px 20px;
   text-decoration: none;
 }
 .copyright {
   margin: 0;
-  color: black;
+  color: white;
   font-size: 20px;
   padding: 15px 0px;
 }
-/*---------------------------------------------*/
-/*------EnD of Virtual.html CSS styling----------------*/
-/*-----------------------------------------------*/
+/* /---------------------------------------------/
+  /------dashboard.html styling ends here----------/
+  /-----------------------------------------------*/
