@@ -60,7 +60,7 @@ body {
 
 /* LoginContent */
 #loginContent {
-  padding: 20px;
+  padding: 60px 0px 50px 0px;
 }
 .BoxTitle {
   color: #f2f2f2;
@@ -139,6 +139,7 @@ body {
   padding-right: 5px;
   border-radius: 8px;
   padding: 5px;
+  cursor: pointer;
 }
 
 #forgotPasswordBtn {
