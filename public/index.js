@@ -14,20 +14,6 @@ firebase.initializeApp(firebaseConfig);
 auth = firebase.auth();
 db = firebase.firestore();
 
-//Signs User up
-function signUp() {
-  email = document.getElementById("emailBox").value;
-  password = document.getElementById("passwordBox").value;
-
-  auth
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      var user = userCredential.user;
-      alert("Signed Up");
-      window.location.href = "./internalPage.html";
-    });
-}
-
 //Logs User in
 function signIn() {
   email = document.getElementById("emailBox").value;
@@ -52,8 +38,8 @@ const togglePassword = document.querySelector("#togglePassword");
 togglePassword.addEventListener("click", function () {
   // toggle the type attribute
   const type =
-    password.getAttribute("type") === "password" ? "text" : "password";
-  password.setAttribute("type", type);
+    passwordBox.getAttribute("type") === "password" ? "text" : "password";
+  passwordBox.setAttribute("type", type);
 
   // toggle the icon
   this.classList.toggle("bi-eye");
