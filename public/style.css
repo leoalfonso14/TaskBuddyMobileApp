@@ -1,10 +1,18 @@
 /* This is a single-line comment /
 / file name' style.css */
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 body {
   margin: 0;
   background-color: #00011d;
   width: 100vw;
   overflow-x: hidden;
+<<<<<<< Updated upstream
+=======
+  overflow-y: hidden;
+>>>>>>> Stashed changes
 }
 
 /*Animation for stars */
@@ -585,6 +593,7 @@ body {
   margin-bottom: 100;
   height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .parallax .group {
@@ -758,7 +767,7 @@ body {
   color: white;
   height: 100vh; /* makes the sun the size of the viewport */
   aspect-ratio: 1/1;
-  font-size: 35px;
+
   background-position: center;
   padding: 120px 0px 0px 120px;
   position: absolute;
@@ -773,12 +782,14 @@ body {
     rgba(135, 114, 123, 1) 100%
   );
 
-  min-height: 110vh;
   display: block;
   font-family: "Frank Ruhl Libre", serif;
-  font-size: 30px;
+
   color: white;
   display: block;
+  width: 100vw;
+  height: 100vh;
+  font-size: 30px;
 }
 /* Clear floats after the columns */
 #row::after {
@@ -847,17 +858,20 @@ body {
     rgba(208, 163, 181, 1) 100%
   );
   font-family: "Frank Ruhl Libre", serif;
-  font-size: 30px;
+
   color: white;
   display: block;
+  width: 100vw;
+  height: 100vh;
+  font-size: 30px;
 }
+
 .ToDoList {
   width: 50%;
   float: right;
   color: white;
   height: 100vh; /* makes the sun the size of the viewport */
   aspect-ratio: 1/1;
-  font-size: 35px;
   padding-right: 10px;
 }
 #todolistimg {
@@ -893,19 +907,27 @@ body {
   font-size: 30px;
   color: white;
   padding: 40px 0px 0px 120px;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   width: 100%;
+  width: 100vw;
+  height: 100vh;
+  font-size: 30px;
 }
+
 .VirtualPetInfo {
   display: inline-block;
   max-width: 40%;
   color: white;
-  font-size: 35px;
+
   margin-bottom: 60px;
 }
 
 #whythepet {
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   font-family: "Frank Ruhl Libre";
   font-weight: 200;
 }
@@ -997,22 +1019,35 @@ body {
 
 .footersection {
   background-color: #fbd3e4;
-  font-size: 33px;
+  font-size: 24px;
   line-height: 2;
   padding: 20px 10px;
   text-align: center;
   font-family: "Frank Ruhl Libre, serif";
+  height: 32vh;
 }
-.footersection a {
-  color: black;
+.footersection p {
+  color: white;
   margin: 10px 20px;
   text-decoration: none;
 }
+.socialMedia {
+  display: flex;
+  justify-content: center;
+}
 .copyright {
   margin: 0;
-  color: white;
+  color: black !important;
   font-size: 20px;
   padding: 15px 0px;
+}
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 /* /---------------------------------------------/
   /------dashboard.html styling ends here----------/
