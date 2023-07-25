@@ -3,7 +3,8 @@
 body {
   margin: 0;
   background-color: #00011d;
-  width: 100%;
+  width: 100vw;
+  overflow: none;
 }
 
 /*Animation for stars */
@@ -578,8 +579,8 @@ body {
 .parallax {
   perspective: 1px;
   perspective-origin: center;
-  overflow-x: hidden;
-  overflow-y: initial !important;
+  /* overflow-x: hidden;
+  overflow-y: initial !important; */
   margin-top: 0;
   margin-bottom: 100;
   height: 100vh;
@@ -737,7 +738,6 @@ body {
   background-position: center;
   top: 5px;
   bottom: 20px;
-  overflow: auto;
   width: 50%;
 }
 
@@ -752,11 +752,6 @@ body {
   padding: 10px;
 }
 
-/* Left and right column */
-.column.side {
-  width: 25%;
-}
-
 /* Middle column */
 .column.middle {
   width: 50%;
@@ -765,10 +760,7 @@ body {
   aspect-ratio: 1/1;
   font-size: 35px;
   background-position: center;
-  bottom: 10px;
-  top: 30px;
-  right: 10px;
-  left: 130px;
+  padding: 120px 0px 0px 120px;
   position: absolute;
   z-index: 1;
 }
@@ -822,16 +814,10 @@ body {
 }
 
 #infoimg {
-  float: left;
+  float: right;
   padding: 10px;
-  width: 50%;
-  position: relative;
-  background-position: center;
-  overflow: auto;
-  left: 1026px;
-  right: 40px;
-  bottom: 50px;
-  height: 100vh; /* makes the sun the size of the viewport */
+  width: 45%;
+  height: 90vh; /* makes the sun the size of the viewport */
   aspect-ratio: 1/1;
   animation: 5s linear 0s alternate sun-rise;
   transform: translateY(0); /* Set the default position for the sun */
@@ -855,14 +841,11 @@ body {
   }
 }
 #CCToDoList {
-  background: rgb(139, 114, 124);
   background: linear-gradient(
     180deg,
     rgba(139, 114, 124, 1) 40%,
     rgba(208, 163, 181, 1) 100%
   );
-  min-height: 110vh;
-  display: block;
   font-family: "Frank Ruhl Libre", serif;
   font-size: 30px;
   color: white;
@@ -870,11 +853,17 @@ body {
 }
 .ToDoList {
   width: 50%;
+  float: right;
   color: white;
   height: 100vh; /* makes the sun the size of the viewport */
   aspect-ratio: 1/1;
   font-size: 35px;
-  /* background-position: center; */
+}
+#todolistimg {
+  float: left;
+  padding: 10px;
+  width: 45%;
+  background-position: center;
 }
 .Joinbutton {
   background: linear-gradient(to bottom, #dddddd 5%, #e3e3e3 100%);
@@ -893,63 +882,38 @@ body {
   background-color: #d878c8;
   color: #ede9ea;
 }
-#todolistimg {
-  float: left;
-  padding: 10px;
-  /* width: 50%; */
-  background-position: center;
-  overflow: auto;
-  /* height: 90vh; */
-}
+
 #CCVirtualPetInfo {
-  background: rgb(208, 163, 181);
   background: linear-gradient(
     180deg,
     rgba(208, 163, 181, 1) 35%,
     rgba(254, 210, 227, 1) 100%
   );
-  min-height: 110vh;
-  display: block;
   font-family: "Frank Ruhl Libre", serif;
   font-size: 30px;
   color: white;
-  display: block;
-  min-height: 120vh;
+  padding: 40px 0px 0px 120px;
 }
 .VirtualPetInfo {
-  /* width: 50%; */
+  display: inline-block;
+  max-width: 40%;
   color: white;
-  height: 100vh; /* makes the sun the size of the viewport */
-  aspect-ratio: 1/1;
   font-size: 35px;
-  background-position: center;
 }
 
 #whythepet {
-  /* width: 60%; */
   color: white;
-  /* height: 100vh; */
-  aspect-ratio: 1/1;
-  font-size: 25px;
+  font-size: 35px;
   font-family: "Frank Ruhl Libre";
   font-weight: 200;
 }
 
 #PetShop {
+  width: 35%;
   padding: 10px;
-  /* width: 100%; */
-  background-position: center;
-  overflow: auto;
-  /* height: 100vh; */
   aspect-ratio: 1/1;
 }
 
-#fonttext {
-  /* width: 50%; */
-  color: white;
-  font-size: 40px;
-  background-position: center;
-}
 .joinus {
   background: linear-gradient(to bottom, #dddddd 5%, #e3e3e3 100%);
   background-color: #ffffff;

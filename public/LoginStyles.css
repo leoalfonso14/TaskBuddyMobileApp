@@ -1,5 +1,5 @@
 body {
-  background-image: url(images/office2.png);
+  background-image: url(images/office3.png);
   margin: 0;
 }
 
@@ -88,7 +88,7 @@ body {
   background-color: white;
   max-width: 30%;
   max-height: 60%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 #loginBox p {
@@ -114,7 +114,7 @@ body {
 #emailBox {
   padding: 5px;
   margin-bottom: 20px;
-  width: 80%;
+  width: 85%;
 }
 
 #password {
@@ -130,7 +130,7 @@ body {
 #passwordBox,
 #passwordBoxConfirm {
   padding: 5px;
-  width: 80%;
+  width: 88%;
   margin-bottom: 20px;
 }
 
@@ -166,7 +166,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   height: 30px;
-  width: 80%;
+  width: 85%;
 }
 
 #signUp {
