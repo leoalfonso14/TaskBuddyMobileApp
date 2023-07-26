@@ -45,16 +45,6 @@ togglePassword.addEventListener("click", function () {
   this.classList.toggle("bi-eye");
 });
 
-function showPassword() {
-  console.log("here");
-  var x = document.getElementById("passwordBox");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-
 // Forgot Password Modal
 // Get the modal
 var passwordModal = document.getElementById("forgotPasswordModal");
