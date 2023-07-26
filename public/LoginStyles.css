@@ -11,7 +11,7 @@ body {
 #navlist {
   background-color: #00011d;
   overflow: hidden;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 /* navlist designing */
