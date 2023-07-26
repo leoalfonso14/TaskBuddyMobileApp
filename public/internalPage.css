@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins :400, 700, 600, 800");
+body {
+  overflow-x: hidden;
+}
+.InternalPage {
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.task-buddy {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: 33px;
+  letter-spacing: 0.24px;
+  line-height: 22.5px;
+  margin-top: -1px;
+  min-height: 31px;
+  width: 294px;
+}
+.side-nav {
+  align-items: flex-start;
+  background-color: var(--haiti);
+  border-radius: 7.51px;
+  box-shadow: 0px, 9.38px, 93.85px #00000026;
+  display: flex;
+  flex-direction: column;
+  height: 1020px;
+  justify-content: start;
+  left: 0;
+  padding: 30.03px 22.52px;
+  position: absolute;
+  top: 0;
+  width: 383px;
+}
+
+.brand-nav-list {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 45.05px;
+  position: relative;
+  font-size: 33px;
+}
+.frame29 .nav {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.nav-list {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15.02px;
+}
+
+.frame29 .nav-item-5 {
+  align-items: center;
+  border-radius: 3.75px;
+  display: flex;
+  padding: 0px 7.51px;
+  position: relative;
+  width: 259.95px;
+}
+
+.nav-item-1 {
+  background-color: var(--raven);
+  flex: 0 0 auto;
+}
+
+.leading-icon-nav-link {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.frame29 .leading-icon-8 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 7.51px;
+  position: relative;
+}
+
+.iconToDoList {
+  position: relative;
+  color: white;
+}
+
+.frame29 .nav-link-8 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 7.51px;
+  position: relative;
+}
+
+.dashboard {
+  letter-spacing: 0.15px;
+  line-height: 22.5px;
+  margin-top: -0.94px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.iconPet {
+  position: relative;
+  color: white;
+}
+
+.nav-item-2 {
+  height: 45.05px;
+}
+
+.iconAccount {
+  position: relative;
+
+  color: white;
+}
+
+.iconCalendar {
+  position: relative;
+
+  color: white;
+}
+.leading-icon {
+  align-items: center;
+  display: flex;
+  height: 45.05px;
+  justify-content: center;
+  padding: 7.51px;
+  position: relative;
+  width: 45.05px;
+}
+.dashboardIcon {
+  position: relative;
+
+  color: #ffffff;
+}
+
+.nav-link {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  padding: 7.51px;
+}
+.iconSettings {
+  position: relative;
+  color: white;
+}
+
+.nav-brand {
+  align-items: center;
+}
+
+.nav-brand {
+  align-items: center;
+  display: inline-flex;
+  gap: 15.02px;
+  justify-content: center;
+}
+
+.logout-toggle {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 22.52px;
+  position: relative;
+}
+
+.nav-item-3 {
+  flex: 0 0 auto;
+  justify-content: space-between;
+}
+
+.trailing-icon {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.toggle {
+  align-items: center;
+  background-color: var(--raven);
+  border-radius: 93.85px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 15.02px;
+  justify-content: center;
+  padding: 1.88px 3.75px;
+  position: relative;
+}
+
+.ellipse-1 {
+  background-color: var(--porcelain);
+  border-radius: 7.51px;
+  height: 15.02px;
+  position: relative;
+  width: 15.02px;
+}
+
+.on {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  line-height: 18.8px;
+  margin-top: -0.94px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+.iconLightMode {
+  position: relative;
+  color: white;
+}
+
+.nav-item-4 {
+  background-color: #5b54c9;
+  flex: 0 0 auto;
+}
+
+.iconLogout {
+  color: white;
+  position: relative;
+}
+
+/* end side nav bar  */
+
+.image-1 {
+  height: 1079px;
+  left: 320px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1947px;
+}
+
+.title {
+  color: var(--haiti);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-weight: 800;
+  left: 806px;
+  letter-spacing: 0.9px;
+  line-height: 22.5px;
+  mix-blend-mode: hard-light;
+  position: absolute;
+  top: 520px;
+  width: 1161px;
+}
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
