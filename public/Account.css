@@ -1,0 +1,278 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 80vh;
+  width: 80vw;
+}
+.sidenav {
+  height: 110vh;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(20 25 59);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 5px 5px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  font-size: 25px;
+  font-family: var(--font-family-poppins);
+}
+.sidenav p {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  font-size: 25px;
+  font-family: var(--font-family-poppins);
+
+  font-weight: 800;
+}
+
+.sidenav a:hover {
+  background-color: rgb(164, 90, 189);
+}
+.logout {
+  position: relative;
+  top: 345px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+.title {
+  letter-spacing: 0.3px;
+  line-height: 45px;
+  position: relative;
+  left: 22%;
+  font-family: var(--font-family-poppins);
+  font-size: 30px;
+}
+#place {
+  letter-spacing: 0.3px;
+  line-height: 0px;
+  position: relative;
+  left: 22%;
+  font-family: var(--font-family-poppins);
+  font-size: 25px;
+}
+#email {
+  letter-spacing: 0.3px;
+  line-height: 0px;
+  position: relative;
+  left: 22%;
+  font-family: var(--font-family-poppins);
+  font-size: 25px;
+}
+#AccountsConnected {
+  letter-spacing: 0.3px;
+  line-height: 30px;
+  position: relative;
+  left: 22%;
+  font-family: var(--font-family-poppins);
+  font-size: 25px;
+}
+#FullNameBox {
+  border-radius: 40px;
+  padding: 25px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 70%;
+  position: relative;
+  left: 22%;
+  border: none;
+}
+#EmailBox {
+  border-radius: 40px;
+  padding: 25px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 70%;
+  position: relative;
+  left: 22%;
+  border: none;
+}
+#GoogleBox {
+  border-radius: 40px;
+  padding: 30px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 70%;
+  position: relative;
+  left: 22%;
+  border: none;
+  display: block;
+}
+#SafariBox {
+  border-radius: 40px;
+  padding: 30px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 70%;
+  position: relative;
+  left: 22%;
+  border: none;
+  top: -100px;
+  display: block;
+}
+#google {
+  height: 35px;
+  left: 330px;
+  position: relative;
+  top: -165px;
+  width: 45px;
+}
+
+#apple {
+  height: 38px;
+  left: 330px;
+  position: relative;
+  top: -270px;
+  width: 45px;
+}
+.UsersInfoGoggle {
+  left: 380px;
+  letter-spacing: 0.16px;
+  line-height: 22.5px;
+  position: relative;
+  top: -55px;
+  white-space: nowrap;
+  width: 186px;
+  font-family: var(--font-family-poppins);
+  font-size: 15px;
+}
+.UsersInfoSafari {
+  left: 380px;
+  letter-spacing: 0.16px;
+  line-height: 22.5px;
+  position: relative;
+  top: -155px;
+  white-space: nowrap;
+  width: 186px;
+  font-family: var(--font-family-poppins);
+  font-size: 15px;
+}
+.DisconnectGoogle {
+  left: 1122px;
+  letter-spacing: 0.15px;
+  position: relative;
+  top: -140px;
+  white-space: nowrap;
+  width: 100px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 15px;
+}
+.rectangle1 {
+  background-color: #5f5d5d;
+  border-radius: 10px;
+  height: 45px;
+  left: 1104px;
+  position: relative;
+  top: -105px;
+  width: 120px;
+}
+.rectangle2 {
+  background-color: #5f5d5d;
+  border-radius: 10px;
+  height: 45px;
+  left: 1104px;
+  position: relative;
+  top: -205px;
+  width: 120px;
+}
+.rectangle3 {
+  background-color: #5f5d5d;
+  border-radius: 10px;
+  height: 45px;
+  left: 1075px;
+  position: relative;
+  top: -55px;
+  width: 120px;
+}
+.rectangle4 {
+  background-color: #5f5d5d;
+  border-radius: 10px;
+  height: 45px;
+  left: 1075px;
+  position: relative;
+  top: -55px;
+  width: 120px;
+}
+.DisconnectSafari {
+  left: 1120px;
+  letter-spacing: 0.15px;
+  position: relative;
+  top: -240px;
+  white-space: nowrap;
+  width: 100px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 15px;
+}
+.EditName {
+  left: 1114px;
+  letter-spacing: 0.15px;
+  position: relative;
+  top: -94px;
+  white-space: nowrap;
+  width: 100px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 20px;
+}
+.EditEmail {
+  left: 1114px;
+  letter-spacing: 0.15px;
+  position: relative;
+  top: -94px;
+  white-space: nowrap;
+  width: 100px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 20px;
+}
+
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
