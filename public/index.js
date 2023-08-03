@@ -21,7 +21,6 @@ function signIn() {
 
   auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
     var user = userCredential.user;
-    console.log(user);
     alert("Logged In " + user.email);
     window.location.href = "./internalPage.html";
   });
