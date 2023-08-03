@@ -18,12 +18,43 @@ db = firebase.firestore();
 function signUp() {
   email = document.getElementById("emailBox").value;
   password = document.getElementById("passwordBox").value;
+  confirmPassword = document.getElementById("passwordBoxConfirm").value;
 
-  auth
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      var user = userCredential.user;
-      alert("Signed Up");
-      window.location.href = "./internalPage.html";
-    });
+  if (password === confirmPassword) {
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        var user = userCredential.user;
+        alert("Signed Up");
+        window.location.href = "./internalPage.html";
+      });
+  } else {
+    alert("Passwords do not match. Please try again");
+  }
 }
+
+/*When the show password icon is clicked the following functions changes the input 
+  type to text so that it shows the password, if unchecked it gets turned back into password*/
+const togglePassword = document.querySelector("#togglePassword");
+togglePassword.addEventListener("click", function () {
+  // toggle the type attribute
+  const type =
+    passwordBox.getAttribute("type") === "password" ? "text" : "password";
+  passwordBox.setAttribute("type", type);
+
+  // toggle the icon
+  this.classList.toggle("bi-eye");
+});
+
+const togglePassword2 = document.querySelector("#togglePassword2");
+togglePassword2.addEventListener("click", function () {
+  // toggle the type attribute
+  const type2 =
+    passwordBoxConfirm.getAttribute("type") === "password"
+      ? "text"
+      : "password";
+  passwordBoxConfirm.setAttribute("type", type2);
+
+  // toggle the icon
+  this.classList.toggle("bi-eye");
+});
