@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
     
     <link rel="stylesheet" href="internalPage.css" />
     <link
@@ -18,168 +25,25 @@
     <title>Home Page</title>
   </head>
 
+  <!-- Body of the internal page -->
+  <body class="backgroundimg">
+    <div class="sidenav">
+      <p  class= "title2" href="#Dashboard"> TaskBuddy </p>
+      <a href="internalPage.html"><i class="fa fa-home" aria-hidden="true"></i></i> Dashboard </a>
+      <a href="#ToDoLists"><i class="fa fa-pencil-square" aria-hidden="true"></i></i> ToDoList </a>
+      <a href="#Calendar"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></i> Calendar </a>
+      <a href="#VirtualPet"
+        ><i class="fa fa-paw" aria-hidden="true"></i> VirtualPet
+      </a>
+      <a href="Account.html"><i class="fa fa-user" aria-hidden="true"></i></i> Account </a>
+      <a href="Security.html"><i class="fa fa-cogs" aria-hidden="true"></i> Settings </a>
+      <a href="" class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+    </div>  
 
-<!-- Body of the internal page -->
-  <body>
-  <div class= InternalPage > 
-    <div class="side-nav">
-      <div class="task-buddy"> TaskBuddy</div>
-      <div class="brand-nav-list">
-          <div class ="nav-brand nav"></div>
-
-          <div class ="nav-list nav">
-              <article class ="nav-item nav">
-                  <div class="leading-icon-nav-link">
-                      <div class ="leading-icon-nav-link">
-                          <div class="dashboardIcon"> 
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
-                            <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707L7.293 1.5Z"/>
-                            <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9.293Zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z"/>
-                          </svg>
-                        </div>
-                          </div>
-                          <div class="nav-link nav">
-                          <div class="dashboard poppins-normal-porcelain-15px">Dashboard</div>
-                      </div>
-                  </div>
-              </article>
-
-              <article class="nav-item-1 nav-item-5">
-                  <div class="leading-icon-nav-link">
-                      <div class="leading-icon-8">
-                        <div class="iconToDoList">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-check-fill" viewBox="0 0 16 16">
-                          <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z"/>
-                          <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5Zm6.769 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
-                        </svg>
-                      </div>
-                      </div>
-                      <div class="nav-link-8">
-                          <div class="dashboard poppins-normal-porcelain-15px">To do List</div>
-                      </div>
-                  </div>
-              </article>
-
-              <article class="nav-item nav">
-                  <div class="leading-icon-nav-link">
-                      <div class="leading-icon-8">
-                        <div class="iconCalendar"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-heart-fill" viewBox="0 0 16 16">
-                          <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5ZM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
-                        </svg>
-                      </div>
-                      </div>
-                      <div class="nav-link-8">
-                          <div class="dashboard poppins-normal-porcelain-15px">Calendar</div>
-                      </div>
-                  </div>
-              </article>
-
-              <article class="nav-item nav">
-                  <div class="leading-icon-nav-link"> 
-                      <div class="leading-icon-8">
-                          <!-- <img class="document" src="image.png" alt="Document"/> -->
-                          <div class="iconPet"> 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                          </div>
-                      </div>
-                      <div class="nav-link-8">
-                          <div class="dashboard poppins-normal-porcelain-15px">Virtual Pet</div>
-                      </div>
-                  </div>
-              </article>
-
-              <article class="nav-item-2 nav-item-5">
-                  <div class="leading-icon-nav-link">
-                      <div class="leading-icon-8">
-                          <!-- <img class="x3-user" src="3-user.svg" alt="3 User"/> -->
-                          <div class="iconAccount">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                            </svg>
-                          </div>
-
-                      </div>
-                      <div class="nav-link-8">
-                          <div class="dashboard poppins-normal-porcelain-15px">Account</div>
-                      </div>
-                  </div>
-              </article>
-                              
-              <article class="nav-item nav">
-                  <div class="leading-icon-nav-link">
-                      <div class="leading-icon-8">
-                              <!-- <img class="setting" src="setting.svg" alt="Setting"/> -->
-                      <div class="iconSettings"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                          <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                        </svg>
-                      </div>
-                      </div>
-                      <div class="nav-link-8">
-                          <div class="dashboard poppins-normal-porcelain-15px">Settings</div>
-                      </div>
-                  </div>
-              </article>
-
-              <article class="nav-item nav"></article>
-          </div>
-      </div>
-
-
-      <div class="logout-toggle">
-          <article class="nav-item-3 nav-item-5">
-              <div class="leading-icon-nav-link">
-                  <div class="leading-icon-8">
-                      <!-- <img class="moon" src="moon.svg" alt="moon"/> -->
-                      <div class="iconLightMode"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
-                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-                        </svg>
-                      </div>
-                  </div>
-                  <div clas="nav-link-8">
-                      <div class="dashboard poppins-normal-porcelain-15px">Light Mode</div>
-                  </div>
-              </div>
-
-              <div class="trailing-icon">
-                  <div class="trailing-icon">
-                      <div class="toggle">
-                          <div class="ellipse-1"></div>
-                              <div class="on"> ON</div> 
-                      </div>
-                  </div>
-              </div>
-          </article>
-
-          <article class="nav-item-4 nav-item-5">
-              <div class="leading-icon-nav-link">
-                  <div class="leading-icon-8">
-                      <!-- <img class="logout" src="logout.svg" alt="Logout"/> -->
-                      <div class="iconLogout"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-closed-fill" viewBox="0 0 16 16">
-                          <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1h8zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                        </svg>
-                      </div>
-                  </div>
-                  <div class="nav-link-8">
-                      <div class="dashboard poppins-normal-porcelain-15px">Logout</div>
-                  </div>
-              </div>
-          </article>
-          
-      </div>
-  </div>
-  <img class="image-1" src="images/DashboardOffice.jpg" alt="dashboardimg"/> 
-  <h1 class="title"> Welcome USER </h1>
-</div>
-    
-</body>
-</html>
-  </body> 
+    <div class="InternalPage">
+      <h1 class="title">Welcome USER</h1>
+    </div>
+  </body>
 
   <!--Scripts for firebase connections-->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
