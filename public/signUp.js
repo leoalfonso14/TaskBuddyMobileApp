@@ -25,7 +25,7 @@ function signUp() {
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         var user = userCredential.user;
-        alert("Signed Up");
+        // alert("Signed Up");
         window.location.href = "./internalPage.html";
       });
   } else {
