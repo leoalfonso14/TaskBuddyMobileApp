@@ -11,7 +11,7 @@ body {
 #navlist {
   background-color: #00011d;
   overflow: hidden;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 /* navlist designing */
@@ -60,7 +60,7 @@ body {
 
 /* LoginContent */
 #loginContent {
-  padding: 20px;
+  padding: 60px 0px 50px 0px;
 }
 .BoxTitle {
   color: #f2f2f2;
@@ -139,6 +139,7 @@ body {
   padding-right: 5px;
   border-radius: 8px;
   padding: 5px;
+  cursor: pointer;
 }
 
 #forgotPasswordBtn {
@@ -271,14 +272,19 @@ svg {
   text-align: center;
   font-family: "Frank Ruhl Libre, serif";
 }
-.footersection a {
+.footersection p {
   color: white;
   margin: 10px 20px;
   text-decoration: none;
 }
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+}
 .copyright {
   margin: 0;
-  color: black;
+  color: black !important;
   font-size: 20px;
   padding: 15px 0px;
 }
