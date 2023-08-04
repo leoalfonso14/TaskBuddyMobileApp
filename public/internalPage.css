@@ -15,30 +15,6 @@ body {
   left: -10px;
 }
 
-/* .InternalPage {
-  height: 110vh;
-  width: 110vw;
-  background-image: url(images/DashboardOffice.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0px;
-  top: -10px;
-  left: -10px;
-} */
-
-/* .task-buddy {
-  color: var(--white);
-  font-family: var(--font-family-poppins);
-  font-size: 33px;
-  letter-spacing: 0.24px;
-  line-height: 22.5px;
-  margin-top: -1px;
-  min-height: 31px;
-  width: 294px;
-} */
-
 .sidenav {
   height: 110vh;
   width: 15%;
@@ -49,6 +25,7 @@ body {
   background-color: rgb(20 25 59);
   overflow-x: hidden;
   padding-top: 20px;
+  overflow-y: none;
 }
 
 .sidenav a {
@@ -77,7 +54,7 @@ body {
 }
 .logout {
   position: relative;
-  top: 250px;
+  top: 38%;
 }
 @media screen and (max-height: 450px) {
   .sidenav {
