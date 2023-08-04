@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    
+    <link rel="stylesheet" href="internalPage.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon.io/favicon-16x16.png"
+    />
+    <!-- <script src="internalPage.js"></script> -->
+    <title>Home Page</title>
+  </head>
+
+  <!-- Body of the internal page -->
+  <body class="backgroundimg">
+    <div class="sidenav">
+      <p  class= "title2" href="#Dashboard"> TaskBuddy </p>
+      <a href="internalPage.html"><i class="fa fa-home" aria-hidden="true"></i></i> Dashboard </a>
+      <a href="#ToDoLists"><i class="fa fa-pencil-square" aria-hidden="true"></i></i> ToDoList </a>
+      <a href="#Calendar"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></i> Calendar </a>
+      <a href="#VirtualPet"
+        ><i class="fa fa-paw" aria-hidden="true"></i> VirtualPet
+      </a>
+      <a href="Account.html"><i class="fa fa-user" aria-hidden="true"></i></i> Account </a>
+      <a href="Security.html"><i class="fa fa-cogs" aria-hidden="true"></i> Settings </a>
+      <a href="" class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+    </div>  
+
+    <div class="InternalPage" style="display: none;">
+      <h1 class="title">Welcome &nbsp<b class="userTitle"> USER</b></h1>
+    </div>
+  </body>
+
+  <!--Scripts for firebase connections-->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="internalPage.js"></script>
+</html>
