@@ -72,25 +72,21 @@ body {
 }
 /* end side nav bar  */
 
+#icons {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  justify-content: right;
+}
+
 .img {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 85%;
 }
 
 .storeIcon {
-  width: 5%;
-  height: auto;
-  position: absolute;
-  top: 10px;
-  right: 5%;
-}
-
-.vetIcon {
-  width: 5%;
-  height: auto;
-  position: absolute;
-  top: 10px;
-  right: 10%;
+  margin-right: 15px;
 }
 
 .container {
@@ -103,6 +99,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-top: 110px;
   opacity: 90%;
 }
 
