@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
   display: flex;
   flex-direction: row;
   margin: 0px;
@@ -51,7 +52,7 @@ body {
   height: 54%;
 }
 #botNav {
-  height: 40%;
+  height: 41.4%;
   display: flex;
   align-items: flex-end;
 }

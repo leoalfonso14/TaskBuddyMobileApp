@@ -18,10 +18,8 @@ db = firebase.firestore();
 //CHECK IF USER IS LOGGED IN - IF NOT SEND TO REGISTRATION/SIGNIN PAGE
 //IF LOGGED IN THEN DISPLAY PAGE WITH USERS STUFF
 var auth = firebase.auth();
-console.log("auth", auth);
 
 auth.onAuthStateChanged((user) => {
-  console.log("user", user);
   if (user == null) {
     // Sign-out successful.
     console.log("Sign-out successful");
@@ -32,7 +30,6 @@ auth.onAuthStateChanged((user) => {
     // LOAD ALL THE USER DATA THAT IS NEEDED
     // LOGIC TO DISPLAY NAME BASED ON EMAIL - IF USER HAS ALREADY ENTERED A NAME IN THE SETTINGS CHOSE THAT
     var email = user.email;
-    console.log("email", email);
     var position = email.search("@");
     var tempName = email.substring(0, position);
     var userTitle = document.getElementsByClassName("userTitle")[0];
