@@ -33,7 +33,24 @@ auth.onAuthStateChanged((user) => {
     var position = email.search("@");
     var tempName = email.substring(0, position);
     var userTitle = document.getElementsByClassName("userTitle")[0];
-    userTitle.textContent = tempName;
+    var UserID = user.uid;
+    let nickName;
+    db.collection("users")
+      .doc(UserID)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          //console.log("Document data: ", doc.data());
+          nickName = doc.data().fullName;
+        } else {
+          console.log("No Such Document");
+        }
+      });
+    if (nickName) {
+      userTitle.textContent = nickName;
+    } else {
+      userTitle.textContent = tempName;
+    }
   }
 });
 
