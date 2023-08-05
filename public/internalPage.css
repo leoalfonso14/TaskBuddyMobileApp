@@ -1,107 +1,86 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins :400, 700, 600, 800");
 body {
   overflow-x: hidden;
-}
-.backgroundimg {
-  height: 110vh;
-  width: 110vw;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
   background-image: url(images/DashboardOffice.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0px;
-  top: -10px;
-  left: -10px;
+  padding: 0px;
+  display: flex;
+  margin: 0px;
 }
 
-/* .InternalPage {
-  height: 110vh;
-  width: 110vw;
-  background-image: url(images/DashboardOffice.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0px;
-  top: -10px;
-  left: -10px;
-} */
-
-/* .task-buddy {
-  color: var(--white);
-  font-family: var(--font-family-poppins);
-  font-size: 33px;
-  letter-spacing: 0.24px;
-  line-height: 22.5px;
-  margin-top: -1px;
-  min-height: 31px;
-  width: 294px;
-} */
-
+/* General styles */
 .sidenav {
-  height: 110vh;
+  height: 100vh; /* Change height to 100vh to occupy full height of the screen */
   width: 15%;
-  position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(20 25 59);
+  background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
+  margin: 0px;
 }
 
-.sidenav a {
+.sidenav a,
+.sidenav p {
   padding: 5px 5px 10px 32px;
   text-decoration: none;
   font-size: 25px;
   color: white;
   display: block;
-  font-size: 25px;
   font-family: var(--font-family-poppins);
 }
+
 .sidenav p {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  font-size: 25px;
-  font-family: var(--font-family-poppins);
-  font-family: var(--font-family-poppins);
   font-weight: 800;
 }
 
 .sidenav a:hover {
   background-color: rgb(164, 90, 189);
 }
-.logout {
-  position: relative;
-  top: 250px;
-}
-@media screen and (max-height: 450px) {
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
   .sidenav {
-    padding-top: 15px;
+    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    height: auto; /* Remove fixed height to accommodate content */
+    position: relative; /* Remove fixed positioning to allow scrolling */
   }
-  .sidenav a {
-    font-size: 18px;
+
+  .sidenav a,
+  .sidenav p {
+    font-size: 18px; /* Reduce font size on smaller devices */
   }
 }
 
+#topNav {
+  height: 54%;
+}
+#botNav {
+  height: 40%;
+  display: flex;
+  align-items: flex-end;
+}
+.logout {
+  width: 100%;
+}
 /* end side nav bar  */
+
+.InternalPage {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .title {
   color: var(--haiti);
   font-family: var(--font-family-poppins);
-  font-size: 50px;
+  font-size: 45px;
   letter-spacing: 0.9px;
   line-height: 22.5px;
   mix-blend-mode: hard-light;
-  position: relative;
-  top: 420px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 :root {
   --black: rgba(0, 0, 0, 1);

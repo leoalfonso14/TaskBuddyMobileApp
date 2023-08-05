@@ -14,27 +14,22 @@ firebase.initializeApp(firebaseConfig);
 auth = firebase.auth();
 db = firebase.firestore();
 
-//var user = userCredential.user;
-
 // todo: DISPLAY LOADER
 //CHECK IF USER IS LOGGED IN - IF NOT SEND TO REGISTRATION/SIGNIN PAGE
 //IF LOGGED IN THEN DISPLAY PAGE WITH USERS STUFF
 var auth = firebase.auth();
-console.log("auth", auth);
-let email;
+
 auth.onAuthStateChanged((user) => {
-  console.log("user", user);
   if (user == null) {
     // Sign-out successful.
     console.log("Sign-out successful");
     window.location.href = "./index.html";
   } else {
     var internalPage = document.getElementsByClassName("InternalPage")[0];
-    internalPage.style.display = "block";
+    internalPage.style.display = "flex";
     // LOAD ALL THE USER DATA THAT IS NEEDED
     // LOGIC TO DISPLAY NAME BASED ON EMAIL - IF USER HAS ALREADY ENTERED A NAME IN THE SETTINGS CHOSE THAT
-    email = user.email;
-    console.log("email", email);
+    var email = user.email;
     var position = email.search("@");
     var tempName = email.substring(0, position);
     var userTitle = document.getElementsByClassName("userTitle")[0];
@@ -51,3 +46,18 @@ logoutClick.addEventListener("click", function () {
 function signOut() {
   firebase.auth().signOut();
 }
+
+// $("#os-phrases > h2")
+//   .css("opacity", 1)
+//   .lettering("words")
+//   .children("span")
+//   .lettering()
+//   .children("span")
+//   .lettering();
+
+// // Progress bars
+// $(document).ready(function () {
+//   $(".progress .progress-bar").css("width", function () {
+//     return $(this).attr("aria-valuenow") + "%";
+//   });
+// });

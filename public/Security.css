@@ -141,35 +141,22 @@ body {
   left: 22%;
   border: none;
 }
-.rectangle4 {
-  background-color: #151939;
-  border-radius: 10px;
-  height: 45px;
-  left: 294px;
-  position: relative;
-  top: 30px;
-  width: 150px;
-}
-.SaveChanges {
-  left: 314px;
-  letter-spacing: 0.15px;
-  position: relative;
-  top: -5px;
-  white-space: nowrap;
-  width: 100px;
-  font-family: var(--font-family-poppins);
-  color: white;
-  font-size: 15px;
-}
 
-.rectangle5 {
+.rectangle {
   background-color: #151939;
   border-radius: 10px;
-  height: 45px;
-  left: 294px;
+  left: 22%;
   position: relative;
   top: 30px;
   width: 150px;
+  color: white;
+  white-space: nowrap;
+  font-family: var(--font-family-poppins);
+  letter-spacing: 0.15px;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 40px;
 }
 
 .DeleteAccountBox {

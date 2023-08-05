@@ -1,0 +1,17 @@
+External:
+	index.html
+	login.html
+	signUp.html
+	virtual.html = external pet page
+	dashboard.html = external dashboard page
+
+Internal:
+	InternalPage.html
+	Account.html
+	Security.html
+	ToDoList.html
+	calendar.html
+	Virtual Pet:
+		VirtualPetPage.html
+		Store.html
+		PetsHealth.html

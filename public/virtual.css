@@ -152,13 +152,13 @@ body {
 }
 
 #gif {
-  padding: 30px 0px 0px 8%;
+  padding: 15px 0px 0px 15px;
 }
 
 .content-whyvirtual {
   font-family: "Frank Ruhl Libre", serif;
   width: 50%; /* Set a width appropriate for your content */
-  padding: 80px;
+  padding-right: 60px;
   font-size: 20px;
   text-align: center;
   float: right;

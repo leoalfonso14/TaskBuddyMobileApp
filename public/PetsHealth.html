@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="PetsHealth.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon.io/favicon-16x16.png"
+    />
+    <title>Pet's Health Page</title>
+  </head>
+
+  <body>
+    <div class="sidenav">
+      <p class="title2" href="#Dashboard">TaskBuddy</p>
+      <a href="internalPage.html"
+        ><i class="fa fa-home" aria-hidden="true"></i> Dashboard
+      </a>
+      <a href="ToDoList.html"
+        ><i class="fa fa-pencil-square" aria-hidden="true"></i> ToDoList
+      </a>
+      <a href="calendar.html"
+        ><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Calendar
+      </a>
+      <a href="VirtualPetPage.html"
+        ><i class="fa fa-paw" aria-hidden="true"></i> VirtualPet
+      </a>
+      <a href="Account.html"
+        ><i class="fa fa-user" aria-hidden="true"></i> Account
+      </a>
+      <a href="" class="logout"
+        ><i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+      </a>
+    </div>
+    <section class="wrapper">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+
+    <div class="rightContainer">
+      <img class="second" id="pet" src="images/Pet06.png" />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h3 class="text-center">Your Pet's Health</h3>
+          <br />
+          <!-- Skill Bars -->
+          <span>Happy</span>
+          <div class="progress skill-bar">
+            <div
+              class="progress-bar progress-bar-primary"
+              role="progressbar"
+              aria-valuenow="80"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+
+          <span>Hungry</span>
+          <div class="progress skill-bar">
+            <div
+              class="progress-bar progress-bar-primary"
+              role="progressbar"
+              aria-valuenow="85"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <span>Tired</span>
+          <div class="progress skill-bar">
+            <div
+              class="progress-bar progress-bar-primary"
+              role="progressbar"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+
+          <span>Sleepy</span>
+          <div class="progress skill-bar">
+            <div
+              class="progress-bar progress-bar-primary"
+              role="progressbar"
+              aria-valuenow="55"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+
+          <span>Angry</span>
+          <div class="progress skill-bar">
+            <div
+              class="progress-bar progress-bar-primary"
+              role="progressbar"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+
+          <span>Sick</span>
+          <div class="progress skill-bar">
+            <div
+              class="progress-bar progress-bar-primary"
+              role="progressbar"
+              aria-valuenow="30"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!--Scripts for firebase connections-->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="internalPage.js"></script>
+</html>

@@ -1,70 +1,80 @@
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 80vh;
-  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
 }
+/* General styles */
 .sidenav {
-  height: 110vh;
+  height: 100vh; /* Change height to 100vh to occupy full height of the screen */
   width: 15%;
-  position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(20 25 59);
+  background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
+  margin: 0px;
 }
 
-.sidenav a {
+.sidenav a,
+.sidenav p {
   padding: 5px 5px 10px 32px;
   text-decoration: none;
   font-size: 25px;
   color: white;
   display: block;
-  font-size: 25px;
   font-family: var(--font-family-poppins);
 }
-.sidenav p {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  font-size: 25px;
-  font-family: var(--font-family-poppins);
 
+.sidenav p {
   font-weight: 800;
 }
 
 .sidenav a:hover {
   background-color: rgb(164, 90, 189);
 }
-.logout {
-  position: relative;
-  top: 395px;
-}
-@media screen and (max-height: 450px) {
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
   .sidenav {
-    padding-top: 15px;
+    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    height: auto; /* Remove fixed height to accommodate content */
+    position: relative; /* Remove fixed positioning to allow scrolling */
   }
-  .sidenav a {
-    font-size: 18px;
+
+  .sidenav a,
+  .sidenav p {
+    font-size: 18px; /* Reduce font size on smaller devices */
   }
 }
+
+#topNav {
+  height: 54%;
+}
+#botNav {
+  height: 41.4%;
+  display: flex;
+  align-items: flex-end;
+}
+.logout {
+  width: 100%;
+}
+/* end side nav bar  */
+
 .title {
   letter-spacing: 0.3px;
   line-height: 45px;
   position: relative;
-  left: 22%;
+  left: 10%;
   font-family: var(--font-family-poppins);
   font-size: 30px;
 }
+
 #place {
   letter-spacing: 0.3px;
   line-height: 0px;
   position: relative;
-  left: 22%;
+  left: 10%;
   font-family: var(--font-family-poppins);
   font-size: 25px;
 }
@@ -72,38 +82,69 @@ body {
   letter-spacing: 0.3px;
   line-height: 0px;
   position: relative;
-  left: 22%;
+  left: 10%;
   font-family: var(--font-family-poppins);
   font-size: 25px;
 }
+
 #AccountsConnected {
   letter-spacing: 0.3px;
   line-height: 30px;
   position: relative;
-  left: 22%;
+  left: 10%;
   font-family: var(--font-family-poppins);
   font-size: 25px;
 }
-#FullNameBox {
+
+#Box {
+  position: relative;
+  left: 10%;
+  display: flex;
+  width: 60vw;
+}
+
+#AccountBox {
   border-radius: 40px;
   padding: 15px;
   background-color: #cccccc;
   overflow: auto;
   width: 70%;
-  position: relative;
-  left: 22%;
   border: none;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.15px;
+  white-space: nowrap;
 }
-#EmailBox {
-  border-radius: 40px;
-  padding: 15px;
-  background-color: #cccccc;
-  overflow: auto;
-  width: 70%;
-  position: relative;
-  left: 22%;
-  border: none;
+
+.rectangle1 {
+  background-color: #5f5d5d;
+  border-radius: 10px;
+  width: 80px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 5px 0px;
+  margin: 5px 10px;
 }
+
+.rectangle2 {
+  background-color: #5f5d5d;
+  border-radius: 10px;
+  width: 120px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 5px 0px;
+  margin: 5px 10px;
+}
+
 #GoogleBox {
   border-radius: 40px;
   padding: 30px;
@@ -111,7 +152,6 @@ body {
   overflow: auto;
   width: 70%;
   position: relative;
-  left: 22%;
   border: none;
   display: block;
 }
@@ -122,127 +162,8 @@ body {
   overflow: auto;
   width: 70%;
   position: relative;
-  left: 22%;
   border: none;
-  top: -100px;
   display: block;
-}
-#google {
-  height: 35px;
-  left: 330px;
-  position: relative;
-  top: -170px;
-  width: 45px;
-}
-
-#apple {
-  height: 38px;
-  left: 330px;
-  position: relative;
-  top: -270px;
-  width: 45px;
-}
-.UsersInfoGoggle {
-  left: 380px;
-  letter-spacing: 0.16px;
-  line-height: 22.5px;
-  position: relative;
-  top: -55px;
-  white-space: nowrap;
-  width: 186px;
-  font-family: var(--font-family-poppins);
-  font-size: 15px;
-}
-.UsersInfoSafari {
-  left: 380px;
-  letter-spacing: 0.16px;
-  line-height: 22.5px;
-  position: relative;
-  top: -155px;
-  white-space: nowrap;
-  width: 186px;
-  font-family: var(--font-family-poppins);
-  font-size: 15px;
-}
-.DisconnectGoogle {
-  left: 1122px;
-  letter-spacing: 0.15px;
-  position: relative;
-  top: -140px;
-  white-space: nowrap;
-  width: 100px;
-  font-family: var(--font-family-poppins);
-  color: white;
-  font-size: 15px;
-}
-.rectangle1 {
-  background-color: #5f5d5d;
-  border-radius: 10px;
-  height: 45px;
-  left: 1104px;
-  position: relative;
-  top: -105px;
-  width: 120px;
-}
-.rectangle2 {
-  background-color: #5f5d5d;
-  border-radius: 10px;
-  height: 45px;
-  left: 1104px;
-  position: relative;
-  top: -205px;
-  width: 120px;
-}
-.rectangle3 {
-  background-color: #5f5d5d;
-  border-radius: 10px;
-  height: 35px;
-  left: 1085px;
-  position: relative;
-  top: -41px;
-  width: 90px;
-}
-.rectangle4 {
-  background-color: #5f5d5d;
-  border-radius: 10px;
-  height: 35px;
-  left: 1085px;
-  position: relative;
-  top: -40px;
-  width: 90px;
-}
-.DisconnectSafari {
-  left: 1120px;
-  letter-spacing: 0.15px;
-  position: relative;
-  top: -240px;
-  white-space: nowrap;
-  width: 100px;
-  font-family: var(--font-family-poppins);
-  color: white;
-  font-size: 15px;
-}
-.EditName {
-  left: 1114px;
-  letter-spacing: 0.15px;
-  position: relative;
-  top: -74px;
-  white-space: nowrap;
-  width: 100px;
-  font-family: var(--font-family-poppins);
-  color: white;
-  font-size: 20px;
-}
-.EditEmail {
-  left: 1114px;
-  letter-spacing: 0.15px;
-  position: relative;
-  top: -74px;
-  white-space: nowrap;
-  width: 100px;
-  font-family: var(--font-family-poppins);
-  color: white;
-  font-size: 20px;
 }
 
 :root {
