@@ -15,25 +15,18 @@ auth = firebase.auth();
 db = firebase.firestore();
 
 var auth = firebase.auth();
-console.log("auth", auth);
 
 auth.onAuthStateChanged((user) => {
-  console.log("user", user);
   if (user == null) {
     // Sign-out successful.
     console.log("Sign-out successful");
     window.location.href = "./index.html";
   } else {
-    var internalPage = document.getElementsByClassName("InternalPage")[0];
-    internalPage.style.display = "block";
     // LOAD ALL THE USER DATA THAT IS NEEDED
     // LOGIC TO DISPLAY NAME BASED ON EMAIL - IF USER HAS ALREADY ENTERED A NAME IN THE SETTINGS CHOSE THAT
     var email = user.email;
-    console.log("email", email);
     var position = email.search("@");
     var tempName = email.substring(0, position);
-    var userTitle = document.getElementsByClassName("userTitle")[0];
-    userTitle.textContent = tempName;
   }
 });
 

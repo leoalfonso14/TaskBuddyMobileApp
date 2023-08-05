@@ -64,7 +64,7 @@ body {
   letter-spacing: 0.3px;
   line-height: 45px;
   position: relative;
-  left: 15%;
+  left: 10%;
   font-family: var(--font-family-poppins);
   font-size: 30px;
 }
@@ -73,7 +73,7 @@ body {
   letter-spacing: 0.3px;
   line-height: 0px;
   position: relative;
-  left: 15%;
+  left: 10%;
   font-family: var(--font-family-poppins);
   font-size: 25px;
 }
@@ -81,7 +81,7 @@ body {
   letter-spacing: 0.3px;
   line-height: 0px;
   position: relative;
-  left: 15%;
+  left: 10%;
   font-family: var(--font-family-poppins);
   font-size: 25px;
 }
@@ -90,14 +90,14 @@ body {
   letter-spacing: 0.3px;
   line-height: 30px;
   position: relative;
-  left: 15%;
+  left: 10%;
   font-family: var(--font-family-poppins);
   font-size: 25px;
 }
 
 #Box {
   position: relative;
-  left: 15%;
+  left: 10%;
   display: flex;
   width: 60vw;
 }
