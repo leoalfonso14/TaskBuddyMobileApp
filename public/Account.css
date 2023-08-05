@@ -4,19 +4,21 @@ body {
   height: 80vh;
   width: 80vw;
 }
+/* General styles */
 .sidenav {
-  height: 110vh;
+  height: 100%; /* Change height to 100% to occupy full height */
   width: 15%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(20 25 59);
+  background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
 }
 
-.sidenav a {
+.sidenav a,
+.sidenav p {
   padding: 5px 5px 10px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -25,31 +27,40 @@ body {
   font-size: 25px;
   font-family: var(--font-family-poppins);
 }
-.sidenav p {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  font-size: 25px;
-  font-family: var(--font-family-poppins);
 
+.sidenav p {
   font-weight: 800;
 }
 
 .sidenav a:hover {
   background-color: rgb(164, 90, 189);
 }
+
+/* Logout at the bottom */
 .logout {
-  position: relative;
-  top: 395px;
+  position: absolute;
+  bottom: 20px;
+  left: 32px;
 }
-@media screen and (max-height: 450px) {
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
   .sidenav {
-    padding-top: 15px;
+    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    height: auto; /* Remove fixed height to accommodate content */
+    position: relative; /* Remove fixed positioning to allow scrolling */
   }
-  .sidenav a {
-    font-size: 18px;
+
+  .sidenav a,
+  .sidenav p {
+    font-size: 18px; /* Reduce font size on smaller devices */
+  }
+
+  /* Adjust logout position on smaller devices */
+  .logout {
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
 .title {

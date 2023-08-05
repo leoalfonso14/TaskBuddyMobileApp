@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins :400, 700, 600, 800");
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 .backgroundimg {
-  height: 110vh;
-  width: 110vw;
+  height: 100vh;
+  width: 100vw;
   background-image: url(images/DashboardOffice.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,8 +16,9 @@ body {
   left: -10px;
 }
 
+/* Common styles for all screen sizes */
 .sidenav {
-  height: 110vh;
+  height: 100%;
   width: 15%;
   position: fixed;
   z-index: 1;
@@ -34,34 +36,50 @@ body {
   font-size: 25px;
   color: white;
   display: block;
-  font-size: 25px;
   font-family: var(--font-family-poppins);
 }
+
 .sidenav p {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
   font-size: 25px;
   color: white;
   display: block;
-  font-size: 25px;
-  font-family: var(--font-family-poppins);
   font-family: var(--font-family-poppins);
   font-weight: 800;
+}
+
+.sidenav a.logout {
+  position: absolute; /* Keep "Logout" link at the bottom */
+  bottom: 20px; /* Adjust the value as needed to control the distance from the bottom */
 }
 
 .sidenav a:hover {
   background-color: rgb(164, 90, 189);
 }
+<<<<<<< Updated upstream
 .logout {
   position: relative;
   top: 38%;
+=======
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .logout {
+    position: relative;
+    top: 38%;
+  }
+>>>>>>> Stashed changes
 }
 @media screen and (max-height: 450px) {
   .sidenav {
-    padding-top: 15px;
+    width: 100%;
+    height: auto;
+    position: static;
   }
   .sidenav a {
     font-size: 18px;
+    padding: 10px 10px 15px 20px;
   }
 }
 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="ToDoList.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon.io/favicon-16x16.png"
+    />
+    <!-- <script src="internalPage.js"></script> -->
+    <title>ToDoList</title>
+    <link rel="shortcut icon" href="todost.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  </head>
+
+  <!-- Body of the internal page -->
+  
+  <body>
+    <div class="sidenav">
+        <p  class= "title2" href="#Dashboard"> TaskBuddy </p>
+        <a href="internalPage.html"><i class="fa fa-home" aria-hidden="true"></i></i> Dashboard </a>
+        <a href="ToDoList.html"><i class="fa fa-pencil-square" aria-hidden="true"></i></i> ToDoList </a>
+        <a href="calendar.html"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></i> Calendar </a>
+        <a href="VirtualPetPage.html"
+          ><i class="fa fa-paw" aria-hidden="true"></i> VirtualPet
+        </a>
+        <a href="Account.html"><i class="fa fa-user" aria-hidden="true"></i></i> Account </a>
+
+        <a href="#Logout" class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+      </div>  
+
+ 
+        <body 
+        style="height: 90vh !important;
+        width: 50vw !important;
+        overflow: hidden !important;">
+            <div class="ToDoListBox">
+            <div class="List"> 
+             <div class="container">
+                <div class="today"></div>
+                <div class="row">
+                   <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+                      <div class="add-control">
+                         <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="✍️ Add item..."/>
+                            <i class="fa fa-plus form-control-feedback add-btn" title="Add item"></i>
+                         </div>
+                      </div>
+                      <p class="err text-danger text-center hidden"><i class="fa fa-warning"></i> Oops! Please, enter name item</p>
+                      <p class="no-items text-muted text-center hidden"><i class="fa fa-ban"></i></p>
+                      <ul class="todo-list">
+                      </ul>
+                   </div>
+                </div>
+                </div>
+            </div>
+            </div>
+             <div class="ProgressInf"> 
+                <div class="trackYourProgress valignTextMiddle"> Track Your Progress </div>
+             </div>
+             <div class="in-progress"> 
+                <!-- <p class="yourProgress valignTextMiddle"> Your progress for today  </p> 
+                <p class="yourProgress2 valignTextMiddle"> Progress for the week </p>  -->
+            </div> 
+            
+
+
+              <div class="col-xl-3 col-lg-6 mb-4">
+                <div class="firstCircle"> 
+                  <div id= "shadowC" class="bg-white rounded-lg p-4 shadow">
+                    <h2 id="text" class="h6 font-weight-bold text-center mb-4">
+                      Progress of Today 
+                    </h2>
+        
+                    <!-- Progress bar 1 -->
+                    <div class="progress mx-auto" data-value="80">
+                      <span class="progress-left">
+                        <span class="progress-bar border-primary"></span>
+                      </span>
+                      <span class="progress-right">
+                        <span class="progress-bar border-primary"></span>
+                      </span>
+                      <div
+                        class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
+                      >
+                        <div class="h2 font-weight-bold">
+                          80<sup class="small text-white">%</sup>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row text-center mt-4">
+                      <div class="col-6 border-right">
+                        <div class="h4 font-weight-bold mb-0 text-white">Last Week</div>
+                   
+                      </div>
+                      <div class="col-6">
+                        <div class="h4 font-weight-bold mb-0 text-white">60%</div>
+                        
+                      </div>
+                    </div>
+              
+             
+                    <!-- END -->
+        
+                  </div>
+                </div>
+                </div>
+                </div>
+        
+                <div class="col-xl-3 col-lg-6 mb-4">
+                    <div class="secondCircle">
+                  <div id="shadowC"class="bg-white rounded-lg p-4 shadow">
+                    <h2 id="text"class="h6 font-weight-bold text-center mb-4">Progress of Lask Week</h2>
+        
+                    <!-- Progress bar 2 -->
+                    <div class="progress mx-auto" data-value="25">
+                      <span class="progress-left">
+                        <span class="progress-bar border-danger"></span>
+                      </span>
+                      <span class="progress-right">
+                        <span class="progress-bar border-danger"></span>
+                      </span>
+                      <div
+                        class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
+                      >
+                        <div class="h2 font-weight-bold text-white">
+                          25<sup class="small text-white">%</sup>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row text-center mt-4">
+                      <div class="col-6 border-right">
+                        <div class="h4 font-weight-bold mb-0 text-white">Last Month</div>
+            
+                      </div>
+                      <div class="col-6">
+                        <div class="h4 font-weight-bold mb-0 text-white">60%</div>
+
+                      </div>
+                    </div>
+                    <!-- END -->
+        
+                    
+                  </div>
+                </div>
+                </div>
+          </div>
+
+            
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+            <script  src="ToDoList.js"></script>
+
+            <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+          ></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+          ></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+          ></script>
+
+  </body>
+
+  <!--Scripts for firebase connections-->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <!-- <script src="internalPage.js"></script> -->
+
+
+</html>

@@ -1,0 +1,286 @@
+/* Common styles for all screen sizes */
+.sidenav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(20 25 59);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 5px 5px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  font-family: var(--font-family-poppins);
+}
+
+.sidenav p {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  font-family: var(--font-family-poppins);
+  font-weight: 800;
+}
+
+.sidenav a.logout {
+  position: absolute; /* Keep "Logout" link at the bottom */
+  bottom: 20px; /* Adjust the value as needed to control the distance from the bottom */
+}
+
+.sidenav a:hover {
+  background-color: rgb(164, 90, 189);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  .sidenav a {
+    font-size: 18px;
+    padding: 10px 10px 15px 20px;
+  }
+}
+
+/* end side nav bar  */
+
+body {
+  background-image: url(images/PetPage4.png);
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0px;
+  top: -10px;
+  right: 15px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.storeIcon {
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  right: 5%;
+}
+
+.vetIcon {
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  right: 10%;
+}
+
+/* div.slide-left p {
+  animation: slide-left 2s;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+} */
+.container {
+  font-family: var(--font-family-poppins) !important;
+  width: 90%;
+  height: 220px;
+  position: relative;
+  mix-blend-mode: hard-light !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  top: 250px;
+  opacity: 90%;
+}
+
+.Virtual {
+  right: 200px !important;
+}
+
+/* Rest of your CSS code (h1, h2, span, keyframes) remains unchanged */
+
+/* float: left;
+  justify-content: center;
+  display: flex;
+  top: -150px !important;
+  position: relative;
+  font-size: 75px;
+  text-transform: uppercase; */
+
+h1,
+h2 {
+  font-size: 75px;
+  text-transform: uppercase;
+  font-family: var(--font-family-poppins);
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 0.1px;
+  line-height: 45.5px;
+  mix-blend-mode: hard-light;
+  opacity: 95%;
+  right: 200px !important;
+}
+
+span {
+  width: 90%;
+  color: white;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  transform: translateY(-20px);
+  opacity: 0;
+  animation-name: titleAnimation;
+  animation-timing-function: ease;
+  animation-duration: 5s;
+}
+
+h1 span {
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  &:first-child {
+    animation-delay: 0.9s;
+  }
+
+  &:last-child {
+    color: white;
+    animation-delay: 0.7s;
+  }
+}
+
+h2 {
+  top: 100px;
+  position: absolute;
+  right: 200px !important;
+
+  span {
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+
+    &:first-child {
+      animation-delay: 4.2s;
+    }
+
+    &:last-child {
+      color: white;
+      animation-delay: 4s;
+    }
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 1;
+    clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .img {
+    justify-content: center;
+  }
+
+  .storeIcon,
+  .vetIcon {
+    width: 12%;
+    max-width: 40px;
+  }
+
+  .container {
+    width: 100%;
+    left: 0;
+    top: 10%;
+    padding: 0 10px;
+  }
+
+  h1,
+  h2 {
+    font-size: 8vw;
+    text-align: center;
+  }
+}
+.title {
+  color: white;
+  font-family: var(--font-family-poppins);
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 0.1px;
+  line-height: 35.5px;
+  mix-blend-mode: hard-light;
+  position: relative;
+  top: 305px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 160px;
+  opacity: 90%;
+  width: 90%;
+}
+
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
