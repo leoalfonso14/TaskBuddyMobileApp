@@ -57,19 +57,16 @@ body {
 .sidenav a:hover {
   background-color: rgb(164, 90, 189);
 }
-<<<<<<< Updated upstream
 .logout {
   position: relative;
   top: 38%;
-=======
-
+}
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .logout {
     position: relative;
     top: 38%;
   }
->>>>>>> Stashed changes
 }
 @media screen and (max-height: 450px) {
   .sidenav {
