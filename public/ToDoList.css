@@ -31,8 +31,7 @@
 }
 
 .sidenav a.logout {
-  position: absolute; /* Keep "Logout" link at the bottom */
-  bottom: 20px; /* Adjust the value as needed to control the distance from the bottom */
+  width: 100%;
 }
 
 .sidenav a:hover {
@@ -50,6 +49,12 @@
     font-size: 18px;
     padding: 10px 10px 15px 20px;
   }
+}
+
+#botNav {
+  height: 67%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .body {
@@ -252,7 +257,7 @@
   clear: both;
 }
 .btn_wrapper {
-  @extend .group;
+  /* @extend .group; */
   max-width: 250px;
   margin: 0 auto;
 }

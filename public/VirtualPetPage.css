@@ -1,59 +1,3 @@
-/* Common styles for all screen sizes */
-.sidenav {
-  height: 100%;
-  width: 15%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(20 25 59);
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 5px 5px 10px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  font-family: var(--font-family-poppins);
-}
-
-.sidenav p {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  font-family: var(--font-family-poppins);
-  font-weight: 800;
-}
-
-.sidenav a.logout {
-  position: absolute; /* Keep "Logout" link at the bottom */
-  bottom: 20px; /* Adjust the value as needed to control the distance from the bottom */
-}
-
-.sidenav a:hover {
-  background-color: rgb(164, 90, 189);
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .sidenav {
-    width: 100%;
-    height: auto;
-    position: static;
-  }
-  .sidenav a {
-    font-size: 18px;
-    padding: 10px 10px 15px 20px;
-  }
-}
-
-/* end side nav bar  */
-
 body {
   background-image: url(images/PetPage4.png);
   height: 100vh;
@@ -67,7 +11,72 @@ body {
   right: 15px;
   overflow-y: hidden;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
 }
+
+/* General styles */
+.sidenav {
+  height: 100vh; /* Change height to 100vh to occupy full height of the screen */
+  width: 15%;
+  z-index: 1;
+  background-color: rgb(20, 25, 59);
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin: 0px;
+}
+
+.sidenav a,
+.sidenav p {
+  padding: 5px 5px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  font-family: var(--font-family-poppins);
+}
+
+.sidenav p {
+  font-weight: 800;
+}
+
+.sidenav a:hover {
+  background-color: rgb(164, 90, 189);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    height: auto; /* Remove fixed height to accommodate content */
+    position: relative; /* Remove fixed positioning to allow scrolling */
+  }
+
+  .sidenav a,
+  .sidenav p {
+    font-size: 18px; /* Reduce font size on smaller devices */
+  }
+}
+
+#topNav {
+  height: 54%;
+}
+#botNav {
+  height: 42.4%;
+  display: flex;
+  align-items: flex-end;
+}
+.logout {
+  width: 100%;
+}
+/* end side nav bar  */
+
+.img {
+  display: flex;
+  flex-direction: row;
+}
+
 .storeIcon {
   width: 5%;
   height: auto;
@@ -84,24 +93,6 @@ body {
   right: 10%;
 }
 
-/* div.slide-left p {
-  animation: slide-left 2s;
-  animation-duration: 1s;
-  animation-direction: alternate;
-  animation-iteration-count: 1;
-}
-
-@keyframes slide-left {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-} */
 .container {
   font-family: var(--font-family-poppins) !important;
   width: 90%;
@@ -112,23 +103,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  top: 250px;
   opacity: 90%;
 }
 
 .Virtual {
   right: 200px !important;
 }
-
-/* Rest of your CSS code (h1, h2, span, keyframes) remains unchanged */
-
-/* float: left;
-  justify-content: center;
-  display: flex;
-  top: -150px !important;
-  position: relative;
-  font-size: 75px;
-  text-transform: uppercase; */
 
 h1,
 h2 {
