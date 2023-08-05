@@ -47,17 +47,17 @@ function signOut() {
   firebase.auth().signOut();
 }
 
-$("#os-phrases > h2")
-  .css("opacity", 1)
-  .lettering("words")
-  .children("span")
-  .lettering()
-  .children("span")
-  .lettering();
+// $("#os-phrases > h2")
+//   .css("opacity", 1)
+//   .lettering("words")
+//   .children("span")
+//   .lettering()
+//   .children("span")
+//   .lettering();
 
-// Progress bars
-$(document).ready(function () {
-  $(".progress .progress-bar").css("width", function () {
-    return $(this).attr("aria-valuenow") + "%";
-  });
-});
+// // Progress bars
+// $(document).ready(function () {
+//   $(".progress .progress-bar").css("width", function () {
+//     return $(this).attr("aria-valuenow") + "%";
+//   });
+// });
