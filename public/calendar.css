@@ -414,15 +414,14 @@ input.add-event-edit:-ms-input-placeholder {
 }
 .event-dates small {
   font-size: 0.65em;
-  color: #444;
+  color: white;
 }
 .event-dates {
   font-weight: 800;
   font-family: "Avenir", sans-serif;
-  color: #04b6e2;
+  color: #ffffff;
   font-size: 18px;
   text-transform: lowercase;
-  /*   position: relative; */
 }
 .event-delete {
   position: absolute;
@@ -433,11 +432,12 @@ input.add-event-edit:-ms-input-placeholder {
   cursor: pointer;
 }
 .event-name {
+  border-radius: 20px;
   font-size: 19px;
   font-family: "Avenir", sans-serif;
-  color: #222;
+  color: #fff;
   padding: 10px;
-  background: #f7f7f7;
+  background: #505fdf;
   margin: 2px 0;
   display: block;
   text-transform: initial;
