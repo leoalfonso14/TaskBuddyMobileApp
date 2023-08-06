@@ -89,7 +89,7 @@ body {
 .title {
   color: var(--haiti);
   font-family: var(--font-family-poppins);
-  font-size: 45px;
+  font-size: 85px;
   letter-spacing: 0.9px;
   line-height: 22.5px;
   mix-blend-mode: hard-light;
