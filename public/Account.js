@@ -22,7 +22,7 @@ var auth = firebase.auth();
 // Get elements
 const saveButton = document.getElementById("saveButton");
 const nameInput = document.getElementById("AccountBox");
-const popup = document.getElementById("popup"); // Add this line to get the popup element
+const popup = document.getElementById("popup");
 
 // Load user's saved name from local storage on page load
 auth.onAuthStateChanged((user) => {
@@ -33,6 +33,7 @@ auth.onAuthStateChanged((user) => {
   } else {
     // Get the userTitle element
     var UserID = user.uid;
+    var email = user.email;
     var nickName;
 
     db.collection("users")
@@ -46,9 +47,12 @@ auth.onAuthStateChanged((user) => {
             nameInput.value = nickName;
           }
         } else {
+          // Handle case when user data doesn't exist
           console.log("No Such Document");
           nameInput.value = tempName;
         }
+        // Display user's email
+        document.getElementById("emailBox").value = email; // Set the email value in the AccountBox input
       });
   }
 });
