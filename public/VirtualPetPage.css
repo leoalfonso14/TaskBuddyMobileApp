@@ -1,14 +1,12 @@
 body {
-  background-image: url(images/PetPage4.png);
+  background-image: url(images/VirtualPetPage3.png);
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 0;
   padding-bottom: 0px;
-  top: -10px;
-  right: 15px;
   overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
@@ -19,12 +17,19 @@ body {
 /* General styles */
 .sidenav {
   height: 100vh; /* Change height to 100vh to occupy full height of the screen */
-  width: 15%;
+  width: 17%;
   z-index: 1;
   background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
   margin: 0px;
+}
+
+@media screen and (min-width: 1680px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15%;
+  }
 }
 
 .sidenav a,
@@ -46,9 +51,10 @@ body {
 }
 
 /* Media query for responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 440px) {
+  /* MOBILE VIEW TOP NAV BAR BETTER?*/
   .sidenav {
-    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    width: 55%; /* Expand the sidebar to full width on smaller devices */
     height: auto; /* Remove fixed height to accommodate content */
     position: relative; /* Remove fixed positioning to allow scrolling */
   }
@@ -72,25 +78,21 @@ body {
 }
 /* end side nav bar  */
 
+#icons {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  justify-content: right;
+}
+
 .img {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 85%;
 }
 
 .storeIcon {
-  width: 5%;
-  height: auto;
-  position: absolute;
-  top: 10px;
-  right: 5%;
-}
-
-.vetIcon {
-  width: 5%;
-  height: auto;
-  position: absolute;
-  top: 10px;
-  right: 10%;
+  margin-right: 15px;
 }
 
 .container {
@@ -103,6 +105,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-top: 110px;
   opacity: 90%;
 }
 
