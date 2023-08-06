@@ -15,12 +15,19 @@ body {
 /* General styles */
 .sidenav {
   height: 100vh; /* Change height to 100vh to occupy full height of the screen */
-  width: 15%;
+  width: 17%;
   z-index: 1;
   background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
   margin: 0px;
+}
+
+@media screen and (min-width: 1680px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15%;
+  }
 }
 
 .sidenav a,
@@ -42,16 +49,21 @@ body {
 }
 
 /* Media query for responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 440px) {
+  /* MOBILE VIEW TOP NAV BAR BETTER?*/
   .sidenav {
-    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    width: 40%; /* Expand the sidebar to full width on smaller devices */
     height: auto; /* Remove fixed height to accommodate content */
     position: relative; /* Remove fixed positioning to allow scrolling */
   }
 
   .sidenav a,
   .sidenav p {
-    font-size: 18px; /* Reduce font size on smaller devices */
+    font-size: 12px; /* Reduce font size on smaller devices */
+  }
+
+  .title {
+    font-size: 22px !important;
   }
 }
 
@@ -59,7 +71,7 @@ body {
   height: 54%;
 }
 #botNav {
-  height: 40%;
+  height: 41.5%;
   display: flex;
   align-items: flex-end;
 }
@@ -71,13 +83,13 @@ body {
 .InternalPage {
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 85%;
 }
 
 .title {
   color: var(--haiti);
   font-family: var(--font-family-poppins);
-  font-size: 45px;
+  font-size: 85px;
   letter-spacing: 0.9px;
   line-height: 22.5px;
   mix-blend-mode: hard-light;
