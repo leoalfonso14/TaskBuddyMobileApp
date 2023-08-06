@@ -1,17 +1,30 @@
-/* Common styles for all screen sizes */
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex !important;
+  flex-direction: row !important;
+  margin: 0px;
+}
+/* General styles */
 .sidenav {
-  height: 100%;
-  width: 15%;
-  position: fixed;
+  height: 100vh; /* Change height to 100vh to occupy full height of the screen */
+  width: 17%;
   z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(20 25 59);
+  background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
+  margin: 0px;
 }
 
-.sidenav a {
+@media screen and (min-width: 1680px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15%;
+  }
+}
+
+.sidenav a,
+.sidenav p {
   padding: 5px 5px 10px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -21,41 +34,44 @@
 }
 
 .sidenav p {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  font-family: var(--font-family-poppins);
   font-weight: 800;
-}
-
-.sidenav a.logout {
-  width: 100%;
 }
 
 .sidenav a:hover {
   background-color: rgb(164, 90, 189);
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
+/* Media query for responsiveness */
+@media screen and (max-width: 440px) {
+  /* MOBILE VIEW TOP NAV BAR BETTER?*/
   .sidenav {
-    width: 100%;
-    height: auto;
-    position: static;
+    width: 40%; /* Expand the sidebar to full width on smaller devices */
+    height: auto; /* Remove fixed height to accommodate content */
+    position: relative; /* Remove fixed positioning to allow scrolling */
   }
-  .sidenav a {
-    font-size: 18px;
-    padding: 10px 10px 15px 20px;
+
+  .sidenav a,
+  .sidenav p {
+    font-size: 12px; /* Reduce font size on smaller devices */
+  }
+
+  .title {
+    font-size: 22px !important;
   }
 }
 
+#topNav {
+  height: 54%;
+}
 #botNav {
-  height: 65.2%;
+  height: 46%;
   display: flex;
   align-items: flex-end;
 }
+.logout {
+  width: 100%;
+}
+/* end side nav bar  */
 
 :root {
   --black: rgba(0, 0, 0, 1);
@@ -95,71 +111,17 @@
   font-family: var(--font-family-poppins);
   display: flex;
   align-items: center;
-  height: 100vw;
   height: 100vh;
   min-height: 500px;
   background: #0f1229 !important;
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    rgba(76, 76, 76, 1) 0%,
-    rgba(43, 43, 43, 1) 0%,
-    rgba(23, 23, 23, 1) 91%,
-    rgba(23, 23, 23, 1) 100%
-  );
-  background: (
-    radial,
-    center center,
-    0px,
-    center center,
-    100%,
-    color-stop(0%, rgba(76, 76, 76, 1)),
-    color-stop(0%, rgba(43, 43, 43, 1)),
-    color-stop(91%, rgba(23, 23, 23, 1)),
-    color-stop(100%, rgba(23, 23, 23, 1))
-  );
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    rgba(76, 76, 76, 1) 0%,
-    rgba(43, 43, 43, 1) 0%,
-    rgba(23, 23, 23, 1) 91%,
-    rgba(23, 23, 23, 1) 100%
-  );
-  background: -o-radial-gradient(
-    center,
-    ellipse cover,
-    rgba(76, 76, 76, 1) 0%,
-    rgba(43, 43, 43, 1) 0%,
-    rgba(23, 23, 23, 1) 91%,
-    rgba(23, 23, 23, 1) 100%
-  );
-  background: -ms-radial-gradient(
-    center,
-    ellipse cover,
-    rgba(76, 76, 76, 1) 0%,
-    rgba(43, 43, 43, 1) 0%,
-    rgba(23, 23, 23, 1) 91%,
-    rgba(23, 23, 23, 1) 100%
-  );
-  background: radial-gradient(
-    ellipse at center,
-    rgba(76, 76, 76, 1) 0%,
-    rgba(43, 43, 43, 1) 0%,
-    rgba(23, 23, 23, 1) 91%,
-    rgba(23, 23, 23, 1) 100%
-  );
 }
 .calendar {
   color: #fff;
-  margin: 10px auto;
+  margin: 60px auto 0px auto;
   background: #0f1229;
   padding: 60px 40px 80px 40px;
-  width: 70vw;
   height: 75vh;
   border-radius: 5px;
-  position: relative;
-  left: 130px;
 }
 
 .calendar__title {
@@ -179,7 +141,6 @@
   transform: scale(0.9) translate(30px, 30px);
   opacity: 0;
   visibility: hidden;
-  /* border-radius: 5px; */
   display: none;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -556,9 +517,7 @@ input.add-event-edit:-ms-input-placeholder {
 }
 .footer {
   width: 100%;
-  bottom: 50px;
-  left: 0;
-  position: absolute;
+  margin-top: 120px;
   font-size: 14px;
   text-align: center;
 }

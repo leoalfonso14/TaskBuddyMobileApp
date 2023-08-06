@@ -7,8 +7,6 @@ body {
   position: relative;
   padding-top: 0;
   padding-bottom: 0px;
-  top: -10px;
-  right: 15px;
   overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
@@ -19,12 +17,19 @@ body {
 /* General styles */
 .sidenav {
   height: 100vh; /* Change height to 100vh to occupy full height of the screen */
-  width: 15%;
+  width: 17%;
   z-index: 1;
   background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
   margin: 0px;
+}
+
+@media screen and (min-width: 1680px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15%;
+  }
 }
 
 .sidenav a,

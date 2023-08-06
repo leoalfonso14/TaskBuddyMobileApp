@@ -8,12 +8,19 @@ body {
 /* General styles */
 .sidenav {
   height: 100vh; /* Change height to 100vh to occupy full height of the screen */
-  width: 15%;
+  width: 17%;
   z-index: 1;
   background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
   margin: 0px;
+}
+
+@media screen and (min-width: 1680px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15%;
+  }
 }
 
 .sidenav a,
@@ -53,7 +60,7 @@ body {
   height: 54%;
 }
 #botNav {
-  height: 41.4%;
+  height: 46%;
   display: flex;
   align-items: flex-end;
 }
@@ -509,91 +516,6 @@ div.h4 {
     height: 70px;
   }
 }
-/* 
-/* Responsive styles for small screens (up to 767px) 
-@media (max-width: 767px) {
-  .trackYourProgress {
-    left: auto;
-    top: auto;
-    width: 100%;
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .firstCircle,
-  .secondCircle {
-    width: 50vw;
-    top: 10px;
-    left: 25%;
-  }
-
-  .progress,
-  .progress::after {
-    height: 80px;
-    width: 80px;
-  }
-
-  #text {
-    font-size: 16px;
-  }
-}
-
-/* Responsive styles for medium screens (768px to 1023px) 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .trackYourProgress {
-    left: auto;
-    top: auto;
-    width: 100%;
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .firstCircle,
-  .secondCircle {
-    width: 40vw;
-    top: 20px;
-    left: 30%;
-  }
-
-  .progress,
-  .progress::after {
-    height: 100px;
-    width: 100px;
-  }
-
-  #text {
-    font-size: 18px;
-  }
-}
-
-/* Responsive styles for large screens (1024px and above) 
-@media (min-width: 1024px) {
-  .trackYourProgress {
-    left: 1210px;
-    top: -620px;
-    width: 809px;
-  }
-
-  .firstCircle {
-    width: 20vw;
-    left: 1001px;
-  }
-  .secondCircle {
-    width: 20vw;
-    top: -450px;
-    left: 1200px;
-  }
-
-  .progress,
-  .progress::after {
-    height: 130px;
-    width: 130px;
-  }
-
-  #text {
-    font-size: 20px;
-  }
-} */
 
 .todo-list input[type="checkbox"] {
   opacity: 0;
@@ -638,10 +560,6 @@ div.h4 {
   width: 80%;
   display: flex;
   flex-direction: row;
-}
-
-#Closed {
-  display: none;
 }
 
 #circles {
