@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background-color: #00011d;
-  overflow: none;
+  overflow-x: hidden !important;
 }
 
 .header {
@@ -63,9 +63,9 @@ body {
   overflow: auto;
 }
 .VirtualPet {
-  background-image: url(images/VirtualPetGardenNew.jpg);
+  background-image: url(images/VirtualPetPage3.png);
   --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-  min-height: 100vh;
+  min-height: 90vh;
   background-size: cover;
   background-position: center;
   color: var(--text);
@@ -80,6 +80,8 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+/*
 #VPtext {
   position: absolute;
   background-position: center;
@@ -88,18 +90,107 @@ body {
   overflow: auto;
   width: 80%;
 }
+*/
 
-.WhatisVirtual {
+/*.WhatisVirtual {
   position: relative;
   height: 100vh;
   padding: 20px;
-  background: linear-gradient(
-    180deg,
-    rgba(161, 181, 109, 1) 75%,
-    rgba(149, 168, 100, 1) 87%,
-    rgba(133, 151, 87, 1) 100%
-  );
+  background-color: #060f43;
+  display:flex;
+  flex-direction: row;
 }
+*/
+
+#row {
+  background-color: #060f43;
+  display: block;
+  font-family: "Frank Ruhl Libre", serif;
+
+  color: white;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  font-size: 20px;
+}
+
+/* Clear floats after the columns */
+#row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side,
+  .column.middle {
+    width: 100%;
+  }
+}
+
+/* Apply "Catamaran" font to the text 
+.content-virtual-text{
+  font-family: "Frank Ruhl Libre", serif;
+  max-width: 600px;  Set a width appropriate for your content 
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #4676b0;
+  width: 70%;
+   height:100vh 
+}
+*/
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+  color: white;
+  height: 50vh;
+  aspect-ratio: 1/1;
+  background-position: center;
+  padding: 70px 0px 0px 100px;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(20%);
+  line-height: 2.5em;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+#infoimg {
+  float: right;
+  padding: 40px 60px 0px 50px;
+  width: 30%;
+  height: 55vh;
+  aspect-ratio: 1/1;
+  animation: 5s linear 0s alternate sun-rise;
+  transform: translateY(20%);
+  animation-iteration-count: 1;
+}
+
+/*
+.content-virtual-media{
+  /*
+  font-family: "Frank Ruhl Libre", serif;
+  max-width: 600px; Set a width appropriate for your content 
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #4676b0;
+  border: green solid 5px; 
+  width: 30%;
+  padding: 30px;
+  height: 100vh;
+  border: green solid 5px;
+  margin: 50px;
+
+}
+
+
 #ownerpet {
   position: absolute;
   background-position: center;
@@ -109,65 +200,69 @@ body {
   overflow: auto;
   width: 35%;
 }
-/* Apply "Catamaran" font to the text */
-.content-virtual {
-  font-family: "Frank Ruhl Libre", serif;
-  max-width: 600px; /* Set a width appropriate for your content */
-  padding: 20px;
-  text-align: center;
-  font-size: 24px;
-}
+*/
+
 .dog-animation {
-  position: absolute;
-  top: 70%;
-  right: 20%;
-  transform: translate(50%, -50%);
-  width: 300px; /* Adjust the size of the dog animation */
-  height: 300px; /* Adjust the size of the dog animation */
-  background-image: url("images/TB_11.png"); /* Replace with the path to your dog animation */
+  background-image: url("images/PetPage_5.png");
+  position: relative;
+  /* Let the height adjust proportionally based on the width */
+  width: 20vw;
+  height: 20vh;
   background-size: cover;
-  animation: moveDog 20s linear infinite;
+  animation: moveDog 15s ease-in-out infinite;
+  right: -40%;
+  bottom: -240px;
+}
+
+.dog-animation img {
+  background-image: url("images/PetPage_5.png");
+  width: 30vw;
+  height: 45vw;
 }
 
 @keyframes moveDog {
   0% {
-    transform: translate(100%, -60%);
+    transform: translateX(40%);
   }
   100% {
-    transform: translate(-100%, -40%);
+    transform: translateX(-500%);
   }
 }
 
-.WhyVirtual {
+#WhyVirtual {
   height: 100vh;
   padding: 0px;
-  background: linear-gradient(
-    180deg,
-    rgba(133, 151, 87, 1) 73%,
-    rgba(128, 145, 82, 1) 82%,
-    rgba(117, 133, 73, 1) 89%,
-    rgba(117, 133, 73, 1) 100%
-  );
+  background-color: #060f43;
   width: 100%;
 }
 
 #gif {
   padding: 15px 0px 0px 15px;
+
+
 }
 
-.content-whyvirtual {
+.content-whyvirtual-text {
   font-family: "Frank Ruhl Libre", serif;
-  width: 50%; /* Set a width appropriate for your content */
   padding-right: 60px;
   font-size: 20px;
   text-align: center;
   float: right;
-  left: 700px;
+  left: 900px;
   right: 10;
   overflow-x: hidden;
+  color: #f4f4f4;
+  transform: translateX(-10%);
+  line-height: 2.5em;
 }
+
+.content-whyvirtual-media {
+  padding: 15px 0px 0px 15px;
+  max-width: 100%;
+}
+
 .footersection {
-  background-color: rgba(117, 133, 73, 1);
+  background-color: #060f43;
   font-size: 33px;
   line-height: 2;
   padding: 20px 10px;
@@ -175,7 +270,7 @@ body {
   font-family: "Frank Ruhl Libre, serif";
 }
 .footersection p {
-  color: white;
+  color: #fcfcfc;
   margin: 10px 20px;
   text-decoration: none;
 }
@@ -185,7 +280,7 @@ body {
 }
 .copyright {
   margin: 0;
-  color: black !important;
+  color: white !important;
   font-size: 20px;
   padding: 15px 0px;
 }
@@ -196,6 +291,55 @@ body {
 .grow:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+.title {
+  color: rgb(251 251 251);
+  font-family: var(--font-family-poppins) !important;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  /* line-height: 35.5px; */
+  font-size: 70px;
+  mix-blend-mode: hard-light;
+  position: relative;
+  top: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -170px;
+  width: 95%;
+  opacity: 75%;
+  text-transform: uppercase;
+}
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
 }
 /*---------------------------------------------*/
 /*------EnD of Virtual.html CSS styling----------------*/
