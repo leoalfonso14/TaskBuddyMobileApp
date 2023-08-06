@@ -1,0 +1,219 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+/* General styles */
+.sidenav {
+  height: 100vh; /* Change height to 100vh to occupy full height of the screen */
+  width: 17%;
+  z-index: 1;
+  background-color: rgb(20, 25, 59);
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 1680px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15%;
+  }
+}
+
+.sidenav a,
+.sidenav p {
+  padding: 5px 5px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  font-family: var(--font-family-poppins);
+}
+
+.sidenav p {
+  font-weight: 800;
+}
+
+.sidenav a:hover {
+  background-color: rgb(164, 90, 189);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    height: auto; /* Remove fixed height to accommodate content */
+    position: relative; /* Remove fixed positioning to allow scrolling */
+  }
+
+  .sidenav a,
+  .sidenav p {
+    font-size: 18px; /* Reduce font size on smaller devices */
+  }
+}
+
+#topNav {
+  height: 54%;
+}
+#botNav {
+  height: 41.4%;
+  display: flex;
+  align-items: flex-end;
+}
+.logout {
+  width: 100%;
+}
+/* end side nav bar  */
+
+.title {
+  letter-spacing: 0.3px;
+  line-height: 45px;
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 30px;
+}
+
+#place {
+  letter-spacing: 0.3px;
+  line-height: 0px;
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 25px;
+}
+#email {
+  letter-spacing: 0.3px;
+  line-height: 0px;
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 25px;
+}
+
+#AccountsConnected {
+  letter-spacing: 0.3px;
+  line-height: 30px;
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 25px;
+}
+
+#Box {
+  position: relative;
+  left: 10%;
+  display: flex;
+  width: 60vw;
+}
+
+#AccountBox {
+  border-radius: 40px;
+  padding: 15px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 70%;
+  border: none;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.15px;
+  white-space: nowrap;
+}
+
+#googleIcon {
+  margin-top: 10px;
+  position: absolute;
+  left: 10px;
+}
+
+#appleIcon {
+  margin-top: 5px;
+  position: absolute;
+  left: 10px;
+}
+
+.rectangle1 {
+  background-color: #5f5d5d;
+  border-radius: 10px;
+  width: 80px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 5px 0px;
+  margin: 5px 10px;
+}
+
+.rectangle2 {
+  background-color: #5f5d5d;
+  border-radius: 10px;
+  width: 120px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 5px 0px;
+  margin: 5px 10px;
+}
+
+#GoogleBox {
+  border-radius: 40px;
+  padding: 30px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 70%;
+  position: relative;
+  border: none;
+  display: block;
+}
+#SafariBox {
+  border-radius: 40px;
+  padding: 30px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 70%;
+  position: relative;
+  border: none;
+  display: block;
+}
+
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}

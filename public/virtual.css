@@ -238,17 +238,12 @@ body {
 
 #gif {
   padding: 15px 0px 0px 15px;
-  max-width: 100%;
-  float: left;
-  aspect-ratio: 1/1;
-  transform: translateY(5%);
-  transform: translateX(29%);
-  width: 30%;
+
+
 }
 
 .content-whyvirtual-text {
   font-family: "Frank Ruhl Libre", serif;
-  width: 50%;
   padding-right: 60px;
   font-size: 20px;
   text-align: center;

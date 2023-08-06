@@ -1,0 +1,224 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+/* General styles */
+.sidenav {
+  height: 100vh; /* Change height to 100vh to occupy full height of the screen */
+  width: 17%;
+  z-index: 1;
+  background-color: rgb(20, 25, 59);
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 1680px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15%;
+  }
+}
+
+.sidenav a,
+.sidenav p {
+  padding: 5px 5px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  font-family: var(--font-family-poppins);
+}
+
+.sidenav p {
+  font-weight: 800;
+}
+
+.sidenav a:hover {
+  background-color: rgb(164, 90, 189);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    height: auto; /* Remove fixed height to accommodate content */
+    position: relative; /* Remove fixed positioning to allow scrolling */
+  }
+
+  .sidenav a,
+  .sidenav p {
+    font-size: 18px; /* Reduce font size on smaller devices */
+  }
+}
+
+#topNav {
+  height: 54%;
+}
+#botNav {
+  height: 41.4%;
+  display: flex;
+  align-items: flex-end;
+}
+.logout {
+  width: 100%;
+}
+/* end side nav bar  */
+
+.SecurityPage {
+  width: 80%;
+}
+
+.title {
+  letter-spacing: 0.3px;
+
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 30px;
+}
+#Changepassword {
+  letter-spacing: 0.3px;
+
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 20px;
+}
+#RepeatPass {
+  letter-spacing: 0.3px;
+
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 15px;
+}
+#NewPassword {
+  border-radius: 40px;
+  padding: 15px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 60%;
+  position: relative;
+  left: 10%;
+  border: none;
+}
+
+#Repeat {
+  border-radius: 40px;
+  padding: 15px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 60%;
+  position: relative;
+  left: 10%;
+  border: none;
+}
+#DeleteAcc {
+  letter-spacing: 0.3px;
+  line-height: 45px;
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 20px;
+}
+#DeleteEmail {
+  letter-spacing: 0.3px;
+
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 15px;
+}
+#DeletePassword {
+  letter-spacing: 0.3px;
+
+  position: relative;
+  left: 10%;
+  font-family: var(--font-family-poppins);
+  font-size: 15px;
+}
+#DeleteEmailAddress {
+  border-radius: 40px;
+  padding: 15px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 60%;
+  position: relative;
+  left: 10%;
+  border: none;
+}
+#DeletePass {
+  border-radius: 40px;
+  padding: 15px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 60%;
+  position: relative;
+  left: 10%;
+  border: none;
+}
+
+.rectangle {
+  background-color: #151939;
+  border-radius: 10px;
+  left: 10%;
+  position: relative;
+  top: 30px;
+  width: 150px;
+  color: white;
+  white-space: nowrap;
+  font-family: var(--font-family-poppins);
+  letter-spacing: 0.15px;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 40px;
+}
+
+.DeleteAccountBox {
+  left: 314px;
+  letter-spacing: 0.15px;
+  position: relative;
+  top: -5px;
+  white-space: nowrap;
+  width: 100px;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 15px;
+}
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}

@@ -13,39 +13,33 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-    <link rel="stylesheet" href="internalPage.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="Security.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="favicon.io/favicon-16x16.png"
     />
-    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- <script src="internalPage.js"></script> -->
-    <title>Home Page</title>
+    <title>Security</title>
   </head>
 
-  <!-- Body of the internal page -->
   <body>
     <div class="sidenav">
       <div id="topNav">
-        <p class="title2" href="internalPage.html">TaskBuddy</p>
+        <p class="title2" href="#Dashboard">TaskBuddy</p>
         <a href="internalPage.html"
-          ><i class="fa fa-home" aria-hidden="true"></i> Dashboard
-        </a>
-        <a href="ToDoList.html"
-          ><i class="fa fa-pencil-square" aria-hidden="true"></i> ToDoList
-        </a>
-        <a href="calendar.html"
-          ><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Calendar
-        </a>
-        <a href="VirtualPetPage.html"
-          ><i class="fa fa-paw" aria-hidden="true"></i> VirtualPet
-        </a>
+          ><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a
+        >
         <a href="Account.html"
           ><i class="fa fa-user" aria-hidden="true"></i> Account
+        </a>
+        <a href="Security.html"
+          ><i class="fa fa-lock" aria-hidden="true"></i> Security
         </a>
       </div>
       <div id="botNav">
@@ -54,10 +48,26 @@
         </a>
       </div>
     </div>
+    <div class="SecurityPage">
+        <h1 class="title poppins-medium-shark">Security & Login </h1>
+  
+        <p id="Changepassword">Change Password </p>
+        <p id="RepeatPass"> New Password</p>
+        <input type="text" id="NewPassword" placeholder="" />
 
-    <div class="InternalPage" style="display: none">
-      <h1 class="title">Welcome &nbsp<b class="userTitle title"></b></h1>
-    </div>
+        <p id="RepeatPass">Repeat Password</p>
+        <input type="text" id="Repeat" placeholder="" />
+
+       <div class="rectangle">Save Changes</div>
+
+        <p id="DeleteAcc">Delete Account </p>
+        <p id="DeleteEmail">Email Address </p>
+      <input type="text" id="DeleteEmailAddress" placeholder="" />
+
+      <p id="DeletePassword">Password </p>
+      <input type="text" id="DeletePass" placeholder="" />
+
+      <div class="rectangle"> Delete Account</div>
   </body>
 
   <!--Scripts for firebase connections-->

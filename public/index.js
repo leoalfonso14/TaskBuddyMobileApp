@@ -14,6 +14,16 @@ firebase.initializeApp(firebaseConfig);
 auth = firebase.auth();
 db = firebase.firestore();
 
+console.log(auth);
+auth.onAuthStateChanged((user) => {
+  if (user == null) {
+    // Sign-out successful.
+  } else {
+    console.log("You are signed in");
+    window.location.href = "./internalPage.html";
+  }
+});
+
 //Logs User in
 function signIn() {
   email = document.getElementById("emailBox").value;
@@ -21,7 +31,7 @@ function signIn() {
 
   auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
     var user = userCredential.user;
-    alert("Logged In " + user.email);
+    // alert("Logged In " + user.email);
     window.location.href = "./internalPage.html";
   });
 }
