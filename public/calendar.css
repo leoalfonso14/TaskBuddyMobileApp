@@ -526,3 +526,15 @@ input.add-event-edit:-ms-input-placeholder {
   padding: 2px 5px;
   border-bottom: 1px solid #fff;
 }
+.googleCalendar {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-poppins);
+  display: flex;
+  position: relative;
+  bottom: 20;
+  align-items: center;
+  height: 150vh;
+  min-height: 500px;
+  background: #0f1229 !important;
+}
