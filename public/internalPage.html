@@ -10,10 +10,10 @@
       rel="stylesheet"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-    
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <link rel="stylesheet" href="internalPage.css" />
     <link
       rel="icon"
@@ -21,27 +21,42 @@
       sizes="32x32"
       href="favicon.io/favicon-16x16.png"
     />
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- <script src="internalPage.js"></script> -->
     <title>Home Page</title>
   </head>
 
   <!-- Body of the internal page -->
-  <body class="backgroundimg">
+  <body>
     <div class="sidenav">
-      <p  class= "title2" href="#Dashboard"> TaskBuddy </p>
-      <a href="internalPage.html"><i class="fa fa-home" aria-hidden="true"></i></i> Dashboard </a>
-      <a href="#ToDoLists"><i class="fa fa-pencil-square" aria-hidden="true"></i></i> ToDoList </a>
-      <a href="Calendar.html"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></i> Calendar </a>
-      <a href="#VirtualPet"
-        ><i class="fa fa-paw" aria-hidden="true"></i> VirtualPet
-      </a>
-      <a href="Account.html"><i class="fa fa-user" aria-hidden="true"></i></i> Account </a>
-      <a href="Security.html"><i class="fa fa-cogs" aria-hidden="true"></i> Settings </a>
-      <a href="" class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
-    </div>  
+      <div id="topNav">
+        <p class="title2" href="internalPage.html">TaskBuddy</p>
+        <a href="internalPage.html"
+          ><i class="fa fa-home" aria-hidden="true"></i> Dashboard
+        </a>
+        <a href="ToDoList.html"
+          ><i class="fa fa-pencil-square" aria-hidden="true"></i> ToDoList
+        </a>
+        <a href="calendar.html"
+          ><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Calendar
+        </a>
+        <a href="VirtualPetPage.html"
+          ><i class="fa fa-paw" aria-hidden="true"></i> VirtualPet
+        </a>
+        <a href="Account.html"
+          ><i class="fa fa-user" aria-hidden="true"></i> Account
+        </a>
+      </div>
+      <div id="botNav">
+        <a href="" class="logout"
+          ><i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+        </a>
+      </div>
+    </div>
 
-    <div class="InternalPage" style="display: none;">
-      <h1 class="title">Welcome &nbsp<b class="userTitle"> USER</b></h1>
+    <div class="InternalPage" style="display: none">
+      <h1 class="title">Welcome &nbsp<b class="userTitle title"></b></h1>
     </div>
   </body>
 
