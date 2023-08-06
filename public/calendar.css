@@ -130,10 +130,10 @@ body {
 .calendar--day-view {
   position: absolute;
   border-radius: 3px;
-  top: 5.5%;
-  left: 5.5%;
-  width: 95%;
-  height: 90%;
+  top: 6.5%;
+  /* left: 15%; */
+  width: 82%;
+  height: 80%;
   background: rgb(6 9 41);
   box-shadow: 3px 12px 5px rgb(0 0 0 / 16%);
   z-index: 2;
