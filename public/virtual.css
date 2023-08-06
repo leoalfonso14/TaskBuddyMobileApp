@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background-color: #00011d;
-  overflow: none;
+  overflow-x: hidden !important;
 }
 
 .header {
@@ -91,7 +91,7 @@ body {
 }
 */
 
- /*.WhatisVirtual {
+/*.WhatisVirtual {
   position: relative;
   height: 100vh;
   padding: 20px;
@@ -101,7 +101,7 @@ body {
 }
 */
 
-#row{
+#row {
   background-color: #060f43;
   display: block;
   font-family: "Frank Ruhl Libre", serif;
@@ -143,15 +143,16 @@ body {
 
 /* Middle column */
 .column.middle {
-  width: 60%;
+  width: 50%;
   color: white;
-  height: 100vh; /* makes the sun the size of the viewport */
+  height: 50vh;
   aspect-ratio: 1/1;
   background-position: center;
   padding: 70px 0px 0px 100px;
   position: absolute;
   z-index: 1;
   transform: translateY(20%);
+  line-height: 2.5em;
 }
 
 .column {
@@ -161,12 +162,12 @@ body {
 
 #infoimg {
   float: right;
-  padding: 40px 60px 0px 0px;
-  width: 40%;
-  height: 65vh; /* makes the sun the size of the viewport */
+  padding: 40px 60px 0px 50px;
+  width: 30%;
+  height: 55vh;
   aspect-ratio: 1/1;
   animation: 5s linear 0s alternate sun-rise;
-  transform: translateY(20%); /* Set the default position for the sun */
+  transform: translateY(20%);
   animation-iteration-count: 1;
 }
 
@@ -202,23 +203,21 @@ body {
 
 .dog-animation {
   background-image: url("images/PetPage_5.png");
-    position: relative;
-     /* Let the height adjust proportionally based on the width */
-     width: 20vw;
-    height: 20vh;
-    background-size: cover;
-    animation: moveDog 15s ease-in-out infinite;
-    right: -40%;
-    bottom: -240px;
-    
+  position: relative;
+  /* Let the height adjust proportionally based on the width */
+  width: 20vw;
+  height: 20vh;
+  background-size: cover;
+  animation: moveDog 15s ease-in-out infinite;
+  right: -40%;
+  bottom: -240px;
 }
 
-.dog-animation img{
-    background-image: url("images/PetPage_5.png");
-    width: 30vw;
-    height: 45vw;
+.dog-animation img {
+  background-image: url("images/PetPage_5.png");
+  width: 30vw;
+  height: 45vw;
 }
-
 
 @keyframes moveDog {
   0% {
@@ -244,29 +243,27 @@ body {
   transform: translateY(5%);
   transform: translateX(29%);
   width: 30%;
-  
 }
 
 .content-whyvirtual-text {
   font-family: "Frank Ruhl Libre", serif;
-  width: 50%; /* Set a width appropriate for your content */
+  width: 50%;
   padding-right: 60px;
   font-size: 20px;
   text-align: center;
   float: right;
-  left: 700px;
+  left: 900px;
   right: 10;
   overflow-x: hidden;
-  color: #4676b0;
+  color: #f4f4f4;
   transform: translateX(-10%);
-  
+  line-height: 2.5em;
 }
 
-.content-whyvirtual-media{
+.content-whyvirtual-media {
   padding: 15px 0px 0px 15px;
   max-width: 100%;
 }
-
 
 .footersection {
   background-color: #060f43;
@@ -277,7 +274,7 @@ body {
   font-family: "Frank Ruhl Libre, serif";
 }
 .footersection p {
-  color: #4676b0;
+  color: #fcfcfc;
   margin: 10px 20px;
   text-decoration: none;
 }
@@ -287,7 +284,7 @@ body {
 }
 .copyright {
   margin: 0;
-  color: #4676b0 !important;
+  color: white !important;
   font-size: 20px;
   padding: 15px 0px;
 }
