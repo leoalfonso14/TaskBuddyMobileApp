@@ -55,10 +55,12 @@
 
     <div id="loginContent">
       <h1 class="BoxTitle">Login to your account</h1>
-      <p class="BoxSubtitle">
-        Don't have an account?
-        <b class="grow" onclick="goToSignUp()">Create one here</b>
-      </p>
+      <div class="BoxSubtitle">
+        <p>Don't have an account? &nbsp</p>
+        <p class="grow" id="createAcc" onclick="goToSignUp()">
+          Create one here
+        </p>
+      </div>
       <div id="loginBox">
         <p id="email">Email address</p>
         <input type="text" id="emailBox" placeholder="" />

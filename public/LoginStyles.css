@@ -60,7 +60,7 @@ body {
 
 /* LoginContent */
 #loginContent {
-  padding: 60px 0px 50px 0px;
+  padding: 100px 0px 50px 0px;
 }
 .BoxTitle {
   color: #f2f2f2;
@@ -68,14 +68,15 @@ body {
   text-align: center;
 }
 .BoxSubtitle {
+  display: flex;
+  justify-content: center;
   font-size: 18px;
   color: #f2f2f2;
   text-align: center;
   padding-bottom: 20px;
 }
-.BoxSubtitle > b {
-  font-family: serif;
-  cursor: pointer;
+#createAcc {
+  font-weight: bold;
 }
 
 #loginBox {
