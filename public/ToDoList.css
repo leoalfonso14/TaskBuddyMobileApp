@@ -1,17 +1,30 @@
-/* Common styles for all screen sizes */
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex !important;
+  flex-direction: row !important;
+  margin: 0px;
+}
+/* General styles */
 .sidenav {
-  height: 100%;
-  width: 15%;
-  position: fixed;
+  height: 100vh; /* Change height to 100vh to occupy full height of the screen */
+  width: 17%;
   z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(20 25 59);
+  background-color: rgb(20, 25, 59);
   overflow-x: hidden;
   padding-top: 20px;
+  margin: 0px;
 }
 
-.sidenav a {
+@media screen and (min-width: 1680px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15%;
+  }
+}
+
+.sidenav a,
+.sidenav p {
   padding: 5px 5px 10px 32px;
   text-decoration: none !important;
   font-size: 25px;
@@ -21,49 +34,45 @@
 }
 
 .sidenav p {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none !important;
-  font-size: 25px;
-  color: white !important;
-  display: block;
-  font-family: var(--font-family-poppins);
   font-weight: 800;
-}
-
-.sidenav a.logout {
-  width: 100%;
 }
 
 .sidenav a:hover {
   background-color: rgb(164, 90, 189);
 }
 
-/* Media query for smaller screens */
+/* Media query for responsiveness */
 @media screen and (max-width: 768px) {
+  /* MOBILE VIEW */
   .sidenav {
-    width: 100%;
-    height: auto;
-    position: static;
+    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    height: auto; /* Remove fixed height to accommodate content */
+    position: relative; /* Remove fixed positioning to allow scrolling */
   }
-  .sidenav a {
-    font-size: 18px;
-    padding: 10px 10px 15px 20px;
+
+  .sidenav a,
+  .sidenav p {
+    font-size: 18px; /* Reduce font size on smaller devices */
   }
 }
 
+#topNav {
+  height: 54%;
+}
 #botNav {
-  height: 67%;
+  height: 46%;
   display: flex;
   align-items: flex-end;
 }
-
-.body {
-  background: #ffffff;
-  font: 14px var(--font-family-poppins);
+.logout {
+  width: 100%;
 }
+/* end side nav bar  */
+
 .today {
   font-size: 22px;
   font-family: var(--font-family-poppins);
+  padding-top: 12px !important;
 }
 .List {
   height: 85vh;
@@ -74,22 +83,12 @@
   left: 10%;
   top: 60px;
 }
-.row {
-  margin-left: 0px !important;
-  margin-right: -30px !important;
-}
 
 .animated.bounceIn,
 .animated.bounceOut,
 .animated.flipOutX,
 .animated.flipOutY {
   font-size: 13px;
-}
-
-.container {
-  padding-top: 45px;
-  position: relative;
-  left: -350px;
 }
 
 .todo-list {
@@ -258,7 +257,6 @@
 }
 .btn_wrapper {
   /* @extend .group; */
-  max-width: 250px;
   margin: 0 auto;
 }
 
@@ -397,89 +395,10 @@ a:hover {
 @media (min-width: 1024px) {
   .List {
     width: 30vw;
-    left: 35%;
     top: 60px;
     height: 85vh; /* Adjust the top position as needed */
   }
 }
-/* .trackYourProgress {
-  left: 820px;
-  letter-spacing: 0;
-  line-height: 22.5px;
-  position: relative;
-  top: -520px;
-  width: 829px;
-  font-size: 34px;
-  font-family: var(--font-family-poppins);
-  color: black;
-}
-
-.yourProgress {
-  left: 890px;
-  letter-spacing: 0;
-  line-height: 22.5px;
-  position: relative;
-  top: -470px;
-  width: 829px;
-  font-size: 30px;
-  font-family: var(--font-family-poppins);
-  color: black;
-}
-
-.yourProgress2 {
-  left: 890px;
-  letter-spacing: 0;
-  line-height: 22.5px;
-  position: relative;
-  top: -210px;
-  width: 829px;
-  font-size: 30px;
-  font-family: var(--font-family-poppins);
-  color: black;
-}
-.valignTextMiddle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-/* .container2 {
-  width: 50%;
-  position: fixed;
-  display: flex;
-
-  flex-direction: column;
-  left: 900px;
-  top: 220px;
-} */
-
-/* Progress */
-/* .progress {
-  width: 130px;
-  height: 130px !important;
-  line-height: 130px;
-  background: none;
-  margin: 0 auto;
-  box-shadow: none;
-  position: relative;
-  left: 1000px;
-  top: -500px;
-  box-shadow: none !important;
-  background-color: white !important;
-}
-#progress2 {
-  width: 130px;
-  height: 130px !important;
-  line-height: 130px;
-  background: none;
-  margin: 0 auto;
-  box-shadow: none;
-  position: relative;
-  left: 1000px;
-  top: -350px;
-  box-shadow: none !important;
-  background-color: white !important;
-
-*/
 /*
 *
 * ==========================================
@@ -487,34 +406,7 @@ a:hover {
 * ==========================================
 *
 */
-.trackYourProgress {
-  left: 1020px !important;
-  letter-spacing: 0;
-  line-height: 22.5px;
-  position: relative;
-  top: -490px !important;
-  width: 829px;
-  font-size: 34px;
-  font-family: var(--font-family-poppins);
-  color: black;
-}
 
-.firstCircle {
-  display: block;
-  left: 820px !important;
-  position: relative;
-  top: -370px !important;
-  width: 20vw;
-  height: 50vh;
-}
-.secondCircle {
-  display: block;
-  position: relative;
-  left: 1010px !important;
-  top: -370px !important;
-  width: 20vw;
-  height: 40vh;
-}
 #shadowC {
   background: #131946 !important;
   box-shadow: inset 0 0 44px 45px rgb(20 25 67) !important;
@@ -618,102 +510,10 @@ div.h4 {
   line-height: 1rem;
 }
 
-@media (min-width: 992px) {
-  .container {
-    width: 100%;
-    max-width: 1150px;
-  }
-}
-
 @media (max-width: 680px) {
   svg {
     width: 70px;
     height: 70px;
-  }
-}
-
-/* Responsive styles for small screens (up to 767px) */
-@media (max-width: 767px) {
-  .trackYourProgress {
-    left: auto;
-    top: auto;
-    width: 100%;
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .firstCircle,
-  .secondCircle {
-    width: 50vw;
-    top: 10px;
-    left: 25%;
-  }
-
-  .progress,
-  .progress::after {
-    height: 80px;
-    width: 80px;
-  }
-
-  #text {
-    font-size: 16px;
-  }
-}
-
-/* Responsive styles for medium screens (768px to 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .trackYourProgress {
-    left: auto;
-    top: auto;
-    width: 100%;
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .firstCircle,
-  .secondCircle {
-    width: 40vw;
-    top: 20px;
-    left: 30%;
-  }
-
-  .progress,
-  .progress::after {
-    height: 100px;
-    width: 100px;
-  }
-
-  #text {
-    font-size: 18px;
-  }
-}
-
-/* Responsive styles for large screens (1024px and above) */
-@media (min-width: 1024px) {
-  .trackYourProgress {
-    left: 1210px;
-    top: -620px;
-    width: 809px;
-  }
-
-  .firstCircle {
-    width: 20vw;
-    left: 1001px;
-  }
-  .secondCircle {
-    width: 20vw;
-    top: -450px;
-    left: 1200px;
-  }
-
-  .progress,
-  .progress::after {
-    height: 130px;
-    width: 130px;
-  }
-
-  #text {
-    font-size: 20px;
   }
 }
 
@@ -737,6 +537,65 @@ div.h4 {
   --font-family-poppins: "Poppins";
 }
 
+/* HOTFIX */
+.container {
+  max-width: 100%;
+}
+
+.row {
+  margin: 0px !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+#hotfix1 {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 1;
+  margin-left: 0px;
+  padding: 0px 6%;
+}
+
+#rightSide {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+#circles {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+#Progress {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ToDoListBox {
+  width: 80%;
+}
+
+.trackYourProgress {
+  letter-spacing: 0;
+  line-height: 22.5px;
+  font-size: 34px;
+  font-family: var(--font-family-poppins);
+  color: black;
+  text-align: center;
+  padding-top: 12%;
+  margin-bottom: 15%;
+}
+
+.circles {
+  width: 50%;
+  margin: 0px 30px;
+}
+
+/* HOTFIX END */
 .poppins-semi-bold-white-15px {
   color: var(--white);
   font-family: var(--font-family-poppins);
