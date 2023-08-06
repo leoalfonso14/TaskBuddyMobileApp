@@ -63,9 +63,9 @@ body {
   overflow: auto;
 }
 .VirtualPet {
-  background-image: url(images/VirtualPetLanding.png);
+  background-image: url(images/VirtualPetPage3.png);
   --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-  min-height: 100vh;
+  min-height: 90vh;
   background-size: cover;
   background-position: center;
   color: var(--text);
@@ -80,6 +80,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 /*
 #VPtext {
   position: absolute;
@@ -295,6 +296,55 @@ body {
 .grow:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+.title {
+  color: rgb(251 251 251);
+  font-family: var(--font-family-poppins) !important;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  /* line-height: 35.5px; */
+  font-size: 70px;
+  mix-blend-mode: hard-light;
+  position: relative;
+  top: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -170px;
+  width: 95%;
+  opacity: 75%;
+  text-transform: uppercase;
+}
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
 }
 /*---------------------------------------------*/
 /*------EnD of Virtual.html CSS styling----------------*/
