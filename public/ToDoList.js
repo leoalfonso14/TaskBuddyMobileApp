@@ -25,8 +25,6 @@ auth.onAuthStateChanged((user) => {
     // LOAD ALL THE USER DATA THAT IS NEEDED
     // LOGIC TO DISPLAY NAME BASED ON EMAIL - IF USER HAS ALREADY ENTERED A NAME IN THE SETTINGS CHOSE THAT
     var email = user.email;
-    var position = email.search("@");
-    var tempName = email.substring(0, position);
   }
 });
 
