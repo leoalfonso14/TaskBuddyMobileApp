@@ -31,7 +31,7 @@
     <!-- Nav bar -->
     <div id="navlist">
       <img id="navimg" src="images/navbar.png" width="84" height="84" />
-      <b><a id="mainTitle" href="ExternalPage.html">TaskBuddy</a></b>
+      <b><a id="mainTitle" href="index.html">TaskBuddy</a></b>
       <a href="login.html">Login</a>
       <p id="noClickNav">Virtual Pet</p>
       <a href="dashboard.html">Dashboard</a>
@@ -39,12 +39,12 @@
 
     <div class="VirtualPet">
       <div class="dog-animation"></div>
+        <!--<img src="images/PetPage_5.png" alt="Animated Dog"> -->
     </div>
 
-    <div class="WhatisVirtual">
-      <img id="ownerpet" class="layer" src="images/pet-owner.png" />
-      <div class="content-virtual">
-        <h1>What is a Virtual Pet?</h1>
+    <div id="row" class="layer"> <!--WhatisVirtual Parent--> <!--Parent-->
+      <div class="column middle"> <!--child 1 was content-virtual-text-->
+        <h2>What is a Virtual Pet?</h2>
         <p>
           Each time you complete a task you earn points or coins that are used
           to sustain and care for your adorable virtual companion. By nurturing
@@ -58,11 +58,13 @@
           eligible for level ups.
         </p>
       </div>
+      <div class="column.side" > <!--child 2 was content-virtual-media--->
+        <img id="infoimg" class="layer" src="images/pet-owner.png" />
+      </div>
     </div>
 
-    <div class="WhyVirtual">
-      <img id="gif" class="layer" src="images/pinguim-penguin.gif" />
-      <div class="content-whyvirtual">
+    <div id="WhyVirtual" class="layer"> <!--parent--->
+      <div class="content-whyvirtual-text"> <!--child --->
         <h1>What Inspired the Virtual Pet</h1>
         <p>
           If you are a Gen-z-er you might be familiar with a popular online
@@ -79,6 +81,10 @@
           achievable.
         </p>
       </div>
+        <div class="content-whyvirtual-media"> <!--child --->
+          <img id="gif" class="layer" src="images/pinguim-penguin.gif" />
+        </div>
+
     </div>
 
     <div class="footersection">
