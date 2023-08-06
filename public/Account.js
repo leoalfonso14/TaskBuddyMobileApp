@@ -56,7 +56,7 @@ auth.onAuthStateChanged((user) => {
 // Listen for Save button click
 saveButton.addEventListener("click", () => {
   const newName = nameInput.value;
-  update(newName);
+  updateName(newName);
 
   // Show the popup
   popup.style.display = "block";
@@ -74,7 +74,7 @@ saveButton.addEventListener("click", () => {
 });
 
 //Updates User data in firebase
-function update(newName) {
+function updateName(newName) {
   var UserID = auth.currentUser.uid;
   db.collection("users")
     .doc(UserID)
@@ -89,7 +89,7 @@ function update(newName) {
     });
 }
 
-function set(newName) {
+function setName(newName) {
   var UserID = auth.currentUser.uid;
   db.collection("users")
     .doc(UserID)

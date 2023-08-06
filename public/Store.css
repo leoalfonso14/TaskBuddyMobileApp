@@ -1,7 +1,7 @@
 /* Common styles for all screen sizes */
 .sidenav {
   height: 100%;
-  width: 15%;
+  width: 17%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -31,8 +31,8 @@
 }
 
 .sidenav a.logout {
-  position: absolute; /* Keep "Logout" link at the bottom */
-  bottom: 20px; /* Adjust the value as needed to control the distance from the bottom */
+  position: relative;
+  top: 54.5%;
 }
 
 .sidenav a:hover {
@@ -49,6 +49,13 @@
   .sidenav a {
     font-size: 18px;
     padding: 10px 10px 15px 20px;
+  }
+}
+
+@media screen and (min-width: 1620px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15% !important;
   }
 }
 
