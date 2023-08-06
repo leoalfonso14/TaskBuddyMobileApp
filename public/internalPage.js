@@ -30,40 +30,45 @@ auth.onAuthStateChanged((user) => {
 
     // Get the userTitle element
     var userTitle = document.querySelector(".userTitle");
+    var email = user.email;
+    var position = email.search("@");
+    var tempName = email.substring(0, position);
 
-    // Get the user's saved name from local storage
-    const savedName = localStorage.getItem("userName");
+    var UserID = user.uid;
+    let nickName;
 
-    if (savedName) {
-      // Update the welcome message with the saved name
-      userTitle.textContent = "Welcome " + savedName;
-    } else {
-      var email = user.email;
-      var position = email.search("@");
-      var tempName = email.substring(0, position);
-
-      var UserID = user.uid;
-      let nickName;
-
-      db.collection("users")
-        .doc(UserID)
-        .get()
-        .then((doc) => {
-          if (doc.exists) {
-            nickName = doc.data().fullName;
-            if (nickName) {
-              userTitle.textContent = "Welcome " + nickName;
-            } else {
-              userTitle.textContent = "Welcome " + tempName;
-            }
-          } else {
-            console.log("No Such Document");
+    db.collection("users")
+      .doc(UserID)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          nickName = doc.data().fullName;
+          if (nickName) {
+            userTitle.textContent = nickName;
           }
-        });
-    }
+        } else {
+          console.log("No Such Document");
+          userTitle.textContent = tempName;
+          set(tempName);
+        }
+      });
   }
 });
 
+function set(tempName) {
+  var UserID = auth.currentUser.uid;
+  db.collection("users")
+    .doc(UserID)
+    .set({
+      fullName: tempName,
+    })
+    .then(() => {
+      console.log("Success!");
+    })
+    .catch((error) => {
+      console.log("Error!");
+    });
+}
 
 const logoutClick = document.querySelector(".logout");
 logoutClick.addEventListener("click", function () {

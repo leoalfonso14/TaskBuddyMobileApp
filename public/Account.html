@@ -21,7 +21,6 @@
       sizes="32x32"
       href="favicon.io/favicon-16x16.png"
     />
-    <!-- <script src="internalPage.js"></script> -->
     <title>My Account</title>
   </head>
 
@@ -50,19 +49,19 @@
       <h1 class="title poppins-medium-shark">Your account</h1>
 
       <p id="place">Full Name</p>
-      <div id="nameInput">
+      <div id="nameInput" class="Box">
         <input type="text" id="AccountBox" placeholder="" />
-        <div class="rectangle1">Edit</div>
+        <div class="rectangle1 grow" id="saveButton">Save</div>
       </div>
       <p id="email">Email</p>
-      <div id="Box">
+      <div class="Box">
         <input type="text" id="AccountBox" placeholder="" />
-        <div class="rectangle1">Edit</div>
+        <div class="rectangle1 grow">Save</div>
       </div>
 
       <p id="AccountsConnected">Accounts Connected</p>
       <div id="Accounts Created">
-        <div id="Box" style="margin-bottom: 25px">
+        <div class="Box" style="margin-bottom: 25px">
           <!-- Google icon  -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,9 +77,9 @@
             />
           </svg>
           <span id="AccountBox" placeholder="Get Users Name"> </span>
-          <div class="rectangle2" id="googleConnect">Connect</div>
+          <div class="rectangle2 grow" id="googleConnect">Connect</div>
         </div>
-        <div id="Box">
+        <div class="Box">
           <!-- Safari Icon -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,27 +97,17 @@
             />
           </svg>
           <span type="text" id="AccountBox" placeholder="Get Users Name"></span>
-          <div class="rectangle2" id="appleConnect">Connect</div>
+          <div class="rectangle2 grow" id="appleConnect">Connect</div>
         </div>
       </div>
-    
-      <div id="saveButton">
-        <div class="rectangle2">Save</div>
-      </div>
-      
-      <div id="popup" class="popup">
-        Your information has been updated.
-      </div>
-      
 
+      <div id="popup" class="popup">Your information has been updated.</div>
     </div>
-
   </body>
 
   <!--Scripts for firebase connections-->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-  <script src="internalPage.js"></script>
   <script src="Account.js"></script>
 </html>

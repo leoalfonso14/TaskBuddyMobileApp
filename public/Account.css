@@ -96,7 +96,7 @@ body {
   font-size: 25px;
 }
 
-#Box {
+.Box {
   position: relative;
   left: 10%;
   display: flex;
@@ -198,14 +198,13 @@ body {
   font-style: normal;
 }
 
-#saveButton {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 #saveButton .rectangle2 {
@@ -225,7 +224,7 @@ body {
 .popup {
   display: none;
   position: fixed;
-  Top: 20px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
