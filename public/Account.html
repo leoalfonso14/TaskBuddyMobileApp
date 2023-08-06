@@ -2,13 +2,18 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KCSZMXRL0"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0KCSZMXRL0"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-0KCSZMXRL0');
+      gtag("config", "G-0KCSZMXRL0");
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,23 +60,28 @@
     </div>
 
     <div class="AccountPage">
-      <h1 class="title poppins-medium-shark">Your account</h1>
+      <div class="BoxAround">
+        <h1 class="title poppins-medium-shark">Your account</h1>
 
-      <p id="place">Full Name</p>
-      <div id="nameInput" class="Box">
-        <input type="text" id="AccountBox" placeholder="" />
-        <div class="rectangle1 grow" id="saveButton">Save</div>
-      </div>
-      <p id="email">Email</p>
-      <div class="Box">
-        <input type="text" id="AccountBox" placeholder="" />
-        <div class="rectangle1 grow">Save</div>
+        <p id="place">Full Name</p>
+        <div id="nameInput" class="Box">
+          <input type="text" id="AccountBox" placeholder="" />
+          <div class="rectangle1 grow" id="saveButton">Save</div>
+        </div>
+
+        <p id="email">Email</p>
+        <div class="Box">
+          <input type="text" id="emailBox" placeholder="" />
+          <span id="emailDisplay"></span>
+          <!-- Display user's email here -->
+          <!--<div class="rectangle1 grow">Save</div> -->
+        </div>
       </div>
 
-      <p id="AccountsConnected">Accounts Connected</p>
+      <!-- <p id="AccountsConnected">Accounts Connected</p>
       <div id="Accounts Created">
         <div class="Box" style="margin-bottom: 25px">
-          <!-- Google icon  -->
+          Google icon 
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -89,7 +99,7 @@
           <div class="rectangle2 grow" id="googleConnect">Connect</div>
         </div>
         <div class="Box">
-          <!-- Safari Icon -->
+          Safari Icon 
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
@@ -109,7 +119,7 @@
           <span type="text" id="AccountBox" placeholder="Get Users Name"></span>
           <div class="rectangle2 grow" id="appleConnect">Connect</div>
         </div>
-      </div>
+      </div> -->
 
       <div id="popup" class="popup">Your information has been updated.</div>
     </div>

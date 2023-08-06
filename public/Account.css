@@ -125,6 +125,20 @@ body {
   white-space: nowrap;
 }
 
+#emailBox {
+  border-radius: 40px;
+  padding: 15px;
+  background-color: #cccccc;
+  overflow: auto;
+  width: 70%;
+  border: none;
+  font-family: var(--font-family-poppins);
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.15px;
+  white-space: nowrap;
+}
+
 #googleIcon {
   margin-top: 10px;
   position: absolute;
@@ -253,4 +267,31 @@ body {
   border-radius: 5px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+}
+
+/* TEMP LOWERING YOUR ACCOUNT PART SINCE WE TEMP REMOVED THE CONNECTING ACCOUNT PART */
+.AccountPage {
+  margin: 12% 0px !important;
+  width: 75%;
+}
+
+.BoxAround {
+  width: 75%;
+  padding: 30px 18px;
+  background-color: #183775;
+  border-radius: 40px;
+  margin-left: 40px;
+  padding-bottom: 50px;
+  box-shadow: 10px 10px 10px #0d1729;
+  color: white;
+}
+
+#AccountBox,
+#emailBox {
+  color: black;
+}
+
+#saveButton {
+  color: Black;
+  background-color: #cccccc;
 }
