@@ -27,32 +27,43 @@ auth.onAuthStateChanged((user) => {
   } else {
     var internalPage = document.getElementsByClassName("InternalPage")[0];
     internalPage.style.display = "flex";
-    // LOAD ALL THE USER DATA THAT IS NEEDED
-    // LOGIC TO DISPLAY NAME BASED ON EMAIL - IF USER HAS ALREADY ENTERED A NAME IN THE SETTINGS CHOSE THAT
-    var email = user.email;
-    var position = email.search("@");
-    var tempName = email.substring(0, position);
-    var userTitle = document.getElementsByClassName("userTitle")[0];
-    var UserID = user.uid;
-    let nickName;
-    db.collection("users")
-      .doc(UserID)
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          //console.log("Document data: ", doc.data());
-          nickName = doc.data().fullName;
-        } else {
-          console.log("No Such Document");
-        }
-      });
-    if (nickName) {
-      userTitle.textContent = nickName;
+
+    // Get the userTitle element
+    var userTitle = document.querySelector(".userTitle");
+
+    // Get the user's saved name from local storage
+    const savedName = localStorage.getItem("userName");
+
+    if (savedName) {
+      // Update the welcome message with the saved name
+      userTitle.textContent = "Welcome " + savedName;
     } else {
-      userTitle.textContent = tempName;
+      var email = user.email;
+      var position = email.search("@");
+      var tempName = email.substring(0, position);
+
+      var UserID = user.uid;
+      let nickName;
+
+      db.collection("users")
+        .doc(UserID)
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            nickName = doc.data().fullName;
+            if (nickName) {
+              userTitle.textContent = "Welcome " + nickName;
+            } else {
+              userTitle.textContent = "Welcome " + tempName;
+            }
+          } else {
+            console.log("No Such Document");
+          }
+        });
     }
   }
 });
+
 
 const logoutClick = document.querySelector(".logout");
 logoutClick.addEventListener("click", function () {
