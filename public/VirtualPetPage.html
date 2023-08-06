@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="VirtualPetPage.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon.io/favicon-16x16.png"
+    />
+    <title>Virtual Pet Page</title>
+  </head>
+
+  <body>
+    <div class="sidenav">
+      <div id="topNav">
+        <p class="title2" href="internalPage.html">TaskBuddy</p>
+        <a href="internalPage.html"
+          ><i class="fa fa-home" aria-hidden="true"></i> Dashboard
+        </a>
+        <a href="ToDoList.html"
+          ><i class="fa fa-pencil-square" aria-hidden="true"></i> ToDoList
+        </a>
+        <a href="calendar.html"
+          ><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Calendar
+        </a>
+        <a href="VirtualPetPage.html"
+          ><i class="fa fa-paw" aria-hidden="true"></i> VirtualPet
+        </a>
+        <a href="Account.html"
+          ><i class="fa fa-user" aria-hidden="true"></i> Account
+        </a>
+      </div>
+      <div id="botNav">
+        <a href="" class="logout"
+          ><i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+        </a>
+      </div>
+    </div>
+    <div class="img">
+      <div id="icons">
+        <!-- Icons  -->
+        <a class="storeIcon" href="Store.html"><img src="icons/shop2.png" /></a>
+        <a class="vetIcon" href="PetsHealth.html">
+          <img src="icons/veterinary2.png"
+        /></a>
+      </div>
+      <section class="container">
+        <h1>
+          <span class="Welcome">Welcome</span>
+          <span>To your</span>
+        </h1>
+
+        <h2 class="Virtual">
+          <span>Virtual</span>
+          <span>Pet Page</span>
+        </h2>
+      </section>
+    </div>
+  </body>
+  <!--Scripts for firebase connections-->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="internalPage.js"></script>
+</html>
