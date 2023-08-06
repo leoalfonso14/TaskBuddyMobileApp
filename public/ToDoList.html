@@ -10,14 +10,19 @@
       rel="stylesheet"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       href="path/to/font-awesome/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="ToDoList.css" />
     <link
       rel="icon"
@@ -26,12 +31,27 @@
       href="favicon.io/favicon-16x16.png"
     />
     <title>ToDoList</title>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css'>
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,700"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
@@ -60,142 +80,147 @@
           ><i class="fa fa-sign-out" aria-hidden="true"></i> Logout
         </a>
       </div>
-    </div> 
+    </div>
 
- 
-        <body 
-        style="height: 90vh !important;
-        width: 50vw !important;
-        overflow: hidden !important;">
-            <div class="ToDoListBox">
-            <div class="List"> 
-             <div class="container">
-                <div class="today"></div>
-                <div class="row">
-                   <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
-                      <div class="add-control">
-                         <div class="form-group has-feedback">
-                            <input type="text" class="form-control" placeholder="✍️ Add item..."/>
-                            <i class="fa fa-plus form-control-feedback add-btn" title="Add item"></i>
-                         </div>
-                      </div>
-                      <p class="err text-danger text-center hidden"><i class="fa fa-warning"></i> Oops! Please, enter name item</p>
-                      <p class="no-items text-muted text-center hidden"><i class="fa fa-ban"></i></p>
-                      <ul class="todo-list">
-                      </ul>
-                   </div>
-                </div>
-                </div>
-            </div>
-            </div>
-             <div class="ProgressInf"> 
-                <div class="trackYourProgress valignTextMiddle"> Track Your Progress </div>
-             </div>
-             <div class="in-progress"> 
-                <!-- <p class="yourProgress valignTextMiddle"> Your progress for today  </p> 
-                <p class="yourProgress2 valignTextMiddle"> Progress for the week </p>  -->
-            </div> 
-            
-
-
-              <div class="col-xl-3 col-lg-6 mb-4">
-                <div class="firstCircle"> 
-                  <div id= "shadowC" class="bg-white rounded-lg p-4 shadow">
-                    <h2 id="text" class="h6 font-weight-bold text-center mb-4">
-                      Progress of Today 
-                    </h2>
-        
-                    <!-- Progress bar 1 -->
-                    <div class="progress mx-auto" data-value="80">
-                      <span class="progress-left">
-                        <span class="progress-bar border-primary"></span>
-                      </span>
-                      <span class="progress-right">
-                        <span class="progress-bar border-primary"></span>
-                      </span>
-                      <div
-                        class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
-                      >
-                        <div class="h2 font-weight-bold">
-                          80<sup class="small text-white">%</sup>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row text-center mt-4">
-                      <div class="col-6 border-right">
-                        <div class="h4 font-weight-bold mb-0 text-white">Last Week</div>
-                   
-                      </div>
-                      <div class="col-6">
-                        <div class="h4 font-weight-bold mb-0 text-white">60%</div>
-                        
-                      </div>
-                    </div>
-                    <!-- END -->
+    <div id="rightSide">
+      <div class="ToDoListBox">
+        <div class="List">
+          <div class="container">
+            <div class="today"></div>
+            <div class="row">
+              <div
+                class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3"
+                id="hotfix1"
+              >
+                <div class="add-control">
+                  <div class="form-group has-feedback">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="✍️ Add item..."
+                    />
+                    <i
+                      class="fa fa-plus form-control-feedback add-btn"
+                      title="Add item"
+                    ></i>
                   </div>
                 </div>
-                </div>
-        
-                <div class="col-xl-3 col-lg-6 mb-4">
-                    <div class="secondCircle">
-                  <div id="shadowC"class="bg-white rounded-lg p-4 shadow">
-                    <h2 id="text"class="h6 font-weight-bold text-center mb-4">Progress of Lask Week</h2>
-        
-                    <!-- Progress bar 2 -->
-                    <div class="progress mx-auto" data-value="25">
-                      <span class="progress-left">
-                        <span class="progress-bar border-danger"></span>
-                      </span>
-                      <span class="progress-right">
-                        <span class="progress-bar border-danger"></span>
-                      </span>
-                      <div
-                        class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
-                      >
-                        <div class="h2 font-weight-bold text-white">
-                          25<sup class="small text-white">%</sup>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row text-center mt-4">
-                      <div class="col-6 border-right">
-                        <div class="h4 font-weight-bold mb-0 text-white">Last Month</div>
-            
-                      </div>
-                      <div class="col-6">
-                        <div class="h4 font-weight-bold mb-0 text-white">60%</div>
+                <p class="err text-danger text-center hidden">
+                  <i class="fa fa-warning"></i> Oops! Please, enter name item
+                </p>
+                <p class="no-items text-muted text-center hidden">
+                  <i class="fa fa-ban"></i>
+                </p>
+                <ul class="todo-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Progress">
+        <div class="trackYourProgress valignTextMiddle">
+          Track Your Progress
+        </div>
+        <div id="circles">
+          <div class="circles">
+            <div class="firstCircle">
+              <div id="shadowC" class="bg-white rounded-lg p-4 shadow">
+                <h2 id="text" class="h6 font-weight-bold text-center mb-4">
+                  Progress of Today
+                </h2>
 
-                      </div>
+                <!-- Progress bar 1 -->
+                <div class="progress mx-auto" data-value="80">
+                  <span class="progress-left">
+                    <span class="progress-bar border-primary"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar border-primary"></span>
+                  </span>
+                  <div
+                    class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
+                  >
+                    <div class="h2 font-weight-bold">
+                      80<sup class="small text-white">%</sup>
                     </div>
-                    <!-- END -->     
                   </div>
                 </div>
+                <div class="row text-center mt-4">
+                  <div class="col-6 border-right">
+                    <div class="h4 font-weight-bold mb-0 text-white">
+                      Last Week
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="h4 font-weight-bold mb-0 text-white">60%</div>
+                  </div>
                 </div>
+                <!-- END -->
+              </div>
+            </div>
+          </div>
+          <div class="circles">
+            <div class="secondCircle">
+              <div id="shadowC" class="bg-white rounded-lg p-4 shadow">
+                <h2 id="text" class="h6 font-weight-bold text-center mb-4">
+                  Progress of Lask Week
+                </h2>
+
+                <!-- Progress bar 2 -->
+                <div class="progress mx-auto" data-value="25">
+                  <span class="progress-left">
+                    <span class="progress-bar border-danger"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar border-danger"></span>
+                  </span>
+                  <div
+                    class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
+                  >
+                    <div class="h2 font-weight-bold text-white">
+                      25<sup class="small text-white">%</sup>
+                    </div>
+                  </div>
+                </div>
+                <div class="row text-center mt-4">
+                  <div class="col-6 border-right">
+                    <div class="h4 font-weight-bold mb-0 text-white">
+                      Last Month
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="h4 font-weight-bold mb-0 text-white">60%</div>
+                  </div>
+                </div>
+                <!-- END -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <!--Scripts for firebase connections-->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-            
-
-            <script
-            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"
-          ></script>
-          <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"
-          ></script>
-          <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"
-          ></script>
-          <script  src="ToDoList.js"></script>
-
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="ToDoList.js"></script>
 </html>

@@ -42,16 +42,21 @@ body {
 }
 
 /* Media query for responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 440px) {
+  /* MOBILE VIEW TOP NAV BAR BETTER?*/
   .sidenav {
-    width: 100%; /* Expand the sidebar to full width on smaller devices */
+    width: 40%; /* Expand the sidebar to full width on smaller devices */
     height: auto; /* Remove fixed height to accommodate content */
     position: relative; /* Remove fixed positioning to allow scrolling */
   }
 
   .sidenav a,
   .sidenav p {
-    font-size: 18px; /* Reduce font size on smaller devices */
+    font-size: 12px; /* Reduce font size on smaller devices */
+  }
+
+  .title {
+    font-size: 22px !important;
   }
 }
 
