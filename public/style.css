@@ -1038,7 +1038,7 @@ body {
   font-family: "Frank Ruhl Libre, serif";
   height: 32vh;
 }
-.footersection p {
+.footersection a {
   color: white;
   margin: 10px 20px;
   text-decoration: none;

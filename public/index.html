@@ -3,16 +3,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0KCSZMXRL0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KCSZMXRL0"></script>
-     <script>
-     window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
- 
-       gtag('config', 'G-0KCSZMXRL0');
-     </script>
+      gtag("config", "G-0KCSZMXRL0");
+    </script>
 
     <title>TaskBuddy</title>
     <meta charset="UTF-8" />
@@ -39,8 +43,6 @@
       href="https://fonts.googleapis.com/css2?family=Bitter:wght@900&display=swap"
       rel="stylesheet"
     />
-
-
   </head>
 
   <body>
@@ -211,17 +213,17 @@
           </div>
           <div class="footersection">
             <div class="socialMedia">
-              <p class="footer-link grow" href="">Meet The Team</p>
-              <p class="footer-link grow" href="">Instagram</p>
+              <a class="footer-link grow" href="Team.html">Meet The Team</a>
+              <a class="footer-link grow" href="">Instagram</a>
               <!-- Change the Youtube Link to the TaskBuddy youtube channel once created -->
-              <p
+              <a
                 class="footer-link grow"
-                href="https://www.youtube.com/@HunterPadilla-gb9qn"
+                href="https://www.youtube.com/@HunterPadilla-gb9qn/videos" target="_blank"
               >
                 Youtube
               </p>
             </div>
-            <p class="copyright">© 2023 TaskBuddy</p>
+            <a class="copyright">© 2023 TaskBuddy</a>
           </div>
         </div>
       </div>

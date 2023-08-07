@@ -238,8 +238,6 @@ body {
 
 #gif {
   padding: 15px 0px 0px 15px;
-
-
 }
 
 .content-whyvirtual-text {
@@ -269,7 +267,7 @@ body {
   text-align: center;
   font-family: "Frank Ruhl Libre, serif";
 }
-.footersection p {
+.footersection a {
   color: #fcfcfc;
   margin: 10px 20px;
   text-decoration: none;

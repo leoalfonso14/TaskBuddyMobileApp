@@ -42,7 +42,6 @@ auth.onAuthStateChanged((user) => {
       .then((doc) => {
         if (doc.exists) {
           nickName = doc.data().fullName;
-          console.log(nickName);
           if (nickName) {
             nameInput.value = nickName;
           }
