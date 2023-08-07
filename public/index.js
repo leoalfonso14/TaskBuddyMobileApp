@@ -28,6 +28,7 @@ auth.onAuthStateChanged((user) => {
 function signIn() {
   email = document.getElementById("emailBox").value;
   password = document.getElementById("passwordBox").value;
+  // handleAuthClick();
 
   auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
     var user = userCredential.user;

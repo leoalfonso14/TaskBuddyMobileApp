@@ -27,15 +27,48 @@ auth.onAuthStateChanged((user) => {
   } else {
     var internalPage = document.getElementsByClassName("InternalPage")[0];
     internalPage.style.display = "flex";
-    // LOAD ALL THE USER DATA THAT IS NEEDED
-    // LOGIC TO DISPLAY NAME BASED ON EMAIL - IF USER HAS ALREADY ENTERED A NAME IN THE SETTINGS CHOSE THAT
+
+    // Get the userTitle element
+    var userTitle = document.querySelector(".userTitle");
     var email = user.email;
     var position = email.search("@");
     var tempName = email.substring(0, position);
-    var userTitle = document.getElementsByClassName("userTitle")[0];
-    userTitle.textContent = tempName;
+
+    var UserID = user.uid;
+    let nickName;
+
+    db.collection("users")
+      .doc(UserID)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          nickName = doc.data().fullName;
+          if (nickName) {
+            userTitle.textContent = nickName;
+          }
+        } else {
+          console.log("No Such Document");
+          userTitle.textContent = tempName;
+          setName(tempName);
+        }
+      });
   }
 });
+
+function setName(tempName) {
+  var UserID = auth.currentUser.uid;
+  db.collection("users")
+    .doc(UserID)
+    .set({
+      fullName: tempName,
+    })
+    .then(() => {
+      console.log("Success!");
+    })
+    .catch((error) => {
+      console.log("Error!");
+    });
+}
 
 const logoutClick = document.querySelector(".logout");
 logoutClick.addEventListener("click", function () {
