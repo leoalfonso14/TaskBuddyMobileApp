@@ -8,7 +8,7 @@ body {
 /* General styles */
 .sidenav {
   height: 100vh; /* Change height to 100vh to occupy full height of the screen */
-  width: 17%;
+  width: 17% !important;
   z-index: 1;
   background-color: rgb(20, 25, 59);
   overflow-x: hidden;
@@ -19,7 +19,7 @@ body {
 @media screen and (min-width: 1680px) {
   /* MOBILE VIEW */
   .sidenav {
-    width: 15%;
+    width: 15% !important;
   }
 }
 
@@ -110,6 +110,7 @@ body {
   padding: 0;
   font-family: var(--font-family-poppins);
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   min-height: 500px;
@@ -117,10 +118,10 @@ body {
 }
 .calendar {
   color: #fff;
-  margin: 60px auto 0px auto;
+  margin: 110px auto 0px auto;
   background: #0f1229;
   padding: 60px 40px 80px 40px;
-  height: 75vh;
+  height: 62vh;
   border-radius: 5px;
 }
 
@@ -531,10 +532,7 @@ input.add-event-edit:-ms-input-placeholder {
   padding: 0;
   font-family: var(--font-family-poppins);
   display: flex;
-  position: relative;
-  bottom: 20;
+  flex-direction: column;
   align-items: center;
-  height: 150vh;
-  min-height: 500px;
   background: #0f1229 !important;
 }

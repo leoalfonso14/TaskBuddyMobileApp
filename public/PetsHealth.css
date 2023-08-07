@@ -1,6 +1,6 @@
 .sidenav {
   height: 100vh;
-  width: 15%;
+  width: 17%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -37,7 +37,7 @@
 }
 .logout {
   position: relative;
-  top: 350px;
+  top: 61.5%;
 }
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -45,6 +45,13 @@
   }
   .sidenav a {
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1620px) {
+  /* MOBILE VIEW */
+  .sidenav {
+    width: 15% !important;
   }
 }
 

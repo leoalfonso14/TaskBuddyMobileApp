@@ -49,13 +49,13 @@ auth.onAuthStateChanged((user) => {
         } else {
           console.log("No Such Document");
           userTitle.textContent = tempName;
-          set(tempName);
+          setName(tempName);
         }
       });
   }
 });
 
-function set(tempName) {
+function setName(tempName) {
   var UserID = auth.currentUser.uid;
   db.collection("users")
     .doc(UserID)

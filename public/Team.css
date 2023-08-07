@@ -1,0 +1,113 @@
+/*-----Virtual.html CSS begins----*/
+body {
+  overflow-x: hidden !important;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  overflow-y: hidden;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+}
+
+#navlist {
+  background-color: #00011d;
+  overflow: hidden;
+  /* z-index: 1; */
+}
+
+/* navlist designing */
+#navlist > a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  font-family: "Bitter", serif;
+  text-align: center;
+  padding: 24px 46px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* navlist link hover effect */
+#navlist > a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navlist > img {
+  float: left;
+}
+
+/* if in Dashboard the Dashboard part of the nav bar cannot be clicked */
+#noClickNav {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  font-family: "Bitter", serif;
+  text-align: center;
+  padding: 24px 46px;
+  font-size: 30px;
+  margin: 0;
+}
+
+#mainTitle {
+  margin-top: 5px;
+  padding-top: 10px;
+  color: white;
+  float: left;
+  font-size: 40px;
+  font-family: "Bitter", serif;
+  text-decoration: none;
+}
+
+.MeetTeamImg {
+  background-image: url(images/Team2.jpg);
+  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  min-height: 95vh;
+  background-size: cover;
+  background-position: center;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  top: 0px;
+  z-index: 10;
+  margin: 100;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}

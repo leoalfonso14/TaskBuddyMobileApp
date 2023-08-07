@@ -1,5 +1,6 @@
 /* This is a single-line comment /
 / file name' style.css */
+
 body {
   margin: 0;
   background-color: #00011d;
@@ -947,10 +948,11 @@ body {
 
 /* /--------------Dashboard.html CSS begins--------------/ .*/
 .DashboardPage {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .image {
-  background-image: url(images/DashboardOfficeNew.jpg);
+  background-image: url(images/Dashboardpic.jpg);
   --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
   min-height: 100vh;
   background-size: cover;
@@ -967,6 +969,23 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+.title {
+  color: var(--haiti);
+  font-family: var(--font-family-poppins) !important;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  line-height: 35.5px;
+  font-size: 80px;
+  mix-blend-mode: hard-light;
+  position: relative;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0px;
+  width: 90%;
+  text-transform: uppercase;
+}
 #dashboardimg {
   position: absolute;
   background-position: center;
@@ -980,42 +999,46 @@ body {
 .WhatisCalendar {
   padding: 20px;
   background-color: #301d5c;
+  height: 60vh;
 }
 
 .content-calendar {
-  font-family: "Frank Ruhl Libre, serif";
+  font-family: var(--font-family-poppins);
   color: #e9e9e9;
-  max-width: 600px;
-  padding: 20px;
+  /* max-width: 600px; */
+  padding: 100px;
   float: left;
-  line-height: 2;
   font-size: 22px;
+  width: 50%;
+  line-height: 2.3em;
 }
 
 .WhatisToDoList {
   padding: 20px;
   background-color: #301d5c;
+  height: 110vh;
 }
 .content-ToDoList {
-  font-family: "Frank Ruhl Libre, serif";
+  font-family: "Poppins";
   color: #e9e9e9;
-  max-width: 600px;
-  padding: 20px;
+  /* max-width: 600px; */
+  padding: 50px;
   float: right;
-  width: 150%;
-  font-size: 22px;
+  width: 60%;
+  font-size: 25px;
+  line-height: 2.3em;
 }
 
 .footersection {
   background-color: #fbd3e4;
   font-size: 24px;
   line-height: 2;
-  padding: 20px 10px;
+  padding: 50px 0px 0px 20px;
   text-align: center;
   font-family: "Frank Ruhl Libre, serif";
   height: 32vh;
 }
-.footersection p {
+.footersection a {
   color: white;
   margin: 10px 20px;
   text-decoration: none;
@@ -1037,6 +1060,37 @@ body {
 .grow:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --haiti: rgba(20, 25, 59, 1);
+  --raven: rgba(102, 122, 138, 1);
+  --porcelain: rgba(239, 242, 244, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12.2px;
+  --font-size-m: 15px;
+  --font-size-l: 24px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 90px;
+
+  --font-family-poppins: "Poppins";
+}
+
+.poppins-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-normal-porcelain-15px {
+  color: var(--porcelain);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
 }
 /* /---------------------------------------------/
   /------dashboard.html styling ends here----------/

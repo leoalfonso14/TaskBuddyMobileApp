@@ -55,10 +55,12 @@
 
     <div id="loginContent">
       <h1 class="BoxTitle">Login to your account</h1>
-      <p class="BoxSubtitle">
-        Don't have an account?
-        <b class="grow" onclick="goToSignUp()">Create one here</b>
-      </p>
+      <div class="BoxSubtitle">
+        <p>Don't have an account? &nbsp</p>
+        <p class="grow" id="createAcc" onclick="goToSignUp()">
+          Create one here
+        </p>
+      </div>
       <div id="loginBox">
         <p id="email">Email address</p>
         <input type="text" id="emailBox" placeholder="" />
@@ -133,11 +135,17 @@
 
     <div class="footersection">
       <div class="socialMedia">
-        <p class="footer-link grow" href="">Meet The Team</p>
-        <p class="footer-link grow" href="">Instagram</p>
-        <p class="footer-link grow" href="">Youtube</p>
+        <a class="footer-link grow" href="Team.html">Meet The Team</a>
+        <a class="footer-link grow" href="">Instagram</a>
+        <!-- Change the Youtube Link to the TaskBuddy youtube channel once created -->
+        <a
+          class="footer-link grow"
+          href="https://www.youtube.com/@HunterPadilla-gb9qn/videos" target="_blank"
+        >
+          Youtube
+        </p>
       </div>
-      <p class="copyright">© 2023 TaskBuddy</p>
+      <a class="copyright">© 2023 TaskBuddy</a>
     </div>
   </body>
 

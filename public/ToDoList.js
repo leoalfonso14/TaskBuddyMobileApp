@@ -57,28 +57,63 @@ function generateID() {
   return randLetter + Date.now();
 }
 
+var tasks;
+var completeTasks;
+var taskSize;
 function pushToState(title, status, id) {
+  //CREATING TASK HERE
   var baseState = getState();
   baseState[id] = { id: id, title: title, status: status };
   syncState(baseState);
+  tasks = document.querySelectorAll("li");
+  taskSize = tasks.length;
+  completeTasks = document.getElementsByClassName("danger").length;
+  percentage = (completeTasks / taskSize) * 100;
+
+  console.log(taskSize);
+  console.log(completeTasks);
+  return percentage;
 }
 
 function setToDone(id) {
+  //MARKING DONE HERE
   var baseState = getState();
   if (baseState[id].status === "new") {
     baseState[id].status = "done";
+    //SET TO DONE
   } else {
     baseState[id].status = "new";
+    //UNSET DONE
   }
-
   syncState(baseState);
+  tasks = document.querySelectorAll("li");
+  taskSize = tasks.length;
+  completeTasks = document.getElementsByClassName("danger").length;
+  const percentage = ((completeTasks / taskSize) * 100).toString();
+  $("#todayProgress").data("value", percentage);
+
+  console.log(taskSize);
+  console.log(completeTasks);
+  return percentage;
 }
 
 function deleteTodo(id) {
-  console.log(id);
+  //DELETING TASK HERE
   var baseState = getState();
   delete baseState[id];
   syncState(baseState);
+
+  tasks = document.querySelectorAll("li");
+  taskSize = tasks.length - 1;
+  completeTasks = document.getElementsByClassName("danger").length;
+  percentage = (completeTasks / taskSize) * 100;
+  todayProgress.attr("data-value") = percentage;
+  let value = todayProgress.attr("data-value");
+
+  console.log(value);
+  console.log(taskSize);
+  console.log(completeTasks);
+  return percentage;
 }
 
 function resetState() {
@@ -204,7 +239,6 @@ $(function () {
       addItem(itemVal);
     }
   });
-  $(".todo-list").sortable();
   $(".todo-list").disableSelection();
 });
 
@@ -358,6 +392,7 @@ $("#prev").click(function () {
 // Progress bars
 $(function () {
   $(".progress").each(function () {
+    var value = percentage;
     var value = $(this).attr("data-value");
     var left = $(this).find(".progress-left .progress-bar");
     var right = $(this).find(".progress-right .progress-bar");
